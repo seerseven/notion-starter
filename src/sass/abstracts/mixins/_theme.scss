@@ -1,0 +1,37 @@
+@mixin light() {
+	@media (prefers-color-scheme: light) {
+		@at-root #{selector-nest(':root:not([data-theme=light]):not([data-theme=dark])', &)} {
+			@content;
+		}
+	}
+	@at-root #{selector-nest(':root[data-theme=light]', &)} {
+		@content;
+	}
+}
+
+@mixin dark() {
+	@media (prefers-color-scheme: dark) {
+		@at-root #{selector-nest(':root:not([data-theme=light]):not([data-theme=dark])', &)} {
+			@content;
+		}
+	}
+	@at-root #{selector-nest(':root[data-theme=dark]', &)} {
+		@content;
+	}
+}
+
+@mixin dmode($classname) {
+	.dark {
+		.d\:#{$classname} {
+			@content;
+		}
+	}
+}
+
+@mixin lmode($classname) {
+	.light {
+		.l\:#{$classname} {
+			@content;
+		}
+	}
+}

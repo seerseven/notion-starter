@@ -1,0 +1,353 @@
+@use '../abstracts' as *;
+
+//FLEX HEADER SETTINGS
+
+.bg\:header {
+	background: $headerBG;
+	@include animate;
+}
+.bg\:trans {
+	background: $headerBG;
+	@include animate;
+}
+.nav\:link {
+	@include animate;
+	color: $linkColor !important;
+	text-decoration: $decoreLine $decoreStyle $linkColor $decoreWeight;
+	text-underline-offset: 0.5rem !important;
+
+	&:hover {
+		@include animate;
+		color: $linkHover !important;
+		text-decoration: $decoreHover $decoreStyle $linkColor $decoreWeight;
+	}
+}
+.nav\:icon {
+	color: $linkColor !important;
+
+	&:hover {
+		color: $linkHover !important;
+	}
+}
+
+.nav\:social {
+	color: $linkColor !important;
+	display: block;
+	padding: 12px 5px 0px;
+	width: 30px;
+
+	&:hover {
+		color: $linkHover !important;
+	}
+}
+
+#header-container {
+	display: block;
+	position: relative;
+}
+
+.sticky-dark {
+	size: 35px;
+	@include radius;
+	background: var(--sticky);
+	z-index: 9999;
+	@include abs(0 5px 0 0);
+	margin-top: calc(100vh * 1.8);
+	margin-right: 5px;
+}
+
+.sticky-bg {
+	background-color: $switch;
+	size: 35px;
+	@include radius;
+}
+.sticky-bgv {
+	background-color: $switchV;
+	size: 35px;
+	@include radius;
+}
+
+.sticky\:show {
+	margin-bottom: 10px;
+	opacity: 1;
+	@include animate;
+}
+
+.sticky\:hide {
+	margin-bottom: -230px;
+	opacity: 0;
+	@include animate(all, 0.1s, ease-out, 0s);
+}
+
+.f-wrap {
+	gap: 0.2em;
+	width: 100%;
+}
+.f-mobile {
+	order: 0;
+}
+.f-logo {
+	flex-basis: 220px;
+	order: 1;
+}
+.f-links {
+	order: 2;
+}
+
+.f-search {
+	order: 3;
+}
+
+.f-accounts {
+	order: 4;
+}
+
+.f-cart {
+	order: 5;
+}
+.f-dark {
+	order: 6;
+}
+.f-icons {
+	flex-basis: 20px;
+}
+
+//FLEX HEADER SETTINGS
+
+header-drawer {
+	justify-self: start;
+	margin-left: -1.2rem;
+}
+
+@media screen and (min-width: 990px) {
+	header-drawer {
+		display: none;
+	}
+}
+
+.menu-drawer-container {
+	display: flex;
+}
+
+.list-menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.list-menu--inline {
+	display: inline-flex;
+	flex-wrap: nowrap;
+}
+
+summary.list-menu__item {
+	padding-right: 2.7rem;
+}
+
+.list-menu__item {
+	display: flex;
+	align-items: center;
+	line-height: calc(1 + 0.3 / var(--font-body-scale));
+}
+
+.list-menu__item--link {
+	text-decoration: none;
+	padding-bottom: 1rem;
+	padding-top: 1rem;
+	line-height: calc(1 + 0.8 / var(--font-body-scale));
+}
+
+@media screen and (min-width: 750px) {
+	.list-menu__item--link {
+		padding-bottom: 0.5rem;
+		padding-top: 0.5rem;
+	}
+}
+
+//Theme Switch Component Mixins & Variables
+
+$lmode: rgba(#222, 0.8);
+$dmode: #fec150;
+
+@mixin theme-switch {
+	@include abs(f0 f0 f0 f0);
+	@include animate;
+	@include radius;
+}
+
+@mixin switch-before($demi) {
+	@include abs(f0 f0 f0 -1px);
+	@include animate;
+	size: $demi;
+	@include radius;
+}
+
+@mixin svg($fill: $fill, $stroke: $fill) {
+	svg {
+		fill: $fill;
+		stroke: $stroke;
+		@include animate;
+	}
+}
+
+.theme-toggler {
+	.theme-switch {
+		@include flexbox;
+		@include rel(0px f0 f0 0px);
+		size: 31px;
+		margin-left: -2px;
+	}
+
+	.theme-switch input {
+		display: none;
+	}
+
+	.darkmode-icons\:navbar,
+	.darkmode-icons\:sticky,
+	input:checked + .darkmode-icons\:navbar,
+	input:checked + .darkmode-icons\:sticky {
+		cursor: pointer;
+		background-color: $trans;
+		@include theme-switch;
+	}
+
+	.icon\:solid {
+		@include svg(currentColor);
+	}
+	.icon\:outline {
+		@include svg(none, currentColor);
+	}
+
+	.colormode\:solid {
+		@include svg($colorMode);
+		@include before {
+			background-color: $colorModeBG;
+			@include switch-before(35px);
+		}
+		@include hover {
+			@include before {
+				@include animate;
+				background-color: $colorModeBGV;
+			}
+			@include svg($colorModeV);
+		}
+	}
+	input:checked + .colormode\:solid {
+		@include svg($colorMode);
+		@include before {
+			background-color: $colorModeBG;
+			@include switch-before(35px);
+		}
+		@include hover {
+			@include before {
+				background-color: $colorModeBGV;
+				@include animate;
+			}
+			@include svg($colorModeV);
+		}
+	}
+
+	.colormode\:outline {
+		@include svg(none, $colorMode);
+		@include before {
+			background-color: $colorModeBG;
+			@include switch-before(35px);
+		}
+		@include hover {
+			@include before {
+				@include animate;
+				background-color: $colorModeBGV;
+			}
+			@include svg(none, $colorModeV);
+		}
+	}
+	input:checked + .colormode\:outline {
+		@include svg(none, $colorMode);
+		@include before {
+			background-color: $colorModeBG;
+			@include switch-before(35px);
+		}
+		@include hover {
+			@include before {
+				background-color: $colorModeBGV;
+				@include animate;
+			}
+			@include svg(none, $colorModeV);
+		}
+	}
+
+	.darkmode-icons\:navbar svg {
+		@include abs(4px 0px 0px 4px);
+		size: 25px;
+		@include animate(opacity, 0.2s);
+		padding: 2px;
+		pointer-events: none;
+	}
+
+	.darkmode-icons\:sticky svg {
+		@include abs(1px 0px 0px 2px);
+		size: 25px;
+		@include animate(opacity, 0.2s);
+		padding: 2px;
+		pointer-events: none;
+	}
+
+	.feather-moon {
+		opacity: 0;
+	}
+
+	.feather-sun {
+		opacity: 1;
+	}
+
+	input:checked + .darkmode-icons\:navbar .feather-moon,
+	input:checked + .darkmode-icons\:sticky .feather-moon {
+		opacity: 1;
+	}
+
+	input:checked + .darkmode-icons\:navbar .feather-sun,
+	input:checked + .darkmode-icons\:sticky .feather-sun {
+		opacity: 0;
+	}
+}
+
+.link {
+	cursor: pointer;
+	display: inline-block;
+	border: none;
+	box-shadow: none;
+	text-decoration: none;
+	text-underline-offset: none;
+	background-color: transparent;
+	font-family: inherit;
+}
+.link-with-icon {
+	display: inline-flex;
+	font-size: 1.4rem;
+	font-weight: 600;
+	letter-spacing: 0.1rem;
+	text-decoration: none;
+	margin-bottom: 4.5rem;
+	white-space: nowrap;
+}
+.header__icon .icon {
+	fill: none;
+	height: 2rem;
+	vertical-align: middle;
+	width: 2rem;
+}
+
+.header__icon,
+.header__icon--cart .icon {
+	height: 3.9rem;
+	width: 3.9rem;
+}
+.header__icon--cart {
+	margin-right: -0.2rem;
+	margin-top: 0.2rem;
+	position: relative;
+}
+
+.header-container-border {
+	border-bottom: 0.1rem solid rgba(0, 0, 0, 0.08);
+}

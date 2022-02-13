@@ -1,0 +1,22 @@
+// # Px to em function
+
+@use '../variables' as *;
+@use 'strip-unit' as *;
+@use 'sass:math';
+
+// Converts px value to em.
+// Usage example :
+// ```scss
+// @use "functions/px-to-em" as *;
+//
+// .text {
+//   font-size: px-to-em(24px); // Output `1.5em`
+//   margin-bottom: px-to-em(24px, 24px); // Output `1em`
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@function px-to-em($pxValue, $context: $base-size) {
+	@return math.div(strip-unit($pxValue), strip-unit($context)) * 1em;
+}

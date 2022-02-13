@@ -1,0 +1,60 @@
+@mixin pose($type, $args: 0 0 0 0) {
+	position: $type;
+	$offsets: top right bottom left;
+	@if length($args) == 2 or length($args) == 4 {
+		@if length($args) == 2 {
+			$args: join($args, $args);
+		}
+		@each $offset in $offsets {
+			$offsetVal: nth($args, index($offsets, $offset));
+			#{$offset}: validOffset($offsetVal);
+		}
+	} @else {
+		@warn "Invalid number of arguments. (Must be either 2 or 4).";
+	}
+}
+
+@mixin pos($args: 0 0 0 0) {
+	$offsets: top right bottom left;
+	@if length($args) == 2 or length($args) == 4 {
+		@if length($args) == 2 {
+			$args: join($args, $args);
+		}
+		@each $offset in $offsets {
+			$offsetVal: nth($args, index($offsets, $offset));
+			#{$offset}: validOffset($offsetVal);
+		}
+	} @else {
+		@warn "Invalid number of arguments. (Must be either 2 or 4).";
+	}
+}
+
+@function validOffset($value) {
+	@if type-of($value) == number {
+		@if ($value != 0) {
+			@return $value;
+		} @else {
+			@return null;
+		}
+	} @else if str-slice($value, 1, 1) == 'f' {
+		@return str-slice($value, 2);
+	} @else if index(auto initial inherit, $value) {
+		@return $value;
+	} @else {
+		@warn "Invalid offset value.";
+		@return null;
+	}
+}
+
+@mixin abs($args: 0 0 0 0) {
+	@include pose(absolute, $args);
+}
+@mixin rel($args: 0 0 0 0) {
+	@include pose(relative, $args);
+}
+@mixin fix($args: 0 0 0 0) {
+	@include pose(fixed, $args);
+}
+@mixin sticky($args: 0 0 0 0) {
+	@include pose(sticky, $args);
+}

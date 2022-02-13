@@ -1,0 +1,91 @@
+.satori-connect,
+.vendor-signup {
+	background: #070b0d;
+	color: #f8f8f8;
+	padding: 20px 0;
+
+	.form-control {
+		border-radius: 0px;
+		padding: 3px;
+		color: #f8f8f8;
+		font-size: 1.2rem;
+		font-weight: 400;
+	}
+
+	.form-outline .form-control {
+		background: transparent;
+		min-height: auto;
+		padding: 0.63em 0.75em;
+		transition: all 0.2s linear;
+		line-height: 2 !important;
+	}
+
+	.form-outline .form-control ~ .form-label {
+		color: #f8f8f8 !important;
+		font-weight: normal !important;
+		line-height: 2 !important;
+	}
+
+	.form-outline textarea.form-control {
+		line-height: 1.7 !important;
+	}
+
+	hr {
+		background-color: #39c0ed;
+		border: 0;
+		height: 0.2rem;
+		color: inherit;
+		margin: 1rem 0 5rem;
+		opacity: 1;
+		width: 58%;
+	}
+
+	.form-outline .form-control ~ .form-notch .form-notch-trailing {
+		border-bottom: 0.2rem solid #8b989e;
+		border-right: 0.2rem solid #8b989e;
+		border-top: 0.2rem solid #8b989e;
+	}
+	.form-outline .form-control ~ .form-notch .form-notch-leading {
+		border-bottom: 0.2rem solid #8b989e;
+		border-left: 0.2rem solid #8b989e;
+		border-top: 0.2rem solid #8b989e;
+	}
+
+	.form-outline .form-control ~ .form-notch .form-notch-middle {
+		border-bottom: 0.2rem solid #8b989e;
+		border-top: 0.2rem solid #8b989e;
+	}
+
+	.form-outline .form-control:focus ~ .form-notch .form-notch-trailing {
+		border-bottom: 0.2rem solid #39c0ed;
+		border-right: 0.2rem solid #39c0ed;
+		border-top: 0.2rem solid #39c0ed;
+	}
+	.form-outline .form-control:focus ~ .form-notch .form-notch-leading {
+		border-bottom: 0.2rem solid #39c0ed;
+		border-left: 0.2rem solid #39c0ed;
+		border-top: 0.2rem solid #39c0ed;
+	}
+
+	.form-outline .form-control:focus ~ .form-notch .form-notch-middle {
+		border-bottom: 0.2rem solid #39c0ed;
+		border-top: 0.2rem solid transparent;
+	}
+
+	[class*='btn-outline-'] {
+		border-width: 0.2rem;
+	}
+
+	.btn-outline-info {
+		background-color: #39c0ed;
+		color: #fff;
+		transition: all 0.5s ease;
+		width: 100%;
+	}
+
+	.btn-outline-info:hover {
+		border-color: #39c0ed;
+		background-color: transparent;
+		color: #39c0ed;
+	}
+}

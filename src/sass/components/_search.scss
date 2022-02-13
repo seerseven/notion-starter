@@ -1,0 +1,36 @@
+@use '../abstracts' as *;
+
+.template-search__header {
+	margin-bottom: 3rem;
+}
+
+.template-search__search {
+	margin: 0 auto 3.5rem;
+	max-width: 47.8rem;
+}
+
+.template-search__search .search {
+	margin-top: 3rem;
+}
+
+.template-search--empty {
+	padding-bottom: 18rem;
+}
+
+.template-search .grid__item--small:not(:last-child) {
+	padding-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 750px) {
+	.template-search__header {
+		margin-bottom: 5rem;
+	}
+
+	.template-search .grid__item--small:not(:last-child) {
+		padding-bottom: 1rem;
+	}
+}
+
+.search__button .icon {
+	height: 1.8rem;
+}

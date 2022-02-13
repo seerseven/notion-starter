@@ -1,0 +1,28 @@
+@mixin animate(
+	$transProperty: all,
+	$transDuration: 0.3s,
+	$transFunction: ease,
+	$transDelay: 0s
+) {
+	transition: $transProperty $transDuration $transFunction $transDelay;
+}
+
+@mixin fade {
+	transition: all 200ms ease;
+}
+
+@mixin bgfade($color, $opacity) {
+	background-color: rgba($color, $opacity);
+}
+
+@mixin hfd($bg, $txt, $bgf, $txtf) {
+	background-color: $bg !important;
+	color: $txt !important;
+	transition: all 0.5s ease;
+
+	&:hover {
+		background-color: $bgf !important;
+		color: $txtf !important;
+		transition: all 0.5s ease;
+	}
+}

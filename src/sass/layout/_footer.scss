@@ -1,0 +1,20 @@
+@use '../abstracts' as *;
+
+.bg\:footer {
+	background: $footerBG;
+}
+
+.bg\:footer-bottom {
+	background: $footerBottom;
+}
+.link\:footer {
+	color: $linkColor;
+
+	&:hover {
+		color: $linkHover;
+	}
+}
+
+.text\:footer {
+	color: #fff;
+}

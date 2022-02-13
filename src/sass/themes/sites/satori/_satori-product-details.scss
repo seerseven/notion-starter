@@ -1,0 +1,21 @@
+.custom-print-table {
+	tbody tr th {
+		font-size: 16px;
+		font-weight: 700;
+	}
+
+	tbody tr td {
+		font-size: 14px;
+		font-weight: 600;
+	}
+	thead td,
+	th,
+	tr {
+		font-size: 16px;
+		font-weight: 700;
+	}
+}
+.canvas-details li {
+	padding: 7px;
+	margin-left: 14px;
+}

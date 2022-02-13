@@ -1,0 +1,60 @@
+/* Carousel styling */
+
+.satori-index {
+	height: 100vh;
+	position: absolute;
+	z-index: 80;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+
+#introCarousel,
+.carousel-inner,
+.carousel-item,
+.carousel-item.active {
+	height: 100vh;
+	position: relative;
+	z-index: 100;
+}
+
+#satori-intro {
+	position: absolute;
+	z-index: 1000;
+}
+
+.carousel-item {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+/* Height for devices larger than 576px */
+
+.satori-offset {
+	margin-top: -74px;
+}
+
+@media (min-width: 992px) {
+	.satori-offset {
+		margin-top: -94px;
+	}
+}
+
+.navbar .nav-link {
+	color: #fff !important;
+}
+
+#vendor-carousel {
+	height: auto !important;
+	.carousel-inner,
+	.carousel-item,
+	.carousel-item.active {
+		height: auto !important;
+	}
+}
+
+#fadeText {
+	transition: all 200ms ease;
+}

@@ -1,0 +1,111 @@
+@use 'sass:map';
+@use '../../variables' as *;
+@use '../../mixins' as *;
+@use '../../functions' as *;
+@use 'sass:math';
+
+// @each $name, $effect in $insta-filters {
+// 	.insta-#{$name} {
+// 		filter: $effect;
+// 	}
+// }
+
+// @each $name, $color in $hexmap {
+// 	.color-#{$name} {
+// 		c: $color;
+// 	}
+// }
+// @each $name, $color in $hexmap {
+// 	.bg-#{$name} {
+// 		bg: $color;
+// 	}
+// }
+
+// @each $name, $size in $delay-map {
+// 	.delay-#{$name} {
+// 		-webkit-animation-delay: calc(1 * $size) !important;
+// 		animation-delay: calc(1 * $size) !important;
+// 	}
+// }
+
+// @each $name, $size in $delay-map {
+// 	.durate-#{$name} {
+// 		-webkit-animation-duration: calc(1 * $size) !important;
+// 		animation-duration: calc(1 * $size) !important;
+// 	}
+// }
+
+// @each $name, $size in $font-sizes-map {
+// 	.rfs-#{$name} {
+// 		@include fs($size);
+// 	}
+// }
+
+// @each $name, $size in $font-sizes-map {
+// 	.rpx-#{$name} {
+// 		@include rfs-padding-right($size);
+// 		@include rfs-padding-left($size);
+// 	}
+// }
+
+// @each $name, $size in $max-widths-map {
+// 	.mxw-#{$name} {
+// 		max-width: $size;
+// 		margin-left: auto;
+// 		margin-right: auto;
+// 	}
+// }
+
+// @each $name, $align in $flx-aligns-map {
+// 	.flxr-#{$name} {
+// 		@include flxr($align);
+// 	}
+// }
+
+// @each $name, $align in $flx-aligns-map {
+// 	.flxd-#{$name} {
+// 		@include flxd($align);
+// 	}
+// }
+
+// @each $name, $size in $break-widths-map {
+// 	.brk-e#{$name} {
+// 		position: relative;
+
+// 		&:after {
+// 			width: px-to-em($size);
+// 			content: '';
+// 			height: 80%;
+// 			margin: auto 0;
+// 			opacity: 0.4;
+// 			@include abs(0px 0px f0 f0);
+// 			@include light {
+// 				background: #000;
+// 			}
+// 			@include dark {
+// 				background: #fff;
+// 			}
+// 		}
+// 	}
+// }
+
+// @each $name, $size in $break-widths-map {
+// 	.brk-s#{$name} {
+// 		position: relative;
+
+// 		&:after {
+// 			width: px-to-em($size);
+// 			content: '';
+// 			height: 80%;
+// 			margin: auto 0;
+// 			opacity: 0.4;
+// 			@include abs(0px 0px f0 f0);
+// 			@include light {
+// 				background: #000;
+// 			}
+// 			@include dark {
+// 				background: #fff;
+// 			}
+// 		}
+// 	}
+// }

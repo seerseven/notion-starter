@@ -1,0 +1,58 @@
+#satori-footer {
+	.list-inline,
+	.list-unstyled {
+		margin-left: -8px;
+	}
+
+	@media screen and (min-width: 750px) {
+		.footer__column--info {
+			margin-left: -8px;
+		}
+	}
+
+	.footer-block--newsletter {
+		margin-top: 0;
+	}
+
+	.footer__list-social {
+		display: inline-flex !important;
+	}
+
+	.list-social__link {
+		font-size: 16px !important;
+		align-items: center !important;
+		display: flex !important;
+		padding: 1.3rem !important;
+	}
+
+	.customer a,
+	.link {
+		font-size: 1.9rem !important;
+		color: #fff !important;
+	}
+
+	footer .link {
+		text-decoration: none !important;
+	}
+	.footer__content-top {
+		padding-bottom: 7rem !important;
+		padding-top: 7rem !important;
+	}
+
+	.list-social__item {
+		padding: 5px !important;
+	}
+
+	.footer {
+		border-top: 0.1rem solid rgba(var(--color-foreground), 0.2) !important;
+	}
+
+	.footer__content-bottom {
+		border-top: 0.1rem solid rgba(var(--color-foreground), 0.2) !important;
+		padding-bottom: 3rem !important;
+		padding-top: 3rem !important;
+	}
+	.footer__content-bottom {
+		border-top-width: 0.1rem !important;
+	}
+}

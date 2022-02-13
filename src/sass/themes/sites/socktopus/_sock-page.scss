@@ -1,0 +1,138 @@
+#socktapus {
+  color: var(--socktapus-textcolor)!important;
+  background-color: var(--socktapus-rootbgcolor)!important;
+  font-family: var(--socktapus-fontfam)!important;
+  width: 100%!important;
+  margin: 0px!important;
+  padding: 0px!important;
+
+  .wrapper {
+    width: 100%!important;
+    margin: 0px auto!important;
+    padding: 0px!important;
+
+
+    .innerWrapper {
+      width: 100%!important;
+      max-width:  var(--socktapus-pagewidth)!important;
+      margin: 0px auto!important;
+      padding: 0px!important;
+      background-color: var(--socktapus-containerbgcolor)!important;
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+      color:  var(--socktapus-headingcolor)!important;
+      font-family: var(--socktapus-headfontfam)!important;
+    }
+    
+    a {
+      color: var(--socktapus-linkcolor)!important;
+    }
+    
+    a:hover {
+      color: var(--socktapus-hovercolor)!important;
+    }
+    
+    button {
+      color: var(--socktapus-btncolor)!important;
+      background-color: var(--second-color)!important;
+    }
+    
+    button:hover {
+      color: var(--socktapus-btnhovercolor)!important;
+      background-color: var(--third-color)!important;
+    }
+  }
+
+}
+
+
+.sock-link {
+  padding: 15px 13px;
+  font-size: 13px;
+
+    @include media (800px){
+      padding: 15px 20px;
+    }
+    @include media (850px){
+      padding: 15px 11px;
+      font-size: 14px;
+    }
+
+    @include media (900px){
+      padding: 15px 16px;
+    }
+
+    @include media (950px){
+      padding: 15px 18px;
+    }
+
+    @include media (990px){
+      padding: 15px 16px;
+    }
+
+    @include media (1025px){
+      padding: 15px 21px;
+    }
+
+    @include media (1050px){
+      padding: 15px 26px;
+    }
+
+    @include media (1100px){
+      padding: 15px 31px;
+    }
+
+    @include media (1150px){
+      padding: 15px 36px;
+    }
+
+    @include media (1200px){
+      padding: 15px 38px;
+      font-size: 15px;
+    }
+
+    @include media (1250px){
+      padding: 15px 44px;
+      font-size: 15px;
+    }
+}
+
+.sock-social {
+  display: none;
+  @include media (850px){
+    display: block;
+  }
+}
+
+
+
+
+.sidenav {
+  color: var(--socktapus-textcolor)!important;
+  background-color: var(--socktapus-rootbgcolor)!important;
+  box-shadow: 0 0 0 0 rgba(0,0,0,0), 0 0 0 0 rgba(0,0,0,0)!important;
+  height: 100vh;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  transform: translateX(-100%);
+  width: 240px;
+  z-index: 1035;
+}
+
+.sidenav-link {
+  align-items: center;
+  border-radius: 5px;
+  color: var(--socktapus-linkcolor)!important;
+  cursor: pointer;
+  display: flex;
+  font-size: .89rem;
+  height: 3rem;
+  overflow: hidden;
+  padding: 1rem 1.5rem;
+  text-overflow: ellipsis;
+  transition: all .3s linear;
+  white-space: nowrap;
+}

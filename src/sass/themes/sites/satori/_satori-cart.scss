@@ -1,0 +1,16 @@
+#satori-cart {
+	@media screen and (min-width: 750px) {
+		.cart-items td {
+			padding-bottom: 4rem;
+		}
+		.cart-item__media {
+			width: 14rem;
+		}
+		.cart-items td:first-child {
+			padding-left: 4rem;
+		}
+		.cart-items td:last-child {
+			padding-right: 4rem;
+		}
+	}
+}

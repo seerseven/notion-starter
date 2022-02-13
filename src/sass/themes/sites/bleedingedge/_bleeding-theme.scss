@@ -1,0 +1,25 @@
+//Site Colors
+
+$nana: #e8d4af;
+
+$mint: #abddb6;
+
+$mithra: rgba(249, 249, 249, 0.6);
+
+$bleed: $mint, $nana;
+
+.mithra {
+	background-color: rgba(249, 249, 249, 0.6);
+}
+
+.mint {
+	background-color: rgba($mint, 0.7);
+}
+
+.nana {
+	background-color: rgba($nana, 0.8);
+}
+
+.bleed {
+	@include blend(to left, $bleed);
+}

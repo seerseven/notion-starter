@@ -1,0 +1,20 @@
+@mixin flxd($align: center, $j: center, $column: column) {
+	display: flex !important;
+	flex-direction: $column !important;
+	justify-content: $j !important;
+	align-items: $align !important;
+}
+
+@mixin flxr($j: center, $column: row, $align: center) {
+	display: flex !important;
+	flex-direction: $column !important;
+	justify-content: $j !important;
+	align-items: $align !important;
+}
+
+@mixin flexbox($dir: row, $wrap: nowrap) {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: $dir $wrap;
+}

@@ -1,0 +1,72 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+/*-----------------------------------
+// DEFAULT LINK AND BUTTON CLASSES //
+------------------------------------*/
+
+.link-primary {
+	color: #0d6efd;
+}
+.link-primary:focus,
+.link-primary:hover {
+	color: #0a58ca;
+}
+.link-secondary {
+	color: #6c757d;
+}
+.link-secondary:focus,
+.link-secondary:hover {
+	color: #565e64;
+}
+.link-success {
+	color: #198754;
+}
+.link-success:focus,
+.link-success:hover {
+	color: #146c43;
+}
+.link-info {
+	color: #0dcaf0;
+}
+.link-info:focus,
+.link-info:hover {
+	color: #3dd5f3;
+}
+.link-warning {
+	color: #ffc107;
+}
+.link-warning:focus,
+.link-warning:hover {
+	color: #ffcd39;
+}
+.link-danger {
+	color: #dc3545;
+}
+.link-danger:focus,
+.link-danger:hover {
+	color: #b02a37;
+}
+.link-light {
+	color: #f8f9fa;
+}
+.link-light:focus,
+.link-light:hover {
+	color: #f9fafb;
+}
+.link-dark {
+	color: #212529;
+}
+.link-dark:focus,
+.link-dark:hover {
+	color: #1a1e21;
+}
+.stretched-link:after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	content: '';
+}

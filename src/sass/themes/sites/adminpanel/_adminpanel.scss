@@ -1,0 +1,95 @@
+#satori-admin-layout {
+	.list-group-item {
+		background-color: transparent;
+		border-color: transparent;
+		color: #fff;
+	}
+	.list-group-item.active {
+		background-color: transparent;
+		border-color: transparent;
+		color: #0980ad;
+		z-index: 2;
+	}
+
+	.sidenav-link {
+		align-items: center !important;
+		border-radius: 5px !important;
+		color: unset !important;
+		cursor: pointer !important;
+		display: flex !important;
+		font-size: 1.89rem !important;
+		height: 3rem !important;
+		overflow: hidden !important;
+		padding: 2.5rem 1.5rem !important;
+		text-overflow: ellipsis !important;
+		transition: all 0.3s linear !important;
+		white-space: nowrap !important;
+	}
+
+	.sidenav-collapse .sidenav-link {
+		font-size: 1.38rem !important;
+		height: 1.5rem !important;
+		padding-left: 3rem !important;
+	}
+
+	// .satori-sidebar-bg {
+	// 	background: linear-gradient(66deg, #15ee77, #1697e4) !important;
+	// }
+	.satori-sidebar-bg {
+		background: #08161e !important;
+		background-color: #08161e !important;
+		background: linear-gradient(66deg, #08161e, #08161e) !important;
+	}
+	.satori-navbar-bg {
+		background-color: #08161e;
+	}
+
+	.sidenav-link:active,
+	.sidenav-link:focus,
+	.sidenav-link:hover {
+		background-color: transparent;
+		color: #cecece;
+		outline: none;
+	}
+
+	.nav {
+		display: block;
+	}
+
+	.navbar {
+		height: 80px;
+	}
+	.sidenav-bottom {
+		height: 2rem;
+		width: 2rem;
+		fill: none;
+		vertical-align: middle;
+	}
+
+	.input-group > .form-control {
+		height: 3.3rem;
+		min-height: calc(2.08rem + 2px);
+		padding-bottom: 0.27rem;
+		padding-top: 0.27rem;
+		transition: all 0.2s linear;
+		font-size: 13px;
+		font-weight: 600;
+		border-radius: 0.25rem;
+	}
+
+	.form-control {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		background-color: #fff !important;
+		border: 1px solid transparent !important;
+		color: #716e6e !important;
+		display: block;
+		font-size: 1rem;
+		font-weight: 400;
+		line-height: 1.6;
+		padding: 0.375rem 0.75rem;
+		transition: all 0.2s linear;
+		width: 100%;
+		box-shadow: 0 10px 20px 0 rgb(0, 0, 0, 5%);
+	}
+}

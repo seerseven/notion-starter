@@ -1,0 +1,2186 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+.text-truncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.font-monospace {
+	font-family: var(--bs-font-monospace) !important;
+}
+.fst-italic {
+	font-style: italic !important;
+}
+.fst-normal {
+	font-style: normal !important;
+}
+.lh-1 {
+	line-height: 1 !important;
+}
+.lh-2 {
+	line-height: 2 !important;
+}
+.lh-sm {
+	line-height: 1.25 !important;
+}
+.lh-base {
+	line-height: 1.5 !important;
+}
+.lh-lg {
+	line-height: 2 !important;
+}
+.t-s {
+	text-align: left !important;
+}
+.t-e {
+	text-align: right !important;
+}
+.t-c {
+	text-align: center !important;
+}
+.text-decoration-none {
+	text-decoration: none !important;
+}
+.text-decoration-underline {
+	text-decoration: underline !important;
+}
+.text-decoration-line-through {
+	text-decoration: line-through !important;
+}
+.text-lowercase {
+	text-transform: lowercase !important;
+}
+.text-uppercase {
+	text-transform: uppercase !important;
+}
+.text-capitalize {
+	text-transform: capitalize !important;
+}
+.text-wrap {
+	white-space: normal !important;
+}
+.text-nowrap {
+	white-space: nowrap !important;
+}
+.text-break {
+	word-wrap: break-word !important;
+	word-break: break-word !important;
+}
+.text-primary {
+	color: #0d6efd !important;
+}
+.text-secondary {
+	color: #6c757d !important;
+}
+.text-success {
+	color: #198754 !important;
+}
+.text-info {
+	color: #0dcaf0 !important;
+}
+.text-warning {
+	color: #ffc107 !important;
+}
+.text-danger {
+	color: #dc3545 !important;
+}
+.text-light {
+	color: #f8f9fa !important;
+}
+.text-dark {
+	color: #212529 !important;
+}
+.text-white {
+	color: #fff !important;
+}
+.text-body {
+	color: #212529 !important;
+}
+.text-muted {
+	color: #6c757d !important;
+}
+.text-black-50 {
+	color: rgba(0, 0, 0, 0.5) !important;
+}
+.text-white-50 {
+	color: hsla(0, 0%, 100%, 0.5) !important;
+}
+.text-reset {
+	color: inherit !important;
+}
+
+.fs-0 {
+	font-size: 0 !important;
+}
+.fs-8 {
+	font-size: 0.8rem !important;
+}
+.fs-9 {
+	font-size: 0.9rem !important;
+}
+.fs-10 {
+	font-size: 1rem !important;
+}
+.fs-11 {
+	font-size: 1.1rem !important;
+}
+.fs-12 {
+	font-size: 1.2rem !important;
+}
+.fs-13 {
+	font-size: 1.3rem !important;
+}
+.fs-14 {
+	font-size: 1.4rem !important;
+}
+.fs-15 {
+	font-size: 1.5rem !important;
+}
+.fs-16 {
+	font-size: 1.6rem !important;
+}
+.fs-17 {
+	font-size: 1.7rem !important;
+}
+.fs-18 {
+	font-size: 1.8rem !important;
+}
+.fs-19 {
+	font-size: 1.9rem !important;
+}
+.fs-20 {
+	font-size: 2rem !important;
+}
+.fs-21 {
+	font-size: 2.1rem !important;
+}
+.fs-22 {
+	font-size: 2.2rem !important;
+}
+.fs-23 {
+	font-size: 2.3rem !important;
+}
+.fs-24 {
+	font-size: 2.4rem !important;
+}
+.fs-25 {
+	font-size: 2.5rem !important;
+}
+.fs-26 {
+	font-size: 2.6rem !important;
+}
+.fs-27 {
+	font-size: 2.7rem !important;
+}
+.fs-28 {
+	font-size: 2.8rem !important;
+}
+.fs-29 {
+	font-size: 2.9rem !important;
+}
+.fs-30 {
+	font-size: 3rem !important;
+}
+.fs-31 {
+	font-size: 3.1rem !important;
+}
+.fs-32 {
+	font-size: 3.2rem !important;
+}
+.fs-33 {
+	font-size: 3.3rem !important;
+}
+.fs-34 {
+	font-size: 3.4rem !important;
+}
+.fs-35 {
+	font-size: 3.5rem !important;
+}
+.fs-36 {
+	font-size: 3.6rem !important;
+}
+.fs-37 {
+	font-size: 3.7rem !important;
+}
+.fs-38 {
+	font-size: 3.8rem !important;
+}
+.fs-39 {
+	font-size: 3.9rem !important;
+}
+.fs-40 {
+	font-size: 4rem !important;
+}
+.fs-41 {
+	font-size: 4.1rem !important;
+}
+.fs-42 {
+	font-size: 4.2rem !important;
+}
+.fs-43 {
+	font-size: 4.3rem !important;
+}
+.fs-44 {
+	font-size: 4.4rem !important;
+}
+.fs-45 {
+	font-size: 4.5rem !important;
+}
+.fs-46 {
+	font-size: 4.6rem !important;
+}
+.fs-47 {
+	font-size: 4.7rem !important;
+}
+.fs-48 {
+	font-size: 4.8rem !important;
+}
+.fs-49 {
+	font-size: 4.9rem !important;
+}
+.fs-50 {
+	font-size: 5rem !important;
+}
+.fs-51 {
+	font-size: 5.1rem !important;
+}
+.fs-52 {
+	font-size: 5.2rem !important;
+}
+.fs-53 {
+	font-size: 5.3rem !important;
+}
+.fs-54 {
+	font-size: 5.4rem !important;
+}
+.fs-55 {
+	font-size: 5.5rem !important;
+}
+.fs-56 {
+	font-size: 5.6rem !important;
+}
+.fs-57 {
+	font-size: 5.7rem !important;
+}
+.fs-58 {
+	font-size: 5.8rem !important;
+}
+.fs-59 {
+	font-size: 5.9rem !important;
+}
+.fs-60 {
+	font-size: 6rem !important;
+}
+.fs-61 {
+	font-size: 6.1rem !important;
+}
+.fs-62 {
+	font-size: 6.2rem !important;
+}
+.fs-63 {
+	font-size: 6.3rem !important;
+}
+.fs-64 {
+	font-size: 6.4rem !important;
+}
+.fs-65 {
+	font-size: 6.5rem !important;
+}
+.fs-66 {
+	font-size: 6.6rem !important;
+}
+.fs-67 {
+	font-size: 6.7rem !important;
+}
+.fs-68 {
+	font-size: 6.8rem !important;
+}
+.fs-69 {
+	font-size: 6.9rem !important;
+}
+.fs-70 {
+	font-size: 7rem !important;
+}
+.fs-71 {
+	font-size: 7.1rem !important;
+}
+.fs-72 {
+	font-size: 7.2rem !important;
+}
+.fs-73 {
+	font-size: 7.3rem !important;
+}
+.fs-74 {
+	font-size: 7.4rem !important;
+}
+.fs-75 {
+	font-size: 7.5rem !important;
+}
+.fs-76 {
+	font-size: 7.6rem !important;
+}
+.fs-77 {
+	font-size: 7.7rem !important;
+}
+.fs-78 {
+	font-size: 7.8rem !important;
+}
+.fs-79 {
+	font-size: 7.9rem !important;
+}
+.fs-80 {
+	font-size: 8rem !important;
+}
+.fs-81 {
+	font-size: 8.1rem !important;
+}
+.fs-82 {
+	font-size: 8.2rem !important;
+}
+.fs-83 {
+	font-size: 8.3rem !important;
+}
+.fs-84 {
+	font-size: 8.4rem !important;
+}
+.fs-85 {
+	font-size: 8.5rem !important;
+}
+.fs-86 {
+	font-size: 8.6rem !important;
+}
+.fs-87 {
+	font-size: 8.7rem !important;
+}
+.fs-88 {
+	font-size: 8.8rem !important;
+}
+.fs-89 {
+	font-size: 8.9rem !important;
+}
+.fs-90 {
+	font-size: 9rem !important;
+}
+.fs-91 {
+	font-size: 9.1rem !important;
+}
+.fs-92 {
+	font-size: 9.2rem !important;
+}
+.fs-93 {
+	font-size: 9.3rem !important;
+}
+.fs-94 {
+	font-size: 9.4rem !important;
+}
+.fs-95 {
+	font-size: 9.5rem !important;
+}
+.fs-96 {
+	font-size: 9.6rem !important;
+}
+.fs-97 {
+	font-size: 9.7rem !important;
+}
+.fs-98 {
+	font-size: 9.8rem !important;
+}
+.fs-99 {
+	font-size: 9.9rem !important;
+}
+.fs-100 {
+	font-size: 10rem !important;
+}
+.fs-101 {
+	font-size: 10.1rem !important;
+}
+.fs-102 {
+	font-size: 10.2rem !important;
+}
+.fs-103 {
+	font-size: 10.3rem !important;
+}
+.fs-104 {
+	font-size: 10.4rem !important;
+}
+.fs-105 {
+	font-size: 10.5rem !important;
+}
+.fs-106 {
+	font-size: 10.6rem !important;
+}
+.fs-107 {
+	font-size: 10.7rem !important;
+}
+.fs-108 {
+	font-size: 10.8rem !important;
+}
+.fw-0 {
+	font-weight: 0 !important;
+}
+.fw-1 {
+	font-weight: 100 !important;
+}
+.fw-2 {
+	font-weight: 200 !important;
+}
+.fw-l {
+	font-weight: 300 !important;
+}
+.fw-n {
+	font-weight: 400 !important;
+}
+.fw-5 {
+	font-weight: 500 !important;
+}
+.fw-6 {
+	font-weight: 600 !important;
+}
+.fw-b {
+	font-weight: 700 !important;
+}
+.fw-8 {
+	font-weight: 800 !important;
+}
+.fw-9 {
+	font-weight: 900 !important;
+}
+
+@include mq(sm) {
+	.t-sm-s {
+		text-align: left !important;
+	}
+	.t-sm-e {
+		text-align: right !important;
+	}
+	.t-sm-c {
+		text-align: center !important;
+	}
+	.fs-sm-0 {
+		font-size: 0 !important;
+	}
+	.fs-sm-8 {
+		font-size: 0.8rem !important;
+	}
+	.fs-sm-9 {
+		font-size: 0.9rem !important;
+	}
+	.fs-sm-10 {
+		font-size: 1rem !important;
+	}
+	.fs-sm-11 {
+		font-size: 1.1rem !important;
+	}
+	.fs-sm-12 {
+		font-size: 1.2rem !important;
+	}
+	.fs-sm-13 {
+		font-size: 1.3rem !important;
+	}
+	.fs-sm-14 {
+		font-size: 1.4rem !important;
+	}
+	.fs-sm-15 {
+		font-size: 1.5rem !important;
+	}
+	.fs-sm-16 {
+		font-size: 1.6rem !important;
+	}
+	.fs-sm-17 {
+		font-size: 1.7rem !important;
+	}
+	.fs-sm-18 {
+		font-size: 1.8rem !important;
+	}
+	.fs-sm-19 {
+		font-size: 1.9rem !important;
+	}
+	.fs-sm-20 {
+		font-size: 2rem !important;
+	}
+	.fs-sm-21 {
+		font-size: 2.1rem !important;
+	}
+	.fs-sm-22 {
+		font-size: 2.2rem !important;
+	}
+	.fs-sm-23 {
+		font-size: 2.3rem !important;
+	}
+	.fs-sm-24 {
+		font-size: 2.4rem !important;
+	}
+	.fs-sm-25 {
+		font-size: 2.5rem !important;
+	}
+	.fs-sm-26 {
+		font-size: 2.6rem !important;
+	}
+	.fs-sm-27 {
+		font-size: 2.7rem !important;
+	}
+	.fs-sm-28 {
+		font-size: 2.8rem !important;
+	}
+	.fs-sm-29 {
+		font-size: 2.9rem !important;
+	}
+	.fs-sm-30 {
+		font-size: 3rem !important;
+	}
+	.fs-sm-31 {
+		font-size: 3.1rem !important;
+	}
+	.fs-sm-32 {
+		font-size: 3.2rem !important;
+	}
+	.fs-sm-33 {
+		font-size: 3.3rem !important;
+	}
+	.fs-sm-34 {
+		font-size: 3.4rem !important;
+	}
+	.fs-sm-35 {
+		font-size: 3.5rem !important;
+	}
+	.fs-sm-36 {
+		font-size: 3.6rem !important;
+	}
+	.fs-sm-37 {
+		font-size: 3.7rem !important;
+	}
+	.fs-sm-38 {
+		font-size: 3.8rem !important;
+	}
+	.fs-sm-39 {
+		font-size: 3.9rem !important;
+	}
+	.fs-sm-40 {
+		font-size: 4rem !important;
+	}
+	.fs-sm-41 {
+		font-size: 4.1rem !important;
+	}
+	.fs-sm-42 {
+		font-size: 4.2rem !important;
+	}
+	.fs-sm-43 {
+		font-size: 4.3rem !important;
+	}
+	.fs-sm-44 {
+		font-size: 4.4rem !important;
+	}
+	.fs-sm-45 {
+		font-size: 4.5rem !important;
+	}
+	.fs-sm-46 {
+		font-size: 4.6rem !important;
+	}
+	.fs-sm-47 {
+		font-size: 4.7rem !important;
+	}
+	.fs-sm-48 {
+		font-size: 4.8rem !important;
+	}
+	.fs-sm-49 {
+		font-size: 4.9rem !important;
+	}
+	.fs-sm-50 {
+		font-size: 5rem !important;
+	}
+	.fs-sm-51 {
+		font-size: 5.1rem !important;
+	}
+	.fs-sm-52 {
+		font-size: 5.2rem !important;
+	}
+	.fs-sm-53 {
+		font-size: 5.3rem !important;
+	}
+	.fs-sm-54 {
+		font-size: 5.4rem !important;
+	}
+	.fs-sm-55 {
+		font-size: 5.5rem !important;
+	}
+	.fs-sm-56 {
+		font-size: 5.6rem !important;
+	}
+	.fs-sm-57 {
+		font-size: 5.7rem !important;
+	}
+	.fs-sm-58 {
+		font-size: 5.8rem !important;
+	}
+	.fs-sm-59 {
+		font-size: 5.9rem !important;
+	}
+	.fs-sm-60 {
+		font-size: 6rem !important;
+	}
+	.fs-sm-61 {
+		font-size: 6.1rem !important;
+	}
+	.fs-sm-62 {
+		font-size: 6.2rem !important;
+	}
+	.fs-sm-63 {
+		font-size: 6.3rem !important;
+	}
+	.fs-sm-64 {
+		font-size: 6.4rem !important;
+	}
+	.fs-sm-65 {
+		font-size: 6.5rem !important;
+	}
+	.fs-sm-66 {
+		font-size: 6.6rem !important;
+	}
+	.fs-sm-67 {
+		font-size: 6.7rem !important;
+	}
+	.fs-sm-68 {
+		font-size: 6.8rem !important;
+	}
+	.fs-sm-69 {
+		font-size: 6.9rem !important;
+	}
+	.fs-sm-70 {
+		font-size: 7rem !important;
+	}
+	.fs-sm-71 {
+		font-size: 7.1rem !important;
+	}
+	.fs-sm-72 {
+		font-size: 7.2rem !important;
+	}
+	.fs-sm-73 {
+		font-size: 7.3rem !important;
+	}
+	.fs-sm-74 {
+		font-size: 7.4rem !important;
+	}
+	.fs-sm-75 {
+		font-size: 7.5rem !important;
+	}
+	.fs-sm-76 {
+		font-size: 7.6rem !important;
+	}
+	.fs-sm-77 {
+		font-size: 7.7rem !important;
+	}
+	.fs-sm-78 {
+		font-size: 7.8rem !important;
+	}
+	.fs-sm-79 {
+		font-size: 7.9rem !important;
+	}
+	.fs-sm-80 {
+		font-size: 8rem !important;
+	}
+	.fs-sm-81 {
+		font-size: 8.1rem !important;
+	}
+	.fs-sm-82 {
+		font-size: 8.2rem !important;
+	}
+	.fs-sm-83 {
+		font-size: 8.3rem !important;
+	}
+	.fs-sm-84 {
+		font-size: 8.4rem !important;
+	}
+	.fs-sm-85 {
+		font-size: 8.5rem !important;
+	}
+	.fs-sm-86 {
+		font-size: 8.6rem !important;
+	}
+	.fs-sm-87 {
+		font-size: 8.7rem !important;
+	}
+	.fs-sm-88 {
+		font-size: 8.8rem !important;
+	}
+	.fs-sm-89 {
+		font-size: 8.9rem !important;
+	}
+	.fs-sm-90 {
+		font-size: 9rem !important;
+	}
+	.fs-sm-91 {
+		font-size: 9.1rem !important;
+	}
+	.fs-sm-92 {
+		font-size: 9.2rem !important;
+	}
+	.fs-sm-93 {
+		font-size: 9.3rem !important;
+	}
+	.fs-sm-94 {
+		font-size: 9.4rem !important;
+	}
+	.fs-sm-95 {
+		font-size: 9.5rem !important;
+	}
+	.fs-sm-96 {
+		font-size: 9.6rem !important;
+	}
+	.fs-sm-97 {
+		font-size: 9.7rem !important;
+	}
+	.fs-sm-98 {
+		font-size: 9.8rem !important;
+	}
+	.fs-sm-99 {
+		font-size: 9.9rem !important;
+	}
+	.fs-sm-100 {
+		font-size: 10rem !important;
+	}
+	.fs-sm-101 {
+		font-size: 10.1rem !important;
+	}
+	.fs-sm-102 {
+		font-size: 10.2rem !important;
+	}
+	.fs-sm-103 {
+		font-size: 10.3rem !important;
+	}
+	.fs-sm-104 {
+		font-size: 10.4rem !important;
+	}
+	.fs-sm-105 {
+		font-size: 10.5rem !important;
+	}
+	.fs-sm-106 {
+		font-size: 10.6rem !important;
+	}
+	.fs-sm-107 {
+		font-size: 10.7rem !important;
+	}
+	.fs-sm-108 {
+		font-size: 10.8rem !important;
+	}
+	.fw-sm-0 {
+		font-weight: 0 !important;
+	}
+	.fw-sm-1 {
+		font-weight: 100 !important;
+	}
+	.fw-sm-2 {
+		font-weight: 200 !important;
+	}
+	.fw-sm-l {
+		font-weight: 300 !important;
+	}
+	.fw-sm-n {
+		font-weight: 400 !important;
+	}
+	.fw-sm-5 {
+		font-weight: 500 !important;
+	}
+	.fw-sm-6 {
+		font-weight: 600 !important;
+	}
+	.fw-sm-b {
+		font-weight: 700 !important;
+	}
+	.fw-sm-8 {
+		font-weight: 800 !important;
+	}
+	.fw-sm-9 {
+		font-weight: 900 !important;
+	}
+}
+@include mq(md) {
+	.t-md-s {
+		text-align: left !important;
+	}
+	.t-md-e {
+		text-align: right !important;
+	}
+	.t-md-c {
+		text-align: center !important;
+	}
+	.fs-md-0 {
+		font-size: 0 !important;
+	}
+	.fs-md-8 {
+		font-size: 0.8rem !important;
+	}
+	.fs-md-9 {
+		font-size: 0.9rem !important;
+	}
+	.fs-md-10 {
+		font-size: 1rem !important;
+	}
+	.fs-md-11 {
+		font-size: 1.1rem !important;
+	}
+	.fs-md-12 {
+		font-size: 1.2rem !important;
+	}
+	.fs-md-13 {
+		font-size: 1.3rem !important;
+	}
+	.fs-md-14 {
+		font-size: 1.4rem !important;
+	}
+	.fs-md-15 {
+		font-size: 1.5rem !important;
+	}
+	.fs-md-16 {
+		font-size: 1.6rem !important;
+	}
+	.fs-md-17 {
+		font-size: 1.7rem !important;
+	}
+	.fs-md-18 {
+		font-size: 1.8rem !important;
+	}
+	.fs-md-19 {
+		font-size: 1.9rem !important;
+	}
+	.fs-md-20 {
+		font-size: 2rem !important;
+	}
+	.fs-md-21 {
+		font-size: 2.1rem !important;
+	}
+	.fs-md-22 {
+		font-size: 2.2rem !important;
+	}
+	.fs-md-23 {
+		font-size: 2.3rem !important;
+	}
+	.fs-md-24 {
+		font-size: 2.4rem !important;
+	}
+	.fs-md-25 {
+		font-size: 2.5rem !important;
+	}
+	.fs-md-26 {
+		font-size: 2.6rem !important;
+	}
+	.fs-md-27 {
+		font-size: 2.7rem !important;
+	}
+	.fs-md-28 {
+		font-size: 2.8rem !important;
+	}
+	.fs-md-29 {
+		font-size: 2.9rem !important;
+	}
+	.fs-md-30 {
+		font-size: 3rem !important;
+	}
+	.fs-md-31 {
+		font-size: 3.1rem !important;
+	}
+	.fs-md-32 {
+		font-size: 3.2rem !important;
+	}
+	.fs-md-33 {
+		font-size: 3.3rem !important;
+	}
+	.fs-md-34 {
+		font-size: 3.4rem !important;
+	}
+	.fs-md-35 {
+		font-size: 3.5rem !important;
+	}
+	.fs-md-36 {
+		font-size: 3.6rem !important;
+	}
+	.fs-md-37 {
+		font-size: 3.7rem !important;
+	}
+	.fs-md-38 {
+		font-size: 3.8rem !important;
+	}
+	.fs-md-39 {
+		font-size: 3.9rem !important;
+	}
+	.fs-md-40 {
+		font-size: 4rem !important;
+	}
+	.fs-md-41 {
+		font-size: 4.1rem !important;
+	}
+	.fs-md-42 {
+		font-size: 4.2rem !important;
+	}
+	.fs-md-43 {
+		font-size: 4.3rem !important;
+	}
+	.fs-md-44 {
+		font-size: 4.4rem !important;
+	}
+	.fs-md-45 {
+		font-size: 4.5rem !important;
+	}
+	.fs-md-46 {
+		font-size: 4.6rem !important;
+	}
+	.fs-md-47 {
+		font-size: 4.7rem !important;
+	}
+	.fs-md-48 {
+		font-size: 4.8rem !important;
+	}
+	.fs-md-49 {
+		font-size: 4.9rem !important;
+	}
+	.fs-md-50 {
+		font-size: 5rem !important;
+	}
+	.fs-md-51 {
+		font-size: 5.1rem !important;
+	}
+	.fs-md-52 {
+		font-size: 5.2rem !important;
+	}
+	.fs-md-53 {
+		font-size: 5.3rem !important;
+	}
+	.fs-md-54 {
+		font-size: 5.4rem !important;
+	}
+	.fs-md-55 {
+		font-size: 5.5rem !important;
+	}
+	.fs-md-56 {
+		font-size: 5.6rem !important;
+	}
+	.fs-md-57 {
+		font-size: 5.7rem !important;
+	}
+	.fs-md-58 {
+		font-size: 5.8rem !important;
+	}
+	.fs-md-59 {
+		font-size: 5.9rem !important;
+	}
+	.fs-md-60 {
+		font-size: 6rem !important;
+	}
+	.fs-md-61 {
+		font-size: 6.1rem !important;
+	}
+	.fs-md-62 {
+		font-size: 6.2rem !important;
+	}
+	.fs-md-63 {
+		font-size: 6.3rem !important;
+	}
+	.fs-md-64 {
+		font-size: 6.4rem !important;
+	}
+	.fs-md-65 {
+		font-size: 6.5rem !important;
+	}
+	.fs-md-66 {
+		font-size: 6.6rem !important;
+	}
+	.fs-md-67 {
+		font-size: 6.7rem !important;
+	}
+	.fs-md-68 {
+		font-size: 6.8rem !important;
+	}
+	.fs-md-69 {
+		font-size: 6.9rem !important;
+	}
+	.fs-md-70 {
+		font-size: 7rem !important;
+	}
+	.fs-md-71 {
+		font-size: 7.1rem !important;
+	}
+	.fs-md-72 {
+		font-size: 7.2rem !important;
+	}
+	.fs-md-73 {
+		font-size: 7.3rem !important;
+	}
+	.fs-md-74 {
+		font-size: 7.4rem !important;
+	}
+	.fs-md-75 {
+		font-size: 7.5rem !important;
+	}
+	.fs-md-76 {
+		font-size: 7.6rem !important;
+	}
+	.fs-md-77 {
+		font-size: 7.7rem !important;
+	}
+	.fs-md-78 {
+		font-size: 7.8rem !important;
+	}
+	.fs-md-79 {
+		font-size: 7.9rem !important;
+	}
+	.fs-md-80 {
+		font-size: 8rem !important;
+	}
+	.fs-md-81 {
+		font-size: 8.1rem !important;
+	}
+	.fs-md-82 {
+		font-size: 8.2rem !important;
+	}
+	.fs-md-83 {
+		font-size: 8.3rem !important;
+	}
+	.fs-md-84 {
+		font-size: 8.4rem !important;
+	}
+	.fs-md-85 {
+		font-size: 8.5rem !important;
+	}
+	.fs-md-86 {
+		font-size: 8.6rem !important;
+	}
+	.fs-md-87 {
+		font-size: 8.7rem !important;
+	}
+	.fs-md-88 {
+		font-size: 8.8rem !important;
+	}
+	.fs-md-89 {
+		font-size: 8.9rem !important;
+	}
+	.fs-md-90 {
+		font-size: 9rem !important;
+	}
+	.fs-md-91 {
+		font-size: 9.1rem !important;
+	}
+	.fs-md-92 {
+		font-size: 9.2rem !important;
+	}
+	.fs-md-93 {
+		font-size: 9.3rem !important;
+	}
+	.fs-md-94 {
+		font-size: 9.4rem !important;
+	}
+	.fs-md-95 {
+		font-size: 9.5rem !important;
+	}
+	.fs-md-96 {
+		font-size: 9.6rem !important;
+	}
+	.fs-md-97 {
+		font-size: 9.7rem !important;
+	}
+	.fs-md-98 {
+		font-size: 9.8rem !important;
+	}
+	.fs-md-99 {
+		font-size: 9.9rem !important;
+	}
+	.fs-md-100 {
+		font-size: 10rem !important;
+	}
+	.fs-md-101 {
+		font-size: 10.1rem !important;
+	}
+	.fs-md-102 {
+		font-size: 10.2rem !important;
+	}
+	.fs-md-103 {
+		font-size: 10.3rem !important;
+	}
+	.fs-md-104 {
+		font-size: 10.4rem !important;
+	}
+	.fs-md-105 {
+		font-size: 10.5rem !important;
+	}
+	.fs-md-106 {
+		font-size: 10.6rem !important;
+	}
+	.fs-md-107 {
+		font-size: 10.7rem !important;
+	}
+	.fs-md-108 {
+		font-size: 10.8rem !important;
+	}
+	.fw-md-0 {
+		font-weight: 0 !important;
+	}
+	.fw-md-1 {
+		font-weight: 100 !important;
+	}
+	.fw-md-2 {
+		font-weight: 200 !important;
+	}
+	.fw-md-l {
+		font-weight: 300 !important;
+	}
+	.fw-md-n {
+		font-weight: 400 !important;
+	}
+	.fw-md-5 {
+		font-weight: 500 !important;
+	}
+	.fw-md-6 {
+		font-weight: 600 !important;
+	}
+	.fw-md-b {
+		font-weight: 700 !important;
+	}
+	.fw-md-8 {
+		font-weight: 800 !important;
+	}
+	.fw-md-9 {
+		font-weight: 900 !important;
+	}
+}
+@include mq(lg) {
+	.t-lg-s {
+		text-align: left !important;
+	}
+	.t-lg-e {
+		text-align: right !important;
+	}
+	.t-lg-c {
+		text-align: center !important;
+	}
+	.fs-lg-0 {
+		font-size: 0 !important;
+	}
+	.fs-lg-8 {
+		font-size: 0.8rem !important;
+	}
+	.fs-lg-9 {
+		font-size: 0.9rem !important;
+	}
+	.fs-lg-10 {
+		font-size: 1rem !important;
+	}
+	.fs-lg-11 {
+		font-size: 1.1rem !important;
+	}
+	.fs-lg-12 {
+		font-size: 1.2rem !important;
+	}
+	.fs-lg-13 {
+		font-size: 1.3rem !important;
+	}
+	.fs-lg-14 {
+		font-size: 1.4rem !important;
+	}
+	.fs-lg-15 {
+		font-size: 1.5rem !important;
+	}
+	.fs-lg-16 {
+		font-size: 1.6rem !important;
+	}
+	.fs-lg-17 {
+		font-size: 1.7rem !important;
+	}
+	.fs-lg-18 {
+		font-size: 1.8rem !important;
+	}
+	.fs-lg-19 {
+		font-size: 1.9rem !important;
+	}
+	.fs-lg-20 {
+		font-size: 2rem !important;
+	}
+	.fs-lg-21 {
+		font-size: 2.1rem !important;
+	}
+	.fs-lg-22 {
+		font-size: 2.2rem !important;
+	}
+	.fs-lg-23 {
+		font-size: 2.3rem !important;
+	}
+	.fs-lg-24 {
+		font-size: 2.4rem !important;
+	}
+	.fs-lg-25 {
+		font-size: 2.5rem !important;
+	}
+	.fs-lg-26 {
+		font-size: 2.6rem !important;
+	}
+	.fs-lg-27 {
+		font-size: 2.7rem !important;
+	}
+	.fs-lg-28 {
+		font-size: 2.8rem !important;
+	}
+	.fs-lg-29 {
+		font-size: 2.9rem !important;
+	}
+	.fs-lg-30 {
+		font-size: 3rem !important;
+	}
+	.fs-lg-31 {
+		font-size: 3.1rem !important;
+	}
+	.fs-lg-32 {
+		font-size: 3.2rem !important;
+	}
+	.fs-lg-33 {
+		font-size: 3.3rem !important;
+	}
+	.fs-lg-34 {
+		font-size: 3.4rem !important;
+	}
+	.fs-lg-35 {
+		font-size: 3.5rem !important;
+	}
+	.fs-lg-36 {
+		font-size: 3.6rem !important;
+	}
+	.fs-lg-37 {
+		font-size: 3.7rem !important;
+	}
+	.fs-lg-38 {
+		font-size: 3.8rem !important;
+	}
+	.fs-lg-39 {
+		font-size: 3.9rem !important;
+	}
+	.fs-lg-40 {
+		font-size: 4rem !important;
+	}
+	.fs-lg-41 {
+		font-size: 4.1rem !important;
+	}
+	.fs-lg-42 {
+		font-size: 4.2rem !important;
+	}
+	.fs-lg-43 {
+		font-size: 4.3rem !important;
+	}
+	.fs-lg-44 {
+		font-size: 4.4rem !important;
+	}
+	.fs-lg-45 {
+		font-size: 4.5rem !important;
+	}
+	.fs-lg-46 {
+		font-size: 4.6rem !important;
+	}
+	.fs-lg-47 {
+		font-size: 4.7rem !important;
+	}
+	.fs-lg-48 {
+		font-size: 4.8rem !important;
+	}
+	.fs-lg-49 {
+		font-size: 4.9rem !important;
+	}
+	.fs-lg-50 {
+		font-size: 5rem !important;
+	}
+	.fs-lg-51 {
+		font-size: 5.1rem !important;
+	}
+	.fs-lg-52 {
+		font-size: 5.2rem !important;
+	}
+	.fs-lg-53 {
+		font-size: 5.3rem !important;
+	}
+	.fs-lg-54 {
+		font-size: 5.4rem !important;
+	}
+	.fs-lg-55 {
+		font-size: 5.5rem !important;
+	}
+	.fs-lg-56 {
+		font-size: 5.6rem !important;
+	}
+	.fs-lg-57 {
+		font-size: 5.7rem !important;
+	}
+	.fs-lg-58 {
+		font-size: 5.8rem !important;
+	}
+	.fs-lg-59 {
+		font-size: 5.9rem !important;
+	}
+	.fs-lg-60 {
+		font-size: 6rem !important;
+	}
+	.fs-lg-61 {
+		font-size: 6.1rem !important;
+	}
+	.fs-lg-62 {
+		font-size: 6.2rem !important;
+	}
+	.fs-lg-63 {
+		font-size: 6.3rem !important;
+	}
+	.fs-lg-64 {
+		font-size: 6.4rem !important;
+	}
+	.fs-lg-65 {
+		font-size: 6.5rem !important;
+	}
+	.fs-lg-66 {
+		font-size: 6.6rem !important;
+	}
+	.fs-lg-67 {
+		font-size: 6.7rem !important;
+	}
+	.fs-lg-68 {
+		font-size: 6.8rem !important;
+	}
+	.fs-lg-69 {
+		font-size: 6.9rem !important;
+	}
+	.fs-lg-70 {
+		font-size: 7rem !important;
+	}
+	.fs-lg-71 {
+		font-size: 7.1rem !important;
+	}
+	.fs-lg-72 {
+		font-size: 7.2rem !important;
+	}
+	.fs-lg-73 {
+		font-size: 7.3rem !important;
+	}
+	.fs-lg-74 {
+		font-size: 7.4rem !important;
+	}
+	.fs-lg-75 {
+		font-size: 7.5rem !important;
+	}
+	.fs-lg-76 {
+		font-size: 7.6rem !important;
+	}
+	.fs-lg-77 {
+		font-size: 7.7rem !important;
+	}
+	.fs-lg-78 {
+		font-size: 7.8rem !important;
+	}
+	.fs-lg-79 {
+		font-size: 7.9rem !important;
+	}
+	.fs-lg-80 {
+		font-size: 8rem !important;
+	}
+	.fs-lg-81 {
+		font-size: 8.1rem !important;
+	}
+	.fs-lg-82 {
+		font-size: 8.2rem !important;
+	}
+	.fs-lg-83 {
+		font-size: 8.3rem !important;
+	}
+	.fs-lg-84 {
+		font-size: 8.4rem !important;
+	}
+	.fs-lg-85 {
+		font-size: 8.5rem !important;
+	}
+	.fs-lg-86 {
+		font-size: 8.6rem !important;
+	}
+	.fs-lg-87 {
+		font-size: 8.7rem !important;
+	}
+	.fs-lg-88 {
+		font-size: 8.8rem !important;
+	}
+	.fs-lg-89 {
+		font-size: 8.9rem !important;
+	}
+	.fs-lg-90 {
+		font-size: 9rem !important;
+	}
+	.fs-lg-91 {
+		font-size: 9.1rem !important;
+	}
+	.fs-lg-92 {
+		font-size: 9.2rem !important;
+	}
+	.fs-lg-93 {
+		font-size: 9.3rem !important;
+	}
+	.fs-lg-94 {
+		font-size: 9.4rem !important;
+	}
+	.fs-lg-95 {
+		font-size: 9.5rem !important;
+	}
+	.fs-lg-96 {
+		font-size: 9.6rem !important;
+	}
+	.fs-lg-97 {
+		font-size: 9.7rem !important;
+	}
+	.fs-lg-98 {
+		font-size: 9.8rem !important;
+	}
+	.fs-lg-99 {
+		font-size: 9.9rem !important;
+	}
+	.fs-lg-100 {
+		font-size: 10rem !important;
+	}
+	.fs-lg-101 {
+		font-size: 10.1rem !important;
+	}
+	.fs-lg-102 {
+		font-size: 10.2rem !important;
+	}
+	.fs-lg-103 {
+		font-size: 10.3rem !important;
+	}
+	.fs-lg-104 {
+		font-size: 10.4rem !important;
+	}
+	.fs-lg-105 {
+		font-size: 10.5rem !important;
+	}
+	.fs-lg-106 {
+		font-size: 10.6rem !important;
+	}
+	.fs-lg-107 {
+		font-size: 10.7rem !important;
+	}
+	.fs-lg-108 {
+		font-size: 10.8rem !important;
+	}
+	.fw-lg-0 {
+		font-weight: 0 !important;
+	}
+	.fw-lg-1 {
+		font-weight: 100 !important;
+	}
+	.fw-lg-2 {
+		font-weight: 200 !important;
+	}
+	.fw-lg-l {
+		font-weight: 300 !important;
+	}
+	.fw-lg-n {
+		font-weight: 400 !important;
+	}
+	.fw-lg-5 {
+		font-weight: 500 !important;
+	}
+	.fw-lg-6 {
+		font-weight: 600 !important;
+	}
+	.fw-lg-b {
+		font-weight: 700 !important;
+	}
+	.fw-lg-8 {
+		font-weight: 800 !important;
+	}
+	.fw-lg-9 {
+		font-weight: 900 !important;
+	}
+}
+@include mq(xl) {
+	.t-xl-s {
+		text-align: left !important;
+	}
+	.t-xl-e {
+		text-align: right !important;
+	}
+	.t-xl-c {
+		text-align: center !important;
+	}
+
+	.fs-xl-0 {
+		font-size: 0 !important;
+	}
+	.fs-xl-8 {
+		font-size: 0.8rem !important;
+	}
+	.fs-xl-9 {
+		font-size: 0.9rem !important;
+	}
+	.fs-xl-10 {
+		font-size: 1rem !important;
+	}
+	.fs-xl-11 {
+		font-size: 1.1rem !important;
+	}
+	.fs-xl-12 {
+		font-size: 1.2rem !important;
+	}
+	.fs-xl-13 {
+		font-size: 1.3rem !important;
+	}
+	.fs-xl-14 {
+		font-size: 1.4rem !important;
+	}
+	.fs-xl-15 {
+		font-size: 1.5rem !important;
+	}
+	.fs-xl-16 {
+		font-size: 1.6rem !important;
+	}
+	.fs-xl-17 {
+		font-size: 1.7rem !important;
+	}
+	.fs-xl-18 {
+		font-size: 1.8rem !important;
+	}
+	.fs-xl-19 {
+		font-size: 1.9rem !important;
+	}
+	.fs-xl-20 {
+		font-size: 2rem !important;
+	}
+	.fs-xl-21 {
+		font-size: 2.1rem !important;
+	}
+	.fs-xl-22 {
+		font-size: 2.2rem !important;
+	}
+	.fs-xl-23 {
+		font-size: 2.3rem !important;
+	}
+	.fs-xl-24 {
+		font-size: 2.4rem !important;
+	}
+	.fs-xl-25 {
+		font-size: 2.5rem !important;
+	}
+	.fs-xl-26 {
+		font-size: 2.6rem !important;
+	}
+	.fs-xl-27 {
+		font-size: 2.7rem !important;
+	}
+	.fs-xl-28 {
+		font-size: 2.8rem !important;
+	}
+	.fs-xl-29 {
+		font-size: 2.9rem !important;
+	}
+	.fs-xl-30 {
+		font-size: 3rem !important;
+	}
+	.fs-xl-31 {
+		font-size: 3.1rem !important;
+	}
+	.fs-xl-32 {
+		font-size: 3.2rem !important;
+	}
+	.fs-xl-33 {
+		font-size: 3.3rem !important;
+	}
+	.fs-xl-34 {
+		font-size: 3.4rem !important;
+	}
+	.fs-xl-35 {
+		font-size: 3.5rem !important;
+	}
+	.fs-xl-36 {
+		font-size: 3.6rem !important;
+	}
+	.fs-xl-37 {
+		font-size: 3.7rem !important;
+	}
+	.fs-xl-38 {
+		font-size: 3.8rem !important;
+	}
+	.fs-xl-39 {
+		font-size: 3.9rem !important;
+	}
+	.fs-xl-40 {
+		font-size: 4rem !important;
+	}
+	.fs-xl-41 {
+		font-size: 4.1rem !important;
+	}
+	.fs-xl-42 {
+		font-size: 4.2rem !important;
+	}
+	.fs-xl-43 {
+		font-size: 4.3rem !important;
+	}
+	.fs-xl-44 {
+		font-size: 4.4rem !important;
+	}
+	.fs-xl-45 {
+		font-size: 4.5rem !important;
+	}
+	.fs-xl-46 {
+		font-size: 4.6rem !important;
+	}
+	.fs-xl-47 {
+		font-size: 4.7rem !important;
+	}
+	.fs-xl-48 {
+		font-size: 4.8rem !important;
+	}
+	.fs-xl-49 {
+		font-size: 4.9rem !important;
+	}
+	.fs-xl-50 {
+		font-size: 5rem !important;
+	}
+	.fs-xl-51 {
+		font-size: 5.1rem !important;
+	}
+	.fs-xl-52 {
+		font-size: 5.2rem !important;
+	}
+	.fs-xl-53 {
+		font-size: 5.3rem !important;
+	}
+	.fs-xl-54 {
+		font-size: 5.4rem !important;
+	}
+	.fs-xl-55 {
+		font-size: 5.5rem !important;
+	}
+	.fs-xl-56 {
+		font-size: 5.6rem !important;
+	}
+	.fs-xl-57 {
+		font-size: 5.7rem !important;
+	}
+	.fs-xl-58 {
+		font-size: 5.8rem !important;
+	}
+	.fs-xl-59 {
+		font-size: 5.9rem !important;
+	}
+	.fs-xl-60 {
+		font-size: 6rem !important;
+	}
+	.fs-xl-61 {
+		font-size: 6.1rem !important;
+	}
+	.fs-xl-62 {
+		font-size: 6.2rem !important;
+	}
+	.fs-xl-63 {
+		font-size: 6.3rem !important;
+	}
+	.fs-xl-64 {
+		font-size: 6.4rem !important;
+	}
+	.fs-xl-65 {
+		font-size: 6.5rem !important;
+	}
+	.fs-xl-66 {
+		font-size: 6.6rem !important;
+	}
+	.fs-xl-67 {
+		font-size: 6.7rem !important;
+	}
+	.fs-xl-68 {
+		font-size: 6.8rem !important;
+	}
+	.fs-xl-69 {
+		font-size: 6.9rem !important;
+	}
+	.fs-xl-70 {
+		font-size: 7rem !important;
+	}
+	.fs-xl-71 {
+		font-size: 7.1rem !important;
+	}
+	.fs-xl-72 {
+		font-size: 7.2rem !important;
+	}
+	.fs-xl-73 {
+		font-size: 7.3rem !important;
+	}
+	.fs-xl-74 {
+		font-size: 7.4rem !important;
+	}
+	.fs-xl-75 {
+		font-size: 7.5rem !important;
+	}
+	.fs-xl-76 {
+		font-size: 7.6rem !important;
+	}
+	.fs-xl-77 {
+		font-size: 7.7rem !important;
+	}
+	.fs-xl-78 {
+		font-size: 7.8rem !important;
+	}
+	.fs-xl-79 {
+		font-size: 7.9rem !important;
+	}
+	.fs-xl-80 {
+		font-size: 8rem !important;
+	}
+	.fs-xl-81 {
+		font-size: 8.1rem !important;
+	}
+	.fs-xl-82 {
+		font-size: 8.2rem !important;
+	}
+	.fs-xl-83 {
+		font-size: 8.3rem !important;
+	}
+	.fs-xl-84 {
+		font-size: 8.4rem !important;
+	}
+	.fs-xl-85 {
+		font-size: 8.5rem !important;
+	}
+	.fs-xl-86 {
+		font-size: 8.6rem !important;
+	}
+	.fs-xl-87 {
+		font-size: 8.7rem !important;
+	}
+	.fs-xl-88 {
+		font-size: 8.8rem !important;
+	}
+	.fs-xl-89 {
+		font-size: 8.9rem !important;
+	}
+	.fs-xl-90 {
+		font-size: 9rem !important;
+	}
+	.fs-xl-91 {
+		font-size: 9.1rem !important;
+	}
+	.fs-xl-92 {
+		font-size: 9.2rem !important;
+	}
+	.fs-xl-93 {
+		font-size: 9.3rem !important;
+	}
+	.fs-xl-94 {
+		font-size: 9.4rem !important;
+	}
+	.fs-xl-95 {
+		font-size: 9.5rem !important;
+	}
+	.fs-xl-96 {
+		font-size: 9.6rem !important;
+	}
+	.fs-xl-97 {
+		font-size: 9.7rem !important;
+	}
+	.fs-xl-98 {
+		font-size: 9.8rem !important;
+	}
+	.fs-xl-99 {
+		font-size: 9.9rem !important;
+	}
+	.fs-xl-100 {
+		font-size: 10rem !important;
+	}
+	.fs-xl-101 {
+		font-size: 10.1rem !important;
+	}
+	.fs-xl-102 {
+		font-size: 10.2rem !important;
+	}
+	.fs-xl-103 {
+		font-size: 10.3rem !important;
+	}
+	.fs-xl-104 {
+		font-size: 10.4rem !important;
+	}
+	.fs-xl-105 {
+		font-size: 10.5rem !important;
+	}
+	.fs-xl-106 {
+		font-size: 10.6rem !important;
+	}
+	.fs-xl-107 {
+		font-size: 10.7rem !important;
+	}
+	.fs-xl-108 {
+		font-size: 10.8rem !important;
+	}
+	.fw-xl-0 {
+		font-weight: 0 !important;
+	}
+	.fw-xl-1 {
+		font-weight: 100 !important;
+	}
+	.fw-xl-2 {
+		font-weight: 200 !important;
+	}
+	.fw-xl-l {
+		font-weight: 300 !important;
+	}
+	.fw-xl-n {
+		font-weight: 400 !important;
+	}
+	.fw-xl-5 {
+		font-weight: 500 !important;
+	}
+	.fw-xl-6 {
+		font-weight: 600 !important;
+	}
+	.fw-xl-b {
+		font-weight: 700 !important;
+	}
+	.fw-xl-8 {
+		font-weight: 800 !important;
+	}
+	.fw-xl-9 {
+		font-weight: 900 !important;
+	}
+}
+@include mq(xxl) {
+	.t-xxl-s {
+		text-align: left !important;
+	}
+	.t-xxl-e {
+		text-align: right !important;
+	}
+	.t-xxl-c {
+		text-align: center !important;
+	}
+	.fs-xxl-0 {
+		font-size: 0 !important;
+	}
+	.fs-xxl-8 {
+		font-size: 0.8rem !important;
+	}
+	.fs-xxl-9 {
+		font-size: 0.9rem !important;
+	}
+	.fs-xxl-10 {
+		font-size: 1rem !important;
+	}
+	.fs-xxl-11 {
+		font-size: 1.1rem !important;
+	}
+	.fs-xxl-12 {
+		font-size: 1.2rem !important;
+	}
+	.fs-xxl-13 {
+		font-size: 1.3rem !important;
+	}
+	.fs-xxl-14 {
+		font-size: 1.4rem !important;
+	}
+	.fs-xxl-15 {
+		font-size: 1.5rem !important;
+	}
+	.fs-xxl-16 {
+		font-size: 1.6rem !important;
+	}
+	.fs-xxl-17 {
+		font-size: 1.7rem !important;
+	}
+	.fs-xxl-18 {
+		font-size: 1.8rem !important;
+	}
+	.fs-xxl-19 {
+		font-size: 1.9rem !important;
+	}
+	.fs-xxl-20 {
+		font-size: 2rem !important;
+	}
+	.fs-xxl-21 {
+		font-size: 2.1rem !important;
+	}
+	.fs-xxl-22 {
+		font-size: 2.2rem !important;
+	}
+	.fs-xxl-23 {
+		font-size: 2.3rem !important;
+	}
+	.fs-xxl-24 {
+		font-size: 2.4rem !important;
+	}
+	.fs-xxl-25 {
+		font-size: 2.5rem !important;
+	}
+	.fs-xxl-26 {
+		font-size: 2.6rem !important;
+	}
+	.fs-xxl-27 {
+		font-size: 2.7rem !important;
+	}
+	.fs-xxl-28 {
+		font-size: 2.8rem !important;
+	}
+	.fs-xxl-29 {
+		font-size: 2.9rem !important;
+	}
+	.fs-xxl-30 {
+		font-size: 3rem !important;
+	}
+	.fs-xxl-31 {
+		font-size: 3.1rem !important;
+	}
+	.fs-xxl-32 {
+		font-size: 3.2rem !important;
+	}
+	.fs-xxl-33 {
+		font-size: 3.3rem !important;
+	}
+	.fs-xxl-34 {
+		font-size: 3.4rem !important;
+	}
+	.fs-xxl-35 {
+		font-size: 3.5rem !important;
+	}
+	.fs-xxl-36 {
+		font-size: 3.6rem !important;
+	}
+	.fs-xxl-37 {
+		font-size: 3.7rem !important;
+	}
+	.fs-xxl-38 {
+		font-size: 3.8rem !important;
+	}
+	.fs-xxl-39 {
+		font-size: 3.9rem !important;
+	}
+	.fs-xxl-40 {
+		font-size: 4rem !important;
+	}
+	.fs-xxl-41 {
+		font-size: 4.1rem !important;
+	}
+	.fs-xxl-42 {
+		font-size: 4.2rem !important;
+	}
+	.fs-xxl-43 {
+		font-size: 4.3rem !important;
+	}
+	.fs-xxl-44 {
+		font-size: 4.4rem !important;
+	}
+	.fs-xxl-45 {
+		font-size: 4.5rem !important;
+	}
+	.fs-xxl-46 {
+		font-size: 4.6rem !important;
+	}
+	.fs-xxl-47 {
+		font-size: 4.7rem !important;
+	}
+	.fs-xxl-48 {
+		font-size: 4.8rem !important;
+	}
+	.fs-xxl-49 {
+		font-size: 4.9rem !important;
+	}
+	.fs-xxl-50 {
+		font-size: 5rem !important;
+	}
+	.fs-xxl-51 {
+		font-size: 5.1rem !important;
+	}
+	.fs-xxl-52 {
+		font-size: 5.2rem !important;
+	}
+	.fs-xxl-53 {
+		font-size: 5.3rem !important;
+	}
+	.fs-xxl-54 {
+		font-size: 5.4rem !important;
+	}
+	.fs-xxl-55 {
+		font-size: 5.5rem !important;
+	}
+	.fs-xxl-56 {
+		font-size: 5.6rem !important;
+	}
+	.fs-xxl-57 {
+		font-size: 5.7rem !important;
+	}
+	.fs-xxl-58 {
+		font-size: 5.8rem !important;
+	}
+	.fs-xxl-59 {
+		font-size: 5.9rem !important;
+	}
+	.fs-xxl-60 {
+		font-size: 6rem !important;
+	}
+	.fs-xxl-61 {
+		font-size: 6.1rem !important;
+	}
+	.fs-xxl-62 {
+		font-size: 6.2rem !important;
+	}
+	.fs-xxl-63 {
+		font-size: 6.3rem !important;
+	}
+	.fs-xxl-64 {
+		font-size: 6.4rem !important;
+	}
+	.fs-xxl-65 {
+		font-size: 6.5rem !important;
+	}
+	.fs-xxl-66 {
+		font-size: 6.6rem !important;
+	}
+	.fs-xxl-67 {
+		font-size: 6.7rem !important;
+	}
+	.fs-xxl-68 {
+		font-size: 6.8rem !important;
+	}
+	.fs-xxl-69 {
+		font-size: 6.9rem !important;
+	}
+	.fs-xxl-70 {
+		font-size: 7rem !important;
+	}
+	.fs-xxl-71 {
+		font-size: 7.1rem !important;
+	}
+	.fs-xxl-72 {
+		font-size: 7.2rem !important;
+	}
+	.fs-xxl-73 {
+		font-size: 7.3rem !important;
+	}
+	.fs-xxl-74 {
+		font-size: 7.4rem !important;
+	}
+	.fs-xxl-75 {
+		font-size: 7.5rem !important;
+	}
+	.fs-xxl-76 {
+		font-size: 7.6rem !important;
+	}
+	.fs-xxl-77 {
+		font-size: 7.7rem !important;
+	}
+	.fs-xxl-78 {
+		font-size: 7.8rem !important;
+	}
+	.fs-xxl-79 {
+		font-size: 7.9rem !important;
+	}
+	.fs-xxl-80 {
+		font-size: 8rem !important;
+	}
+	.fs-xxl-81 {
+		font-size: 8.1rem !important;
+	}
+	.fs-xxl-82 {
+		font-size: 8.2rem !important;
+	}
+	.fs-xxl-83 {
+		font-size: 8.3rem !important;
+	}
+	.fs-xxl-84 {
+		font-size: 8.4rem !important;
+	}
+	.fs-xxl-85 {
+		font-size: 8.5rem !important;
+	}
+	.fs-xxl-86 {
+		font-size: 8.6rem !important;
+	}
+	.fs-xxl-87 {
+		font-size: 8.7rem !important;
+	}
+	.fs-xxl-88 {
+		font-size: 8.8rem !important;
+	}
+	.fs-xxl-89 {
+		font-size: 8.9rem !important;
+	}
+	.fs-xxl-90 {
+		font-size: 9rem !important;
+	}
+	.fs-xxl-91 {
+		font-size: 9.1rem !important;
+	}
+	.fs-xxl-92 {
+		font-size: 9.2rem !important;
+	}
+	.fs-xxl-93 {
+		font-size: 9.3rem !important;
+	}
+	.fs-xxl-94 {
+		font-size: 9.4rem !important;
+	}
+	.fs-xxl-95 {
+		font-size: 9.5rem !important;
+	}
+	.fs-xxl-96 {
+		font-size: 9.6rem !important;
+	}
+	.fs-xxl-97 {
+		font-size: 9.7rem !important;
+	}
+	.fs-xxl-98 {
+		font-size: 9.8rem !important;
+	}
+	.fs-xxl-99 {
+		font-size: 9.9rem !important;
+	}
+	.fs-xxl-100 {
+		font-size: 10rem !important;
+	}
+	.fs-xxl-101 {
+		font-size: 10.1rem !important;
+	}
+	.fs-xxl-102 {
+		font-size: 10.2rem !important;
+	}
+	.fs-xxl-103 {
+		font-size: 10.3rem !important;
+	}
+	.fs-xxl-104 {
+		font-size: 10.4rem !important;
+	}
+	.fs-xxl-105 {
+		font-size: 10.5rem !important;
+	}
+	.fs-xxl-106 {
+		font-size: 10.6rem !important;
+	}
+	.fs-xxl-107 {
+		font-size: 10.7rem !important;
+	}
+	.fs-xxl-108 {
+		font-size: 10.8rem !important;
+	}
+	.fw-xxl-0 {
+		font-weight: 0 !important;
+	}
+	.fw-xxl-1 {
+		font-weight: 100 !important;
+	}
+	.fw-xxl-2 {
+		font-weight: 200 !important;
+	}
+	.fw-xxl-l {
+		font-weight: 300 !important;
+	}
+	.fw-xxl-n {
+		font-weight: 400 !important;
+	}
+	.fw-xxl-5 {
+		font-weight: 500 !important;
+	}
+	.fw-xxl-6 {
+		font-weight: 600 !important;
+	}
+	.fw-xxl-b {
+		font-weight: 700 !important;
+	}
+	.fw-xxl-8 {
+		font-weight: 800 !important;
+	}
+	.fw-xxl-9 {
+		font-weight: 900 !important;
+	}
+}

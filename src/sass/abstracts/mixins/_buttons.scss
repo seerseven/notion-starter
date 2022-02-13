@@ -1,0 +1,122 @@
+// # Btn style mixin
+
+@use '../variables' as *;
+@use './transition' as *;
+
+// Used to create generic button styles
+// Usage example :
+// ```scss
+// @use "mixins/btn-styles" as *;
+//
+// .base-btn {
+//   @include btn-styles(white, black);
+// }
+// ```
+
+// Please update, add or remove the styles below to match the project needs.
+
+@mixin btn-styles(
+	$color,
+	$background-color,
+	$block-selector: selector.$default-button
+) {
+	// Add your custom styles here
+	background-color: $background-color;
+	color: $color;
+
+	&:hover,
+	&#{$block-selector}--hovered {
+		// Add your custom styles here
+	}
+	&:focus,
+	&#{$block-selector}--focused {
+		// Add your custom styles here
+	}
+
+	&:active,
+	&#{$block-selector}--activated {
+		// Add your custom styles here
+	}
+
+	&[disabled],
+	&#{$block-selector}--disabled {
+		// Add your custom styles here
+	}
+}
+
+@mixin btn($btn-bg-color, $btn-txt-color) {
+	display: block;
+	border-radius: 10rem;
+	border: 2px solid $btn-bg-color;
+	background-color: $btn-bg-color;
+	color: $btn-txt-color;
+	@extend .phase;
+
+	&:hover {
+		border: 2px solid $btn-bg-color;
+		background-color: transparent;
+		color: $btn-bg-color;
+		@extend .phase;
+	}
+}
+
+//Outline 2 Color Button
+
+@mixin obtn($btn-bg-color, $btn-txt-color) {
+	display: block;
+	border-radius: 10rem;
+	border: 2px solid $btn-bg-color;
+	background-color: transparent;
+	color: $btn-bg-color;
+	@extend .phase;
+
+	&:hover {
+		border: 2px solid $btn-bg-color;
+		background-color: $btn-bg-color;
+		color: $btn-txt-color;
+		@extend .phase;
+	}
+}
+
+//Master Any Color Button
+@mixin mbtn(
+	$btn-bg-color,
+	$btn-txt-color,
+	$btn-hbg-color,
+	$btn-htxt-color,
+	$btn-bdr-color: $btn-bg-color,
+	$btn-hbdr-color: $btn-hbg-color
+) {
+	display: block;
+	border-radius: 10rem;
+	background-color: $btn-bg-color;
+	color: $btn-txt-color;
+	border: 2px solid $btn-bdr-color;
+	@extend .phase;
+
+	&:hover {
+		background-color: $btn-hbg-color;
+		color: $btn-htxt-color;
+		border: 2px solid $btn-hbdr-color;
+		@extend .phase;
+	}
+}
+
+@mixin baseButton(
+	$btn-color: $buttonColor,
+	$bg-color: $buttonBGColor,
+	$btn-hover: $buttonHover,
+	$bg-hover: buttonBGColor
+) {
+	@include animate;
+	color: $btn-color !important;
+	background-color: $bg-color !important;
+	text-decoration: none;
+
+	&:hover {
+		@include animate;
+		color: $btn-hover !important;
+		background-color: $bg-hover !important;
+		text-decoration: none;
+	}
+}

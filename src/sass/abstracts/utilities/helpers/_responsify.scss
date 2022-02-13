@@ -1,0 +1,51 @@
+@use '../../functions' as *;
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+/*!
+ * RESPONSIV CLASS GENERATOR
+ * From postcss.config.js
+ * Uses Breakpoints.map in Variables/Maps.scss
+ */
+
+.insta-test {
+	sz: 400px;
+	radius: 50%;
+	border: 1px 2px 10px 4px#343434;
+	// @include blendsphere(circle at center, $hex, ease-in-out, $hex);
+	@include placeholder(500);
+}
+
+@reactive {
+	.placeholder {
+		@seer size(calc(100vh - 8vw));
+		bgc: $hexd;
+		overflow: visible;
+		c: $hexl;
+	}
+}
+
+@seerseven :--heading h1, h2, h3;
+
+:--heading {
+	fs: 40px;
+	bgc: hex(do00);
+	c: chex(do00) !important;
+	fw: 900;
+	decor: underline;
+	b: 3px solid $hex !important;
+	mar: 1rem;
+	pad: 1.5rem;
+}
+.fluid-test {
+	sz: 400px;
+	pad: 1rem fluid(10px, 20px) 2rem;
+	fs: fluid(16px, 30px);
+}
+.tipsy {
+	tipsy: n #34495e 5px 0;
+}
+
+.blur {
+	@include effect(4, 16px 16px 20px red);
+}

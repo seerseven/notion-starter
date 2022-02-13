@@ -1,0 +1,103 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	color: #fff;
+	font-family: sans-serif;
+	scroll-behavior: smooth;
+}
+
+.satori-section {
+	height: 100vh;
+	position: relative;
+
+	.satori-scroll {
+		@include scroll-button;
+	}
+}
+
+.section-negative {
+	@include sec-neg;
+}
+
+.hero-block {
+	width: 100%;
+	height: auto;
+
+	@include media(765px) {
+		height: calc(100vh + 94px);
+		max-height: 100%;
+		position: relative;
+	}
+}
+
+.content-block {
+	width: 100%;
+	height: auto;
+}
+
+.satori-image {
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.satori-hero-block {
+	@include media(765px) {
+		height: 100%;
+	}
+}
+
+#shopify-section-header {
+	will-change: transform;
+	z-index: 9999;
+}
+
+.satori-hero {
+	padding-top: 98px;
+}
+
+.scrollable-element {
+	scrollbar-color: dark;
+}
+
+#satoriBody {
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+.facon {
+	pointer-events: none;
+}
+
+
+
+.rale {
+	font-family: 'Josefin Sans', sans-serif !important;
+	font-weight: 400 !important;
+}
+.p-card {
+	word-wrap: break-word;
+	background-clip: border-box;
+	border: 1px solid rgba(0, 0, 0, 0.125);
+	border-radius: 0.25rem;
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	position: relative;
+	border: 0;
+	box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
+	display: block;
+	overflow: hidden;
+	text-decoration: none;
+}
+.shopify-policy__container {
+	max-width: 650px !important;
+	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding: 20px;
+}

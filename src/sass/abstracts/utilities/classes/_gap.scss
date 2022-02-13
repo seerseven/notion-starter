@@ -1,0 +1,222 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+/*--------------------------------
+/// FLEX && CSS GAP CLASSES ///
+----------------------------------*/
+
+@include mq(zx) {
+	.gap-0 {
+		gap: 0 !important;
+	}
+	.gap-1 {
+		gap: 0.25rem !important;
+	}
+	.gap-2 {
+		gap: 0.5rem !important;
+	}
+	.gap-3 {
+		gap: 1rem !important;
+	}
+	.gap-4 {
+		gap: 1.5rem !important;
+	}
+	.gap-5 {
+		gap: 3rem !important;
+	}
+	.gap-6 {
+		gap: 4.5rem !important;
+	}
+	.gap-7 {
+		gap: 6rem !important;
+	}
+	.gap-8 {
+		gap: 7.5rem !important;
+	}
+	.gap-9 {
+		gap: 9rem !important;
+	}
+	.gap-10 {
+		gap: 10.5rem !important;
+	}
+}
+
+@include mq(sm) {
+	.gap-sm-0 {
+		gap: 0 !important;
+	}
+	.gap-sm-1 {
+		gap: 0.25rem !important;
+	}
+	.gap-sm-2 {
+		gap: 0.5rem !important;
+	}
+	.gap-sm-3 {
+		gap: 1rem !important;
+	}
+	.gap-sm-4 {
+		gap: 1.5rem !important;
+	}
+	.gap-sm-5 {
+		gap: 3rem !important;
+	}
+	.gap-sm-6 {
+		gap: 4.5rem !important;
+	}
+	.gap-sm-7 {
+		gap: 6rem !important;
+	}
+	.gap-sm-8 {
+		gap: 7.5rem !important;
+	}
+	.gap-sm-9 {
+		gap: 9rem !important;
+	}
+	.gap-sm-10 {
+		gap: 10.5rem !important;
+	}
+}
+
+@include mq(md) {
+	.gap-md-0 {
+		gap: 0 !important;
+	}
+	.gap-md-1 {
+		gap: 0.25rem !important;
+	}
+	.gap-md-2 {
+		gap: 0.5rem !important;
+	}
+	.gap-md-3 {
+		gap: 1rem !important;
+	}
+	.gap-md-4 {
+		gap: 1.5rem !important;
+	}
+	.gap-md-5 {
+		gap: 3rem !important;
+	}
+	.gap-md-6 {
+		gap: 4.5rem !important;
+	}
+	.gap-md-7 {
+		gap: 6rem !important;
+	}
+	.gap-md-8 {
+		gap: 7.5rem !important;
+	}
+	.gap-md-9 {
+		gap: 9rem !important;
+	}
+	.gap-md-10 {
+		gap: 10.5rem !important;
+	}
+}
+
+@include mq(lg) {
+	.gap-lg-0 {
+		gap: 0 !important;
+	}
+	.gap-lg-1 {
+		gap: 0.25rem !important;
+	}
+	.gap-lg-2 {
+		gap: 0.5rem !important;
+	}
+	.gap-lg-3 {
+		gap: 1rem !important;
+	}
+	.gap-lg-4 {
+		gap: 1.5rem !important;
+	}
+	.gap-lg-5 {
+		gap: 3rem !important;
+	}
+	.gap-lg-6 {
+		gap: 4.5rem !important;
+	}
+	.gap-lg-7 {
+		gap: 6rem !important;
+	}
+	.gap-lg-8 {
+		gap: 7.5rem !important;
+	}
+	.gap-lg-9 {
+		gap: 9rem !important;
+	}
+	.gap-lg-10 {
+		gap: 10.5rem !important;
+	}
+}
+
+@include mq(xl) {
+	.gap-xl-0 {
+		gap: 0 !important;
+	}
+	.gap-xl-1 {
+		gap: 0.25rem !important;
+	}
+	.gap-xl-2 {
+		gap: 0.5rem !important;
+	}
+	.gap-xl-3 {
+		gap: 1rem !important;
+	}
+	.gap-xl-4 {
+		gap: 1.5rem !important;
+	}
+	.gap-xl-5 {
+		gap: 3rem !important;
+	}
+	.gap-xl-6 {
+		gap: 4.5rem !important;
+	}
+	.gap-xl-7 {
+		gap: 6rem !important;
+	}
+	.gap-xl-8 {
+		gap: 7.5rem !important;
+	}
+	.gap-xl-9 {
+		gap: 9rem !important;
+	}
+	.gap-xl-10 {
+		gap: 10.5rem !important;
+	}
+}
+
+@include mq(xxl) {
+	.gap-xxl-0 {
+		gap: 0 !important;
+	}
+	.gap-xxl-1 {
+		gap: 0.25rem !important;
+	}
+	.gap-xxl-2 {
+		gap: 0.5rem !important;
+	}
+	.gap-xxl-3 {
+		gap: 1rem !important;
+	}
+	.gap-xxl-4 {
+		gap: 1.5rem !important;
+	}
+	.gap-xxl-5 {
+		gap: 3rem !important;
+	}
+	.gap-xxl-6 {
+		gap: 4.5rem !important;
+	}
+	.gap-xxl-7 {
+		gap: 6rem !important;
+	}
+	.gap-xxl-8 {
+		gap: 7.5rem !important;
+	}
+	.gap-xxl-9 {
+		gap: 9rem !important;
+	}
+	.gap-xxl-10 {
+		gap: 10.5rem !important;
+	}
+}

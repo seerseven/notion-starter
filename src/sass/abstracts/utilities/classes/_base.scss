@@ -1,0 +1,206 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+/*-------------------------
+// BASE THEME CLASSES //
+--------------------------*/
+
+/*-------------------------
+// ASPECT RATIO CLASSES //
+--------------------------*/
+.ratio {
+	position: relative;
+	width: 100%;
+}
+.ratio:before {
+	display: block;
+	padding-top: var(--bs-aspect-ratio);
+	content: '';
+}
+.ratio > * {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.ratio-1x1 {
+	--bs-aspect-ratio: 100%;
+}
+.ratio-4x3 {
+	--bs-aspect-ratio: 75%;
+}
+.ratio-16x9 {
+	--bs-aspect-ratio: 56.25%;
+}
+.ratio-21x9 {
+	--bs-aspect-ratio: 42.8571428571%;
+}
+
+/*-------------------------
+// TRANSLATE CLASSES //
+--------------------------*/
+
+.translate-middle {
+	transform: translate(-50%, -50%) !important;
+}
+.translate-middle-x {
+	transform: translateX(-50%) !important;
+}
+.translate-middle-y {
+	transform: translateY(-50%) !important;
+}
+
+/*--------------
+// ALIGNMENT //
+---------------*/
+
+.align-baseline {
+	vertical-align: baseline !important;
+}
+.align-top {
+	vertical-align: top !important;
+}
+.align-middle {
+	vertical-align: middle !important;
+}
+.align-bottom {
+	vertical-align: bottom !important;
+}
+.align-text-bottom {
+	vertical-align: text-bottom !important;
+}
+.align-text-top {
+	vertical-align: text-top !important;
+}
+
+/*-------------------------
+// USER AND CURSOR //
+--------------------------*/
+
+.cursor-auto {
+	cursor: auto !important;
+}
+.cursor-pointer {
+	cursor: pointer !important;
+}
+.cursor-grab {
+	cursor: grab !important;
+}
+.overflow-auto {
+	overflow: auto !important;
+}
+.overflow-hidden {
+	overflow: hidden !important;
+}
+.overflow-visible {
+	overflow: visible !important;
+}
+.overflow-scroll {
+	overflow: scroll !important;
+}
+.user-select-all {
+	user-select: all !important;
+}
+.user-select-auto {
+	user-select: auto !important;
+}
+.user-select-none {
+	user-select: none !important;
+}
+.pe-none {
+	pointer-events: none !important;
+}
+.pe-auto {
+	pointer-events: auto !important;
+}
+
+/*-------------------------
+// BOX SHADOW CLASSES //
+--------------------------*/
+.shadow {
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+.shadow-sm {
+	box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+.shadow-lg {
+	box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+.shadow-none {
+	box-shadow: none !important;
+}
+
+/*-------------------------
+// FLOAT && CLEAR CLASSES //
+--------------------------*/
+.clearfix:after {
+	display: block;
+	clear: both;
+	content: '';
+}
+.float-start {
+	float: left !important;
+}
+.float-end {
+	float: right !important;
+}
+.float-none {
+	float: none !important;
+}
+
+@include mq(sm) {
+	.float-sm-start {
+		float: left !important;
+	}
+	.float-sm-end {
+		float: right !important;
+	}
+	.float-sm-none {
+		float: none !important;
+	}
+}
+@include mq(md) {
+	.float-md-start {
+		float: left !important;
+	}
+	.float-md-end {
+		float: right !important;
+	}
+	.float-md-none {
+		float: none !important;
+	}
+}
+@include mq(lg) {
+	.float-lg-start {
+		float: left !important;
+	}
+	.float-lg-end {
+		float: right !important;
+	}
+	.float-lg-none {
+		float: none !important;
+	}
+}
+@include mq(xl) {
+	.float-xl-start {
+		float: left !important;
+	}
+	.float-xl-end {
+		float: right !important;
+	}
+	.float-xl-none {
+		float: none !important;
+	}
+}
+@include mq(xxl) {
+	.float-xxl-start {
+		float: left !important;
+	}
+	.float-xxl-end {
+		float: right !important;
+	}
+	.float-xxl-none {
+		float: none !important;
+	}
+}

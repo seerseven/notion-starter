@@ -1,0 +1,369 @@
+/*// RANDOM COLOR GENERATOR VARIABLES */
+$hex: randomColor;
+$hexl: randomColor(light);
+$hexd: randomColor(dark);
+
+// MESSAGE COLORS
+$msg-default: #999;
+$msg-success: #5cb85c;
+$msg-warning: #f0ad4e;
+$msg-danger: #d9534f;
+$msg-info: #5bc0de;
+
+//SOCIAL MEDIA COLORS
+$dailymile: #ffaa25;
+$facebook: #3b5998;
+$flickr: #f80082;
+$github: #f7f7f7;
+$google: #d7473d;
+$instagram: #37658d;
+$linkedin: #2c8cc0;
+$pinterest: #c5142b;
+$runkeeper: #3193d3;
+$skype: #00abee;
+$spotify: #7ab800;
+$twitter: #3b8aca;
+
+/*// UI SPECTRUM COLORS */
+$light-grey: #f5f5f5;
+$mid-grey: #d7dada;
+$dark-grey: #353b3b;
+$turquoise: #1abc9c;
+$green-sea: #16a085;
+$emerald: #2ecc71;
+$nephritis: #27ae60;
+$peter-river: #3498db;
+$belize-hole: #2980b9;
+$amethyst: #9b59b6;
+$wisteria: #8e44ad;
+$wet-asphalt: #34495e;
+$midnight-blue: #2c3e50;
+$sunflower: #f1c40f;
+$orange: #f39c12;
+$carrot: #e67e22;
+$pumpkin: #d35400;
+$alizarin: #e74c3c;
+$pomegranate: #c0392b;
+$clouds: #ecf0f1;
+$silver: #bdc3c7;
+$concrete: #95a5a6;
+$asbestos: #7f8c8d;
+$craven: #0c1012;
+$black: #000;
+
+/*// RANDOM COLORS */
+$alpha: #2f9ed1;
+$beta: #36a178;
+$gamma: #ffc742;
+$delta: #eb520b;
+$theta: #33373b;
+$zeth: #0c1012;
+$mith: #f8f8f8;
+$orange: #ffa600;
+$blue: #82d2e5;
+$green: #c1d72e;
+$blue: blue;
+$yellow: yellow;
+$white: #fff;
+$red: #f00;
+$lmode: #222;
+$dmode: #fec150;
+$nana: #e8d4af;
+$mint: #abddb6;
+$red-monza: #d20434;
+$gray-gallery: #efefef;
+$gray-mine-shaft: #333;
+$gray: #808080;
+
+//REDS
+$r00: #ffebee;
+$r10: #ffcdd2;
+$r20: #ef9a9a;
+$r30: #e57373;
+$r40: #ef5350;
+$r50: #f44336;
+$r60: #e53935;
+$r70: #d32f2f;
+$r80: #c62828;
+$r90: #b71c1c;
+$r100: #ff8a80;
+$r110: #ff5252;
+$r120: #ff1744;
+$r130: #d50000;
+
+//PINK
+$pk00: #fce4ec;
+$pk10: #f8bbd0;
+$pk20: #f48fb1;
+$pk30: #f06292;
+$pk40: #ec407a;
+$pk50: #e91e63;
+$pk60: #d81b60;
+$pk70: #c2185b;
+$pk80: #ad1457;
+$pk90: #880e4f;
+$pk100: #ff80ab;
+$pk110: #ff4081;
+$pk120: #f50057;
+$pk130: #c51162;
+
+//PURPLE
+$p00: #f3e5f5;
+$p10: #e1bee7;
+$p20: #ce93d8;
+$p30: #ba68c8;
+$p40: #ab47bc;
+$p50: #9c27b0;
+$p60: #8e24aa;
+$p70: #7b1fa2;
+$p80: #6a1b9a;
+$p90: #4a148c;
+$p100: #ea80fc;
+$p110: #e040fb;
+$p120: #d500f9;
+$p130: #aa00ff;
+
+//DEEP PURPLE
+$dp00: #ede7f6;
+$dp10: #d1c4e9;
+$dp20: #b39ddb;
+$dp30: #9575cd;
+$dp40: #7e57c2;
+$dp50: #673ab7;
+$dp60: #5e35b1;
+$dp70: #512da8;
+$dp80: #4527a0;
+$dp90: #311b92;
+$dp100: #b388ff;
+$dp110: #7c4dff;
+$dp120: #651fff;
+$dp130: #6200ea;
+
+//INDIGO
+$in00: #e8eaf6;
+$in10: #c5cae9;
+$in20: #9fa8da;
+$in30: #7986cb;
+$in40: #5c6bc0;
+$in50: #3f51b5;
+$in60: #3949ab;
+$in70: #303f9f;
+$in80: #283593;
+$in90: #1a237e;
+$in100: #8c9eff;
+$in110: #536dfe;
+$in120: #3d5afe;
+$in130: #304ffe;
+
+//BLUE
+$b00: #e3f2fd;
+$b10: #bbdefb;
+$b20: #90caf9;
+$b30: #64b5f6;
+$b40: #42a5f5;
+$b50: #2196f3;
+$b60: #1e88e5;
+$b70: #1976d2;
+$b80: #1565c0;
+$b90: #0d47a1;
+$b100: #82b1ff;
+$b110: #448aff;
+$b120: #2979ff;
+$b130: #2962ff;
+
+//LIGHTBLUE
+$lb00: #e1f5fe;
+$lb10: #b3e5fc;
+$lb20: #81d4fa;
+$lb30: #4fc3f7;
+$lb40: #29b6f6;
+$lb50: #03a9f4;
+$lb60: #039be5;
+$lb70: #0288d1;
+$lb80: #0277bd;
+$lb90: #01579b;
+$lb100: #80d8ff;
+$lb110: #40c4ff;
+$lb120: #00b0ff;
+$lb130: #0091ea;
+
+//CYAN
+$cy00: #e0f7fa;
+$cy10: #b2ebf2;
+$cy20: #80deea;
+$cy30: #4dd0e1;
+$cy40: #26c6da;
+$cy50: #00bcd4;
+$cy60: #00acc1;
+$cy70: #0097a7;
+$cy80: #00838f;
+$cy90: #006064;
+$cy100: #84ffff;
+$cy110: #18ffff;
+$cy120: #00e5ff;
+$cy130: #00b8d4;
+
+//TEAL
+$t00: #e0f2f1;
+$t10: #b2dfdb;
+$t20: #80cbc4;
+$t30: #4db6ac;
+$t40: #26a69a;
+$t50: #009688;
+$t60: #00897b;
+$t70: #00796b;
+$t80: #00695c;
+$t90: #004d40;
+$t100: #a7ffeb;
+$t110: #64ffda;
+$t120: #1de9b6;
+$t130: #00bfa5;
+
+//GREEN
+$g00: #e8f5e9;
+$g10: #c8e6c9;
+$g20: #a5d6a7;
+$g30: #81c784;
+$g40: #66bb6a;
+$g50: #4caf50;
+$g60: #43a047;
+$g70: #388e3c;
+$g80: #2e7d32;
+$g90: #1b5e20;
+$g100: #b9f6ca;
+$g110: #69f0ae;
+$g120: #00e676;
+$g130: #00c853;
+
+//LIGHTGREEN
+$lg00: #f1f8e9;
+$lg10: #dcedc8;
+$lg20: #c5e1a5;
+$lg30: #aed581;
+$lg40: #9ccc65;
+$lg50: #8bc34a;
+$lg60: #7cb342;
+$lg70: #689f38;
+$lg80: #558b2f;
+$lg90: #33691e;
+$lg100: #ccff90;
+$lg110: #b2ff59;
+$lg120: #76ff03;
+$lg130: #64dd17;
+
+//LIME
+$lm00: #f9fbe7;
+$lm10: #f0f4c3;
+$lm20: #e6ee9c;
+$lm30: #dce775;
+$lm40: #d4e157;
+$lm50: #cddc39;
+$lm60: #c0ca33;
+$lm70: #afb42b;
+$lm80: #9e9d24;
+$lm90: #827717;
+$lm100: #f4ff81;
+$lm110: #eeff41;
+$lm120: #c6ff00;
+$lm130: #aeea00;
+
+//YELLOW
+$y00: #fffde7;
+$y10: #fff9c4;
+$y20: #fff59d;
+$y30: #fff176;
+$y40: #ffee58;
+$y50: #ffeb3b;
+$y60: #fdd835;
+$y70: #fbc02d;
+$y80: #f9a825;
+$y90: #f57f17;
+$y100: #ffff8d;
+$y110: #ffff00;
+$y120: #ffea00;
+$y130: #ffd600;
+
+//AMBER
+$am00: #fff8e1;
+$am10: #ffecb3;
+$am20: #ffe082;
+$am30: #ffd54f;
+$am40: #ffca28;
+$am50: #ffc107;
+$am60: #ffb300;
+$am70: #ffa000;
+$am80: #ff8f00;
+$am90: #ff6f00;
+$am100: #ffe57f;
+$am110: #ffd740;
+$am120: #ffc400;
+$am130: #ffab00;
+
+//ORANGE
+$o00: #fff3e0;
+$o10: #ffe0b2;
+$o20: #ffcc80;
+$o30: #ffb74d;
+$o40: #ffa726;
+$o50: #ff9800;
+$o60: #fb8c00;
+$o70: #f57c00;
+$o80: #ef6c00;
+$o90: #e65100;
+$o100: #ffd180;
+$o110: #ffab40;
+$o120: #ff9100;
+$o130: #ff6d00;
+
+//DEEP ORANGE
+$do00: #fbe9e7;
+$do10: #ffccbc;
+$do20: #ffab91;
+$do30: #ff8a65;
+$do40: #ff7043;
+$do50: #ff5722;
+$do60: #f4511e;
+$do70: #e64a19;
+$do80: #d84315;
+$do90: #bf360c;
+$do100: #ff9e80;
+$do110: #ff6e40;
+$do120: #ff3d00;
+$do130: #dd2c00;
+
+//BROWN
+$br00: #efebe9;
+$br10: #d7ccc8;
+$br20: #bcaaa4;
+$br30: #a1887f;
+$br40: #8d6e63;
+$br50: #795548;
+$br60: #6d4c41;
+$br70: #5d4037;
+$br80: #4e342e;
+$br90: #3e2723;
+
+//GREY
+$gy00: #fafafa;
+$gy10: #f5f5f5;
+$gy20: #eeeeee;
+$gy30: #e0e0e0;
+$gy40: #bdbdbd;
+$gy50: #9e9e9e;
+$gy60: #757575;
+$gy70: #616161;
+$gy80: #424242;
+$gy90: #212121;
+
+//BLUE GREY
+$blg00: #eceff1;
+$blg10: #cfd8dc;
+$blg20: #b0bec5;
+$blg30: #90a4ae;
+$blg40: #78909c;
+$blg50: #607d8b;
+$blg60: #546e7a;
+$blg70: #455a64;
+$blg80: #37474f;
+$blg90: #263238;
+$blg100: #11171a;

@@ -1,0 +1,129 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+.z-block {
+	display: block !important;
+}
+.z-flex {
+	display: flex !important;
+}
+.z-none {
+	display: none !important;
+}
+@include mq(sx) {
+	.z-xs-block {
+		display: block !important;
+	}
+
+	.z-xs-flex {
+		display: flex !important;
+	}
+
+	.z-xs-none {
+		display: none !important;
+	}
+}
+@include mq(sm) {
+	.z-sm-block {
+		display: block !important;
+	}
+
+	.z-sm-flex {
+		display: flex !important;
+	}
+
+	.z-sm-none {
+		display: none !important;
+	}
+}
+@include mq(sx) {
+	.z-sx-block {
+		display: block !important;
+	}
+
+	.z-sx-flex {
+		display: flex !important;
+	}
+
+	.z-sx-none {
+		display: none !important;
+	}
+}
+@include mq(md) {
+	.z-md-block {
+		display: block !important;
+	}
+
+	.z-md-flex {
+		display: flex !important;
+	}
+
+	.z-md-none {
+		display: none !important;
+	}
+}
+@include mq(nx) {
+	.z-nx-block {
+		display: block !important;
+	}
+
+	.z-nx-flex {
+		display: flex !important;
+	}
+
+	.z-nx-none {
+		display: none !important;
+	}
+}
+@include mq(lg) {
+	.z-lg-block {
+		display: block !important;
+	}
+
+	.z-lg-flex {
+		display: flex !important;
+	}
+
+	.z-lg-none {
+		display: none !important;
+	}
+}
+@include mq(xl) {
+	.z-xl-block {
+		display: block !important;
+	}
+
+	.z-xl-flex {
+		display: flex !important;
+	}
+
+	.z-xl-none {
+		display: none !important;
+	}
+}
+@include mq(xxl) {
+	.z-xxl-block {
+		display: block !important;
+	}
+
+	.z-xxl-flex {
+		display: flex !important;
+	}
+
+	.z-xxl-none {
+		display: none !important;
+	}
+}
+@include mq(xxxl) {
+	.z-xxxl-block {
+		display: block !important;
+	}
+
+	.z-xxxl-flex {
+		display: flex !important;
+	}
+
+	.z-xxxl-none {
+		display: none !important;
+	}
+}

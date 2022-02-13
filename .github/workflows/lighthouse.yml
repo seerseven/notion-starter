@@ -1,0 +1,31 @@
+# For more infos check out https://shopify.dev/themes/tools/lighthouse-ci
+
+name: Shopify Lighthouse CI
+on: [push]
+jobs:
+  lhci:
+    name: Lighthouse
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Lighthouse
+        uses: shopify/lighthouse-ci-action@1.0
+        with:
+          app_id: ${{ secrets.SHOP_APP_ID }}
+          app_password: ${{ secrets.SHOP_APP_PASSWORD }}
+          store: ${{ secrets.SHOP_STORE }}
+          password: ${{ secrets.SHOP_PASSWORD }}
+
+          # You first need to configure these in Github secrets.
+          lhci_github_app_token: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+
+          ## Lighthouse settings
+
+          # lhci_min_score_performance: 0.9
+          # lhci_min_score_accessibility: 0.9
+
+          ## Run Lighthouse test on specific product/collection
+          
+          # product_handle: 'worst-sneakers'
+          # collection_handle: 'sneakers'
+

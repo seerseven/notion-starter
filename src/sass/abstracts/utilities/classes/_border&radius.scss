@@ -1,0 +1,369 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+.border {
+	border: 1px solid #dee2e6 !important;
+}
+.border-0 {
+	border: 0 !important;
+}
+.border-top {
+	border-top: 1px solid #dee2e6 !important;
+}
+.border-top-0 {
+	border-top: 0 !important;
+}
+.border-end {
+	border-right: 1px solid #dee2e6 !important;
+}
+.border-end-0 {
+	border-right: 0 !important;
+}
+.border-bottom {
+	border-bottom: 1px solid #dee2e6 !important;
+}
+.border-bottom-0 {
+	border-bottom: 0 !important;
+}
+.border-start {
+	border-left: 1px solid #dee2e6 !important;
+}
+.border-start-0 {
+	border-left: 0 !important;
+}
+.border-primary {
+	border-color: #0d6efd !important;
+}
+.border-secondary {
+	border-color: #6c757d !important;
+}
+.border-success {
+	border-color: #198754 !important;
+}
+.border-info {
+	border-color: #0dcaf0 !important;
+}
+.border-warning {
+	border-color: #ffc107 !important;
+}
+.border-danger {
+	border-color: #dc3545 !important;
+}
+.border-light {
+	border-color: #f8f9fa !important;
+}
+.border-dark {
+	border-color: #212529 !important;
+}
+.border-white {
+	border-color: #fff !important;
+}
+.border-1 {
+	border-width: 1px !important;
+}
+.border-2 {
+	border-width: 2px !important;
+}
+.border-3 {
+	border-width: 3px !important;
+}
+.border-4 {
+	border-width: 4px !important;
+}
+.border-5 {
+	border-width: 5px !important;
+}
+
+.rounded {
+	border-radius: 0.25rem !important;
+}
+.rounded-0 {
+	border-radius: 0 !important;
+}
+.rounded-1 {
+	border-radius: 0.2rem !important;
+}
+.rounded-2 {
+	border-radius: 0.25rem !important;
+}
+.rounded-3 {
+	border-radius: 0.3rem !important;
+}
+.rounded-circle {
+	border-radius: 50% !important;
+}
+.rounded-pill {
+	border-radius: 50rem !important;
+}
+.rounded-top {
+	border-top-left-radius: 0.25rem !important;
+}
+.rounded-end,
+.rounded-top {
+	border-top-right-radius: 0.25rem !important;
+}
+.rounded-bottom,
+.rounded-end {
+	border-bottom-right-radius: 0.25rem !important;
+}
+.rounded-bottom,
+.rounded-start {
+	border-bottom-left-radius: 0.25rem !important;
+}
+.rounded-start {
+	border-top-left-radius: 0.25rem !important;
+}
+
+.r-0 {
+	border-radius: 0 !important;
+}
+.r-1 {
+	border-radius: 0.25rem !important;
+}
+.r-2 {
+	border-radius: 0.5rem !important;
+}
+.r-3 {
+	border-radius: 0.75rem !important;
+}
+.r-4 {
+	border-radius: 1rem !important;
+}
+.r-5 {
+	border-radius: 1.25rem !important;
+}
+.r-6 {
+	border-radius: 1.5rem !important;
+}
+.r-7 {
+	border-radius: 1.75rem !important;
+}
+.r-8 {
+	border-radius: 2rem !important;
+}
+.r-9 {
+	border-radius: 2.25rem !important;
+}
+.r-10 {
+	border-radius: 2.5rem !important;
+}
+.r-11 {
+	border-radius: 2.75rem !important;
+}
+.r-12 {
+	border-radius: 3rem !important;
+}
+
+@include mq(sm) {
+	.r-sm-0 {
+		border-radius: 0 !important;
+	}
+	.r-sm-1 {
+		border-radius: 0.25rem !important;
+	}
+	.r-sm-2 {
+		border-radius: 0.5rem !important;
+	}
+	.r-sm-3 {
+		border-radius: 0.75rem !important;
+	}
+	.r-sm-4 {
+		border-radius: 1rem !important;
+	}
+	.r-sm-5 {
+		border-radius: 1.25rem !important;
+	}
+	.r-sm-6 {
+		border-radius: 1.5rem !important;
+	}
+	.r-sm-7 {
+		border-radius: 1.75rem !important;
+	}
+	.r-sm-8 {
+		border-radius: 2rem !important;
+	}
+	.r-sm-9 {
+		border-radius: 2.25rem !important;
+	}
+	.r-sm-10 {
+		border-radius: 2.5rem !important;
+	}
+	.r-sm-11 {
+		border-radius: 2.75rem !important;
+	}
+	.r-sm-12 {
+		border-radius: 3rem !important;
+	}
+}
+
+@include mq(md) {
+	.r-md-0 {
+		border-radius: 0 !important;
+	}
+	.r-md-1 {
+		border-radius: 0.25rem !important;
+	}
+	.r-md-2 {
+		border-radius: 0.5rem !important;
+	}
+	.r-md-3 {
+		border-radius: 0.75rem !important;
+	}
+	.r-md-4 {
+		border-radius: 1rem !important;
+	}
+	.r-md-5 {
+		border-radius: 1.25rem !important;
+	}
+	.r-md-6 {
+		border-radius: 1.5rem !important;
+	}
+	.r-md-7 {
+		border-radius: 1.75rem !important;
+	}
+	.r-md-8 {
+		border-radius: 2rem !important;
+	}
+	.r-md-9 {
+		border-radius: 2.25rem !important;
+	}
+	.r-md-10 {
+		border-radius: 2.5rem !important;
+	}
+	.r-md-11 {
+		border-radius: 2.75rem !important;
+	}
+	.r-md-12 {
+		border-radius: 3rem !important;
+	}
+}
+@include mq(lg) {
+	.r-lg-0 {
+		border-radius: 0 !important;
+	}
+	.r-lg-1 {
+		border-radius: 0.25rem !important;
+	}
+	.r-lg-2 {
+		border-radius: 0.5rem !important;
+	}
+	.r-lg-3 {
+		border-radius: 0.75rem !important;
+	}
+	.r-lg-4 {
+		border-radius: 1rem !important;
+	}
+	.r-lg-5 {
+		border-radius: 1.25rem !important;
+	}
+	.r-lg-6 {
+		border-radius: 1.5rem !important;
+	}
+	.r-lg-7 {
+		border-radius: 1.75rem !important;
+	}
+	.r-lg-8 {
+		border-radius: 2rem !important;
+	}
+	.r-lg-9 {
+		border-radius: 2.25rem !important;
+	}
+	.r-lg-10 {
+		border-radius: 2.5rem !important;
+	}
+	.r-lg-11 {
+		border-radius: 2.75rem !important;
+	}
+	.r-lg-12 {
+		border-radius: 3rem !important;
+	}
+}
+@include mq(xl) {
+	.r-xl-0 {
+		border-radius: 0 !important;
+	}
+	.r-xl-1 {
+		border-radius: 0.25rem !important;
+	}
+	.r-xl-2 {
+		border-radius: 0.5rem !important;
+	}
+	.r-xl-3 {
+		border-radius: 0.75rem !important;
+	}
+	.r-xl-4 {
+		border-radius: 1rem !important;
+	}
+	.r-xl-5 {
+		border-radius: 1.25rem !important;
+	}
+	.r-xl-6 {
+		border-radius: 1.5rem !important;
+	}
+	.r-xl-7 {
+		border-radius: 1.75rem !important;
+	}
+	.r-xl-8 {
+		border-radius: 2rem !important;
+	}
+	.r-xl-9 {
+		border-radius: 2.25rem !important;
+	}
+	.r-xl-10 {
+		border-radius: 2.5rem !important;
+	}
+	.r-xl-11 {
+		border-radius: 2.75rem !important;
+	}
+	.r-xl-12 {
+		border-radius: 3rem !important;
+	}
+}
+@include mq(xxl) {
+	.r-xxl-0 {
+		border-radius: 0 !important;
+	}
+	.r-xxl-1 {
+		border-radius: 0.25rem !important;
+	}
+	.r-xxl-2 {
+		border-radius: 0.5rem !important;
+	}
+	.r-xxl-3 {
+		border-radius: 0.75rem !important;
+	}
+	.r-xxl-4 {
+		border-radius: 1rem !important;
+	}
+	.r-xxl-5 {
+		border-radius: 1.25rem !important;
+	}
+	.r-xxl-6 {
+		border-radius: 1.5rem !important;
+	}
+	.r-xxl-7 {
+		border-radius: 1.75rem !important;
+	}
+	.r-xxl-8 {
+		border-radius: 2rem !important;
+	}
+	.r-xxl-9 {
+		border-radius: 2.25rem !important;
+	}
+	.r-xxl-10 {
+		border-radius: 2.5rem !important;
+	}
+	.r-xxl-11 {
+		border-radius: 2.75rem !important;
+	}
+	.r-xxl-12 {
+		border-radius: 3rem !important;
+	}
+}
+
+/*!
+ * Bootstrap Utilities v5.0.2 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */

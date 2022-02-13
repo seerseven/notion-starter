@@ -1,0 +1,35 @@
+@use 'sass:map';
+@use '../variables' as *;
+
+@mixin mq($key) {
+	$size: map.get($breakpoints-map, $key);
+
+	@media (min-width: $size) {
+		@content;
+	}
+}
+
+@mixin media($screen) {
+	// Write the media query.
+	@media (min-width: $screen) {
+		@content;
+	}
+}
+
+@mixin above($width) {
+	@media only screen and (min-width: $width) {
+		@content;
+	}
+}
+
+@mixin below($width) {
+	@media only screen and (max-width: $width) {
+		@content;
+	}
+}
+
+@mixin between($min-width, $max-width) {
+	@media only screen and (min-width: $min-width) and (max-width: $max-width) {
+		@content;
+	}
+}

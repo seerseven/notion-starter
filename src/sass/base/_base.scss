@@ -1,0 +1,154 @@
+@use '../abstracts' as *;
+
+@alias {
+	@i: @import;
+	@m: @media;
+	sz: size;
+	trans: transition;
+	form: transform;
+	bg: background;
+	bgc: background-color;
+	bimg: background-image;
+	bpos: background-position;
+	bsize: background-size;
+	repeat: background-repeat;
+	c: color;
+	ci: color-ie;
+	radius: border-radius;
+	b: border;
+	bright: border-right;
+	bleft: border-left;
+	btop: border-top;
+	bbottom: border-bottom;
+	shade: box-shadow;
+	mouse: cursor;
+	show: display;
+	fs: font-size;
+	fst: font-style;
+	fw: font-weight;
+	fam: font-family;
+	h: height;
+	min-h: min-height;
+	max-h: max-height;
+	w: width;
+	min-w: min-width;
+	max-w: max-width;
+	space: letter-spacing;
+	lh: line-height;
+	list: list-style;
+	mar: margin;
+	mar-t: margin-top;
+	mar-b: margin-bottom;
+	mar-r: margin-right;
+	mar-l: margin-left;
+	pad: padding;
+	pad-t: padding-top;
+	pad-b: padding-bottom;
+	pad-r: padding-right;
+	pad-l: padding-left;
+	op: opacity;
+	o: order;
+	z: z-index;
+	pos: position;
+	start: left;
+	end: right;
+	base: bottom;
+	scroll: scroll-behavior;
+	align: text-align;
+	decor: text-decoration;
+	shadow: text-shadow;
+	vis: visibility;
+	animate: animation;
+	box: box-sizing;
+	format: text-transform;
+}
+
+.testi {
+	@include placeholder(400);
+}
+
+.scrollable {
+	scrollbar-color: #14252c #090d10;
+	scrollbar-width: thin;
+}
+
+html {
+	trans: color 301ms, background-color 301ms;
+	@include animate;
+}
+
+.fake {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+}
+
+html[data-theme='light'] {
+	--bg: #fff;
+}
+
+html[data-theme='dark'] {
+	--bg: #333333;
+}
+.link\:link {
+	@include baseLink;
+}
+
+.link\:icon {
+	@include baseLink;
+}
+
+.link\:button {
+	@include baseButton;
+}
+.link\:transparent-light {
+	@include baseLink($linkColorTransDark, $linkHoverTransDark);
+}
+
+.link\:transparent-dark {
+	@include baseLink($linkColorTransLight, $linkHoverTransLight);
+}
+
+// :root {
+//   --danger-theme: {
+//     color: white;
+//     background-color: red;
+//   }
+// }
+
+// .danger {
+//   @apply --danger-theme;
+// }
+
+// @custom-selector :--button button, .button;
+// @custom-selector :--enter :hover, :focus;
+
+// :--button {
+
+// }
+// :--button:--enter {
+
+// }
+
+// .foo {
+//   background-image: image-set(
+//     url(img/test.png) 1x,
+//     url(img/test-2x.png) 2x,
+//     url(my-img-print.png) 600dpi
+//   );
+// }
+
+// .blur {
+//   filter: blur(4px);
+// }
+
+// div {
+//   all: initial;
+// }
+
+// body {
+//   font-family: system-ui;
+// }
+
+// @omnicss

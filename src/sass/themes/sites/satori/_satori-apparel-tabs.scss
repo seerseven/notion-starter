@@ -1,0 +1,105 @@
+#satori-apparel-tabs {
+	.ant-bg {
+		background: linear-gradient(
+				to bottom,
+				rgba(114, 15, 8, 0.5),
+				rgba(254, 174, 62, 0.5)
+			),
+			url('https://ik.imagekit.io/lcgo2wk1se/seerseven/img/sd/tribalbg.jpg');
+		background-size: cover;
+	}
+	.ant-tabs-bg {
+		background-color: #0e1722;
+	}
+
+	.ant-con-bg {
+		background-color: #f8f8f8;
+	}
+
+	.nav-tabs .nav-link.active {
+		border-color: transparent;
+		color: #fff;
+		background-color: #0e1722;
+		transition: all 0.4s ease;
+	}
+
+	.nav-tabs .nav-link {
+		background-color: transparent;
+		border-color: transparent;
+		color: #fff;
+		transition: all 0.4s ease;
+	}
+
+	.nav-tabs .nav-link:hover {
+		background-color: #0e1722;
+		border-color: transparent;
+		color: #fff;
+		transition: all 0.4s ease;
+	}
+
+	.info-tabs .nav-tabs .nav-link {
+		background-color: transparent;
+		border-color: transparent;
+		color: #0e1722;
+		transition: all 0.4s ease;
+		padding: 17px 10px 16px;
+
+		@include media(650px) {
+			padding: 17px 29px 16px;
+		}
+	}
+
+	.info-tabs .nav-tabs .nav-link.active {
+		border-color: transparent;
+		color: #0e1722;
+		background-color: transparent;
+		border-bottom: 2px solid #0e1722;
+		transition: all 0.4s ease;
+	}
+	.info-tabs .nav-tabs .nav-link:hover {
+		border-color: transparent;
+		color: #0e1722;
+		background-color: transparent;
+		border-bottom: 2px solid #0e1722;
+		transition: all 0.4s ease;
+	}
+
+	.info-tabs {
+		.nav {
+			display: flex;
+			flex-wrap: nowrap;
+			list-style: none;
+			margin-bottom: 0;
+			padding-left: 0;
+		}
+	}
+
+	#product-slider-unisextee,
+	.carousel-inner,
+	.carousel-item,
+	.carousel-item.active {
+		height: 366px;
+		position: relative;
+		z-index: 100;
+	}
+
+	.details li {
+		padding: 3px 0;
+	}
+
+	info-tabs .nav-tabs .nav-link {
+		padding: 10px 7px 9px;
+	}
+
+	.apparel-item-table-mobile .table tbody {
+		font-weight: 500 !important;
+	}
+
+	.apparel-item-table-mobile .table th {
+		font-weight: 600 !important;
+	}
+
+	.table-bg-reset {
+		--mdb-table-accent-bg: transparent;
+	}
+}

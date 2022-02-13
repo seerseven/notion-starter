@@ -1,0 +1,152 @@
+header-drawer {
+	justify-self: start;
+	margin-left: -1.2rem;
+}
+
+@media screen and (min-width: 990px) {
+	header-drawer {
+		display: none;
+	}
+}
+
+.menu-drawer-container {
+	display: flex;
+}
+
+.list-menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.list-menu--inline {
+	display: inline-flex;
+	flex-wrap: wrap;
+}
+
+summary.list-menu__item {
+	padding-right: 2.7rem;
+}
+
+.list-menu__item {
+	display: flex;
+	align-items: center;
+	line-height: calc(1 + 0.3 / var(--font-body-scale));
+}
+
+.list-menu__item--link {
+	text-decoration: none;
+	padding-bottom: 1rem;
+	padding-top: 1rem;
+	line-height: calc(1 + 0.8 / var(--font-body-scale));
+}
+
+@media screen and (min-width: 750px) {
+	.list-menu__item--link {
+		padding-bottom: 0.5rem;
+		padding-top: 0.5rem;
+	}
+}
+
+#satori-nav .customer a,
+.link {
+	font-size: 1.7rem !important;
+}
+
+.satori-buttons a,
+.link {
+	font-size: 1.5rem;
+}
+
+@media screen and (min-width: 750px) {
+	.list-menu__item--link {
+		padding-bottom: 0.5rem;
+		padding-top: 0.5rem;
+	}
+}
+
+@media screen and (min-width: 990px) {
+	.header--middle-left .header__inline-menu {
+		min-width: 40rem;
+	}
+}
+
+.header__menu-item {
+	color: #f8f8f8 !important;
+}
+.satori-btn {
+	color: #fff;
+
+	a {
+		color: #fff;
+		padding: 0px 7px;
+
+		&:hover {
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+}
+
+.satori-vendor-btn {
+	background-color: #0095ca;
+	@include fade;
+
+	&:hover {
+		color: #fff;
+		background-color: #2fa6d7;
+	}
+}
+
+.satori-custom-btn {
+	background-color: #28ab5c;
+	@include fade;
+
+	&:hover {
+		color: #fff;
+		background-color: #2aab5d;
+	}
+}
+
+.satori-vendor-ico,
+.satori-vendor-ico a {
+	color: #0095ca;
+	background-color: transparent;
+	padding: 2px;
+	@include fade;
+
+	&:hover {
+		color: #fff;
+	}
+}
+
+.satori-custom-ico,
+.satori-custom-ico a {
+	color: #2aab5d;
+	background-color: transparent;
+	padding: 2px;
+	@include fade;
+
+	&:hover {
+		color: #fff;
+	}
+}
+
+.satori-btn {
+	color: #fff;
+}
+
+button {
+	inset: 0;
+	outline: none;
+	border: 0;
+}
+button:focus-visible {
+	outline: 0 solid transparent !important;
+}
+
+/* Focusing the button with a mouse, touch, or stylus will show a subtle drop shadow. */
+button:focus:not(:focus-visible) {
+	outline: none;
+	box-shadow: 0px 0px 0px rgba(1, 1, 0, 0.7) !important;
+}

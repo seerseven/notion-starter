@@ -39,7 +39,12 @@ function bjs() {
 
 function vjs() {
 	return gulp
-		.src('src/js/vendors/*.js')
+		.src([
+			'src/js/vendors/jquery.js',
+			'src/js/vendors/jqueryUI.js',
+			'src/js/vendors/aos.js',
+			'src/js/vendors/rellax.js',
+		])
 		.pipe(plumber())
 		.pipe(uglify())
 		.pipe(rename({ suffix: '.min' }))
@@ -49,13 +54,12 @@ function vjs() {
 function js() {
 	return gulp
 		.src([
-			'src/scripts/shopify.min.js',
 			'src/scripts/jquery.min.js',
 			'src/scripts/jqueryUI.min.js',
-			'src/scripts/popper.min.js',
-			'src/scripts/mdball.min.js',
-			'src/scripts/three.min.js',
-			'src/scripts/vanta.min.js',
+			// 'src/scripts/popper.min.js',
+			// 'src/scripts/mdball.min.js',
+			// 'src/scripts/three.min.js',
+			// 'src/scripts/vanta.min.js',
 			'src/scripts/aos.min.js',
 			'src/scripts/rellax.min.js',
 		])

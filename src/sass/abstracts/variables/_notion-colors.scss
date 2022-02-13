@@ -1,5 +1,7 @@
-$clr-default: #4d586f;
-$clr-default-light: #64748b;
+@use './colors' as *;
+
+$clr-default: #6f4d5a;
+$clr-default-light: $hex;
 $clr-gray: #9ca3af;
 $clr-brown: #c9844f;
 $clr-orange: #fb923c;
@@ -9,7 +11,7 @@ $clr-blue: #60a5fa;
 $clr-purple: #c084fc;
 $clr-pink: #f472b6;
 $clr-red: #f87171;
-$bg-default: #f3eee8;
+$bg-default: $hexd;
 $bg-gray: #f0edeb;
 $bg-brown: #f0e4da;
 $bg-orange: #fce4d1;
@@ -28,7 +30,7 @@ $bg-blue-light: #dee8f7;
 $bg-purple-light: #e0d8f4;
 $bg-pink-light: #fae0f0;
 $bg-red-light: #fbd6d2;
-$pill-default: rgba(0, 0, 0, 0.04);
+$pill-default: $hex;
 $pill-gray: #f0edeb;
 $pill-brown: #f0e4da;
 $pill-orange: #fce4d1;

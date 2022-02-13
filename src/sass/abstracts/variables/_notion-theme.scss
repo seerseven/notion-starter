@@ -1,4 +1,8 @@
-$v-color-primary: #1ca0f1 !important;
+@use './colors' as *;
+
+$n-clr-1: --color-primary;
+
+$v-color-primary: #671e9b !important;
 $v-cta-color-bg: #e4f5fe !important;
 $v-cta-padding: 12px 22px !important;
 $v-cta-border-radius: 50px !important;
@@ -18,7 +22,7 @@ $v-color-bg-gray: #f5f4f2 !important;
 $v-color-ui-hover-bg: rgba(150, 150, 150, 0.1) !important;
 $v-color-ui-hover-bg-light: #e7f5fd !important;
 $v-color-border-default: #f1f5f7;
-$v-color-accent-bg: var($v-color-primary);
+$v-color-accent-bg: var($n-clr-1);
 $v-color-card-bg: rgba(150, 150, 150, 0.1) !important;
 
 $v-clr-1: $v-color-primary;

@@ -32884,12 +32884,12 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   border-radius: 50%;
   background-image: url("https://dummyimage.com/500x500");
 }
-@reactive { .placeholder { @seer size(calc(100vh - 8vw)); overflow: visible; background-color: #872904; color: #f9e9bd; } }
+@reactive { .placeholder { @seer size(calc(100vh - 8vw)); overflow: visible; background-color: #9b3306; color: #f7a779; } }
 @seerseven :--heading h1, h2, h3;
 :--heading {
   margin: 1rem;
   padding: 1.5rem;
-  border: 3px solid #3ca9d1 !important;
+  border: 3px solid #edea47 !important;
   background-color: #fbe9e7;
   color: #000 !important;
   font-weight: 900;

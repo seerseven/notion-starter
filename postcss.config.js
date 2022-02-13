@@ -18,7 +18,6 @@ module.exports = {
 	syntax: 'postcss-scss',
 	parser: 'postcss-scss',
 	plugins: [
-		require('mdcss'),
 		require('postcss-alias'),
 		require('postcss-hocus'),
 		require('postcss-utilities'),
@@ -57,6 +56,7 @@ module.exports = {
 			max: '1600px',
 			functionName: 'fluid',
 		}),
+		require('mdcss')({ destination: '.vscode/styleguide' }),
 		require('postcss-placehold')({ service: 'dummyimage' }),
 		require('postcss-responsify')(responsified),
 		require('css-declaration-sorter')({ order: 'smacss' }),

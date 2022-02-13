@@ -1,4 +1,28 @@
 /* src/sass/notion.scss */
+:root {
+  --color-primary: #671e9b !important;
+  --cta-color-bg: #e4f5fe !important;
+  --cta-padding: 12px 22px !important;
+  --cta-border-radius: 50px !important;
+  --cta-color-text: #424b55 !important;
+  --color-text-default: #424b55;
+  --callout-border-radius: 20px !important;
+  --inline-code-bg-color: rgba(28, 160, 241, 0.1) !important;
+  --content-width: 1500px !important;
+  --color-code-block: #fafafa !important;
+  --color-text-light: white !important;
+  --column-spacing: 15px !important;
+  --collection-card-cover-size-small: 180px !important;
+  --collection-card-cover-size-medium: 260px !important;
+  --collection-card-cover-size-large: calc(50% - 15px) !important;
+  --transition: all 0.17s ease-in-out !important;
+  --color-bg-gray: #f5f4f2 !important;
+  --color-ui-hover-bg: rgba(150, 150, 150, 0.1) !important;
+  --color-ui-hover-bg-light: #e7f5fd !important;
+  --color-border-default: #f1f5f7;
+  --color-accent-bg: var(--color-primary);
+  --color-card-bg: rgba(150, 150, 150, 0.1) !important;
+}
 body {
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
@@ -1028,4 +1052,3 @@ pre[class*=language-] {
 .super-badge img {
   margin-left: 5px !important;
 }
-/*# sourceMappingURL=notion.css.map */

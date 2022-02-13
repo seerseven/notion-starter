@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../js/seerseven.js"],
-  "sourcesContent": ["import * as el from './utils/element';\r\n\r\nAOS.init();\r\n"],
-  "mappings": ";AAEA,IAAI;",
-  "names": []
-}

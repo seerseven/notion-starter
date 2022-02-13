@@ -1,8 +1,28 @@
 @use '../../abstracts' as *;
 
 :root {
-	@include notion-theme-variables;
-	@include notion-default-color-variables;
+	--color-primary: #{$v-clr-1};
+	--cta-color-bg: #{$v-cta-bg};
+	--cta-padding: #{$v-cta-p};
+	--cta-border-radius: #{$v-cta-br};
+	--cta-color-text: #{$v-cta-txt};
+	--color-text-default: #{$v-clr-txt-d};
+	--callout-border-radius: #{$v-call-br};
+	--inline-code-bg-color: #{$v-in-code};
+	--content-width: #{$v-con-w};
+	--color-code-block: #{$v-blk-code};
+	--color-text-light: #{$v-c-txt-l};
+	--column-spacing: #{$v-col-spac};
+	--collection-card-cover-size-small: #{$v-ccc-sm};
+	--collection-card-cover-size-medium: #{$v-ccc-md};
+	--collection-card-cover-size-large: #{$v-ccc-lg};
+	--transition: #{$v-trans};
+	--color-bg-gray: #{$v-bg-gray};
+	--color-ui-hover-bg: #{$v-ui-hvr-bg};
+	--color-ui-hover-bg-light: #{$v-ui-hvr-bgl};
+	--color-border-default: #{$v-c-bdr-d};
+	--color-accent-bg: #{$v-c-acc-bg};
+	--color-card-bg: #{$v-c-card-bg};
 }
 
 body {

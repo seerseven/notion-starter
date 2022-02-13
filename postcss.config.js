@@ -1,19 +1,3 @@
-const breakpoints = [
-	{ prefix: 'zx-', mediaQuery: '(min-width: 0px)' },
-	{ prefix: 'xs-', mediaQuery: '(min-width: 360px)' },
-	{ prefix: 'sm-', mediaQuery: '(min-width: 576px)' },
-	{ prefix: 'sx-', mediaQuery: '(min-width: 640px)' },
-	{ prefix: 'md-', mediaQuery: '(min-width: 768px)' },
-	{ prefix: 'nx-', mediaQuery: '(min-width: 900px)' },
-	{ prefix: 'lg-', mediaQuery: '(min-width: 992px)' },
-	{ prefix: 'xl-', mediaQuery: '(min-width: 1200px)' },
-	{ prefix: 'xxl-', mediaQuery: '(min-width: 1400px)' },
-	{ prefix: 'xxxl-', mediaQuery: '(min-width: 1600px)' },
-];
-const responsified = {
-	breakpoints,
-};
-
 module.exports = {
 	syntax: 'postcss-scss',
 	parser: 'postcss-scss',
@@ -58,7 +42,7 @@ module.exports = {
 		}),
 		require('mdcss')({ destination: '.vscode/styleguide' }),
 		require('postcss-placehold')({ service: 'dummyimage' }),
-		require('postcss-responsify')(responsified),
+		// require('postcss-responsify')(responsified),
 		require('css-declaration-sorter')({ order: 'smacss' }),
 		require('postcss-fixes')({ preset: 'safe' }),
 		require('postcss-preset-env')({ stage: 1 }),

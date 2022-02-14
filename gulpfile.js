@@ -97,6 +97,7 @@ function watchFiles() {
 // define complex tasks
 const version = gulp.series(ver);
 const get = gulp.series(localMaster);
+const send = gulp.series(originMaster);
 const deploy = gulp.series(localMaster, originMaster);
 const watch = gulp.series(watchFiles);
 
@@ -107,6 +108,7 @@ exports.lib = lib;
 exports.ver = ver;
 
 exports.get = get;
+exports.send = send;
 exports.deploy = deploy;
 exports.version = version;
 exports.watch = watch;

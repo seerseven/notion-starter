@@ -1,6 +1,6 @@
 'use strict';
 
-const { task } = require('gulp');
+const { task, series } = require('gulp');
 const gulp = require('gulp');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
@@ -98,6 +98,8 @@ task('push', function (done) {
 	gitPush();
 	done();
 });
+
+task('deploy', series(gitCommit, gitPush));
 
 function watchFiles() {
 	gulp.watch('src/build/*.css', css);

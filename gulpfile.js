@@ -99,7 +99,7 @@ task('push', function (done) {
 	done();
 });
 
-task('deploy', series(gitCommit, gitPush));
+task('deploy', series('commit', 'push'));
 
 function watchFiles() {
 	gulp.watch('src/build/*.css', css);

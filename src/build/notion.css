@@ -68,6 +68,7 @@ body {
   -moz-osx-font-smoothing: grayscale !important;
   text-rendering: optimizeLegibility !important;
   font-size: 16px !important;
+  background: randomColor;
 }
 .super-content {
   padding: 0 !important;

@@ -22,6 +22,46 @@
   --color-border-default: #f1f5f7;
   --color-accent-bg: var(--color-primary);
   --color-card-bg: rgba(150, 150, 150, 0.1) !important;
+  --color-text-default: #4d586f;
+  --color-text-default-light: #64748b;
+  --color-text-gray: #9ca3af;
+  --color-text-brown: #c9844f;
+  --color-text-orange: #fb923c;
+  --color-text-yellow: #fbbf24;
+  --color-text-green: #34d399;
+  --color-text-blue: #60a5fa;
+  --color-text-purple: #c084fc;
+  --color-text-pink: #f472b6;
+  --color-text-red: #f87171;
+  --color-bg-default: randomColor;
+  --color-bg-gray: #f0edeb;
+  --color-bg-brown: #f0e4da;
+  --color-bg-orange: #fce4d1;
+  --color-bg-yellow: #fbeed0;
+  --color-bg-green: #deede8;
+  --color-bg-blue: #dee8f7;
+  --color-bg-purple: #e0d8f4;
+  --color-bg-pink: #fae0f0;
+  --color-bg-red: #fbd6d2;
+  --color-bg-gray-light: #f0edeb;
+  --color-bg-brown-light: #f0e4da;
+  --color-bg-orange-light: #fce4d1;
+  --color-bg-yellow-light: #fbeed0;
+  --color-bg-green-light: #deede8;
+  --color-bg-blue-light: #dee8f7;
+  --color-bg-purple-light: #e0d8f4;
+  --color-bg-pink-light: #fae0f0;
+  --color-bg-red-light: #fbd6d2;
+  --color-pill-default: rgba(0, 0, 0, 0.04);
+  --color-pill-gray: #f0edeb;
+  --color-pill-brown: #f0e4da;
+  --color-pill-orange: #fce4d1;
+  --color-pill-yellow: #fbeed0;
+  --color-pill-green: #deede8;
+  --color-pill-blue: #dee8f7;
+  --color-pill-purple: #e0d8f4;
+  --color-pill-pink: #fae0f0;
+  --color-pill-red: #fbd6d2;
 }
 body {
   -webkit-font-smoothing: antialiased !important;
@@ -303,7 +343,7 @@ ul > .notion-list-item:before {
   border-radius: 25px !important;
   box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.12) !important;
 }
-.notion-callout.border > {
+.notion-root > .notion-callout {
   display: block !important;
 }
 .notion-callout__content .notion-link {

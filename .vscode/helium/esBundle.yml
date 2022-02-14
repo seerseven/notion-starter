@@ -1,0 +1,12 @@
+
+
+Create Junction between Node_modules and Vscode folder:
+
+remoteurl:
+/Users/Seerseven/Fillory/Notion/notion-starter/node_modules/@idbakkasse/helium/src
+
+localurl:
+/Users/Seerseven/Fillory/Notion/notion-starter/.vscode/helium
+
+filepath:
+ln -s /Users/Seerseven/Fillory/Notion/notion-starter/node_modules/@idbakkasse/helium/src /Users/Seerseven/Fillory/Notion/notion-starter/.vscode/helium"

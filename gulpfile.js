@@ -82,10 +82,11 @@ function localMaster() {
 		.pipe(git.commit('bump version'));
 }
 
-gulp.task('push', function () {
+gulp.task('push', function (done) {
 	git.push('origin', 'master', function (err) {
 		if (err) throw err;
 	});
+	done();
 });
 
 function watchFiles() {

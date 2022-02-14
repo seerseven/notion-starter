@@ -79,8 +79,7 @@ function dep() {
 		.pipe(plumber())
 		.pipe(gitignore())
 		.pipe(git.add())
-		.pipe(git.commit('bump version'))
-		.pipe(push({ repository: 'origin' }));
+		.pipe(git.commit('bump version'));
 }
 
 function watchFiles() {

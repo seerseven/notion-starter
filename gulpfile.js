@@ -76,7 +76,6 @@ function ver() {
 function dep() {
 	return gulp
 		.src([app + '*'])
-		.pipe(plumber())
 		.pipe(gitignore())
 		.pipe(git.add())
 		.pipe(git.commit('bump version'))

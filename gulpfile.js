@@ -1,5 +1,6 @@
 'use strict';
 
+const { task } = require('gulp');
 const gulp = require('gulp');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
@@ -20,6 +21,12 @@ const scripts = 'src/scripts/';
 const dist = 'theme/assets';
 const cdn = 'docs';
 const app = './';
+
+function gitPush() {
+	git.push('origin', 'master', function (err) {
+		if (err) throw err;
+	});
+}
 
 //List Javascript Vendors in Bundle Order
 var libs = ['jquery.js', 'jqueryUI.js', 'aos.js', 'rellax.js'];
@@ -82,10 +89,8 @@ function localMaster() {
 		.pipe(git.commit('bump version'));
 }
 
-gulp.task('push', function (done) {
-	git.push('origin', 'master', function (err) {
-		if (err) throw err;
-	});
+task('push', function (done) {
+	gitPush();
 	done();
 });
 

@@ -13,19 +13,6 @@ module.exports = {
 		require('postcss-tipsy'),
 		require('postcss-easing-gradients'),
 		require('postcss-custom-selectors'),
-		require('postcss-font-magician')({
-			// hosted: ['./src/fonts', /custom/path/to/fonts/on/site],
-			foundries: ['google'],
-			variants: {
-				Montserrat: {
-					300: [],
-					400: [],
-					500: [],
-					600: [],
-					700: [],
-				},
-			},
-		}),
 		require('postcss-placehold')({ service: 'dummyimage' }),
 		require('css-declaration-sorter')({ order: 'smacss' }),
 		require('postcss-fixes')({ preset: 'safe' }),

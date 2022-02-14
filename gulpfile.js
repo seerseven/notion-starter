@@ -73,12 +73,18 @@ function ver() {
 		.pipe(gulp.dest(app));
 }
 
-function dep() {
+function localMaster() {
 	return gulp
 		.src([app + '*'])
 		.pipe(gitignore())
 		.pipe(git.add())
-		.pipe(git.commit('bump version'))
+		.pipe(git.commit('bump version'));
+}
+
+function originMaster() {
+	return gulp
+		.src([app + '*'])
+		.pipe(gitignore())
 		.pipe(push({ repository: 'origin' }));
 }
 
@@ -90,7 +96,8 @@ function watchFiles() {
 
 // define complex tasks
 const version = gulp.series(ver);
-const deploy = gulp.series(dep);
+const get = gulp.series(localMaster);
+const deploy = gulp.series(localMaster, originMaster);
 const watch = gulp.series(watchFiles);
 
 // export tasks
@@ -98,8 +105,8 @@ exports.css = css;
 exports.js = js;
 exports.lib = lib;
 exports.ver = ver;
-exports.dep = dep;
 
+exports.get = get;
 exports.deploy = deploy;
 exports.version = version;
 exports.watch = watch;

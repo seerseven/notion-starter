@@ -80,7 +80,7 @@ function dep() {
 		.pipe(gitignore())
 		.pipe(git.add())
 		.pipe(git.commit('bump version'))
-		.pipe(push({ repository: 'origin', refspec: 'HEAD' }));
+		.pipe(push({ repository: 'origin' }));
 }
 
 function watchFiles() {

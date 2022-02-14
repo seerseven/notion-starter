@@ -39,6 +39,7 @@
     "gulp-postcss": "^9.0.1",
     "gulp-rename": "^2.0.0",
     "gulp-uglify": "^3.0.2",
+    "gulp-wait": "^0.0.2",
     "mdcss": "^1.5.2",
     "postcss": "^8.4.6",
     "postcss-aimlesscolor": "^1.0.0",

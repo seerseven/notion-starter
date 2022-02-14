@@ -11,6 +11,7 @@ const cssnano = require('gulp-cssnano');
 const git = require('gulp-git');
 const push = require('gulp-git-push');
 const gitignore = require('gulp-gitignore');
+const wait = require('gulp-wait');
 
 //Define Src and Dest Filepaths
 const esbuild = 'src/build/';
@@ -84,6 +85,7 @@ function localMaster() {
 function originMaster() {
 	return gulp
 		.src([app + '*'])
+		.pipe(wait(5000))
 		.pipe(gitignore())
 		.pipe(push({ repository: 'origin' }));
 }

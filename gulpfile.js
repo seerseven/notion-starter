@@ -89,7 +89,8 @@ function watchFiles() {
 }
 
 // define complex tasks
-const build = gulp.series(ver, dep);
+const version = gulp.series(ver);
+const deploy = gulp.series(dep);
 const watch = gulp.series(watchFiles);
 
 // export tasks
@@ -99,6 +100,7 @@ exports.lib = lib;
 exports.ver = ver;
 exports.dep = dep;
 
-exports.build = build;
+exports.deploy = deploy;
+exports.version = version;
 exports.watch = watch;
-exports.default = build;
+exports.default = watch;

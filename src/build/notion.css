@@ -64,7 +64,8 @@
   --color-pill-red: #fbd6d2;
 }
 .imhere {
-  bg: rgba(30, 136, 229, 0.4);
+  bg: rgba(216, 27, 96, 0.4);
+  c: pink;
 }
 body {
   -webkit-font-smoothing: antialiased !important;

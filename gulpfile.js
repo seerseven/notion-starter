@@ -32,12 +32,12 @@ function css() {
 		.src([esbuild + '*.css'])
 		.pipe(plumber())
 		.pipe(postcss())
-		.pipe(gulp.dest(styles));
-	// .pipe(cssnano())
-	// .pipe(rename({ suffix: '.min' }))
-	// .pipe(gulp.dest(dist))
-	// .pipe(rename({ prefix: 'dist-' }))
-	// .pipe(gulp.dest(cdn));
+		.pipe(gulp.dest(styles))
+		.pipe(cssnano())
+		.pipe(rename({ suffix: '.min' }))
+		.pipe(gulp.dest(dist))
+		.pipe(rename({ prefix: 'dist-' }))
+		.pipe(gulp.dest(cdn));
 }
 
 //Move, Minify, and Rename Bundled Modules

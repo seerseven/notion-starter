@@ -27639,64 +27639,56 @@
   color: #0d6efd;
 }
 .link-primary:focus,
-.link-primary:hover,
-.link-primary.\:hover {
+.link-primary:hover {
   color: #0a58ca;
 }
 .link-secondary {
   color: #6c757d;
 }
 .link-secondary:focus,
-.link-secondary:hover,
-.link-secondary.\:hover {
+.link-secondary:hover {
   color: #565e64;
 }
 .link-success {
   color: #198754;
 }
 .link-success:focus,
-.link-success:hover,
-.link-success.\:hover {
+.link-success:hover {
   color: #146c43;
 }
 .link-info {
   color: #0dcaf0;
 }
 .link-info:focus,
-.link-info:hover,
-.link-info.\:hover {
+.link-info:hover {
   color: #3dd5f3;
 }
 .link-warning {
   color: #ffc107;
 }
 .link-warning:focus,
-.link-warning:hover,
-.link-warning.\:hover {
+.link-warning:hover {
   color: #ffcd39;
 }
 .link-danger {
   color: #dc3545;
 }
 .link-danger:focus,
-.link-danger:hover,
-.link-danger.\:hover {
+.link-danger:hover {
   color: #b02a37;
 }
 .link-light {
   color: #f8f9fa;
 }
 .link-light:focus,
-.link-light:hover,
-.link-light.\:hover {
+.link-light:hover {
   color: #f9fafb;
 }
 .link-dark {
   color: #212529;
 }
 .link-dark:focus,
-.link-dark:hover,
-.link-dark.\:hover {
+.link-dark:hover {
   color: #1a1e21;
 }
 .stretched-link:after {
@@ -28414,8 +28406,7 @@
 .hvr {
   transition: all 0.3s ease-in-out;
 }
-.hvr:hover,
-.hvr.\:hover {
+.hvr:hover {
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: all 0.3s ease-in-out;
 }
@@ -28424,9 +28415,7 @@
   transition: all 0.3s linear;
 }
 .zoom:hover img,
-.zoom:hover video,
-.zoom.\:hover img,
-.zoom.\:hover video {
+.zoom:hover video {
   transform: scale(1.1);
 }
 .bg-cover {
@@ -32958,12 +32947,12 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   border-radius: 50%;
   background-image: url("https://dummyimage.com/500x500");
 }
-@reactive { .placeholder { @seer size(calc(100vh - 8vw)); overflow: visible; background-color: #3c9609; color: #f9e2b8; } }
+@reactive { .placeholder { @seer size(calc(100vh - 8vw)); overflow: visible; background-color: #c904b5; color: #8b81e2; } }
 @seerseven :--heading h1, h2, h3;
 :--heading {
   margin: 1rem;
   padding: 1.5rem;
-  border: 3px solid #6891d8 !important;
+  border: 3px solid #ff9b93 !important;
   background-color: #fbe9e7;
   color: #000 !important;
   font-weight: 900;
@@ -32973,8 +32962,8 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 .fluid-test {
   width: 400px;
   height: 400px;
-  padding: 1rem calc(10px + 10 * (100vw - 320px) / 1280) 2rem;
-  font-size: calc(16px + 14 * (100vw - 320px) / 1280);
+  padding: 1rem fluid(10px, 20px) 2rem;
+  font-size: fluid(16px, 30px);
 }
 .tipsy {
   display: inline-block;
@@ -33113,19 +33102,16 @@ html {
 }
 html[data-theme=light] {
   --bg: #fff;
-  --bg_rgb: 255, 255, 255;
 }
 html[data-theme=dark] {
   --bg: #333333;
-  --bg_rgb: 51, 51, 51;
 }
 .link\:link {
   color: var(--linkColor) !important;
   text-decoration: none;
   transition: all 0.3s ease 0s;
 }
-.link\:link:hover,
-.link\:link.\:hover {
+.link\:link:hover {
   color: var(--linkHover) !important;
   text-decoration: none;
   transition: all 0.3s ease 0s;
@@ -33135,8 +33121,7 @@ html[data-theme=dark] {
   text-decoration: none;
   transition: all 0.3s ease 0s;
 }
-.link\:icon:hover,
-.link\:icon.\:hover {
+.link\:icon:hover {
   color: var(--linkHover) !important;
   text-decoration: none;
   transition: all 0.3s ease 0s;
@@ -33147,8 +33132,7 @@ html[data-theme=dark] {
   text-decoration: none;
   transition: all 0.3s ease 0s;
 }
-.link\:button:hover,
-.link\:button.\:hover {
+.link\:button:hover {
   background-color: buttonBGColor !important;
   color: var(--buttonHover) !important;
   text-decoration: none;
@@ -33159,8 +33143,7 @@ html[data-theme=dark] {
   text-decoration: none;
   transition: all 0.3s ease 0s;
 }
-.link\:transparent-light:hover,
-.link\:transparent-light.\:hover {
+.link\:transparent-light:hover {
   color: var(--linkHoverTransDark) !important;
   text-decoration: none;
   transition: all 0.3s ease 0s;
@@ -33170,8 +33153,7 @@ html[data-theme=dark] {
   text-decoration: none;
   transition: all 0.3s ease 0s;
 }
-.link\:transparent-dark:hover,
-.link\:transparent-dark.\:hover {
+.link\:transparent-dark:hover {
   color: var(--linkHoverTransLight) !important;
   text-decoration: none;
   transition: all 0.3s ease 0s;
@@ -33191,8 +33173,7 @@ html[data-theme=dark] {
   text-underline-offset: 0.5rem !important;
   transition: all 0.3s ease 0s;
 }
-.nav\:link:hover,
-.nav\:link.\:hover {
+.nav\:link:hover {
   color: var(--linkHover) !important;
   -webkit-text-decoration: var(--decore-hover) var(--decore-style) var(--linkColor) var(--decore-weight);
           text-decoration: var(--decore-hover) var(--decore-style) var(--linkColor) var(--decore-weight);
@@ -33201,8 +33182,7 @@ html[data-theme=dark] {
 .nav\:icon {
   color: var(--linkColor) !important;
 }
-.nav\:icon:hover,
-.nav\:icon.\:hover {
+.nav\:icon:hover {
   color: var(--linkHover) !important;
 }
 .nav\:social {
@@ -33211,8 +33191,7 @@ html[data-theme=dark] {
   padding: 12px 5px 0px;
   color: var(--linkColor) !important;
 }
-.nav\:social:hover,
-.nav\:social.\:hover {
+.nav\:social:hover {
   color: var(--linkHover) !important;
 }
 #header-container {
@@ -33381,14 +33360,12 @@ summary.list-menu__item {
   content: "";
   transition: all 0.3s ease 0s;
 }
-.theme-toggler .colormode\:solid:hover:before,
-.theme-toggler .colormode\:solid.\:hover:before {
+.theme-toggler .colormode\:solid:hover:before {
   background-color: var(--colorModeBGV);
   content: "";
   transition: all 0.3s ease 0s;
 }
-.theme-toggler .colormode\:solid:hover svg,
-.theme-toggler .colormode\:solid.\:hover svg {
+.theme-toggler .colormode\:solid:hover svg {
   fill: var(--colorModeV);
   stroke: var(--colorModeV);
   transition: all 0.3s ease 0s;
@@ -33411,14 +33388,12 @@ summary.list-menu__item {
   content: "";
   transition: all 0.3s ease 0s;
 }
-.theme-toggler input:checked + .colormode\:solid:hover:before,
-.theme-toggler input:checked + .colormode\:solid.\:hover:before {
+.theme-toggler input:checked + .colormode\:solid:hover:before {
   background-color: var(--colorModeBGV);
   content: "";
   transition: all 0.3s ease 0s;
 }
-.theme-toggler input:checked + .colormode\:solid:hover svg,
-.theme-toggler input:checked + .colormode\:solid.\:hover svg {
+.theme-toggler input:checked + .colormode\:solid:hover svg {
   fill: var(--colorModeV);
   stroke: var(--colorModeV);
   transition: all 0.3s ease 0s;
@@ -33441,14 +33416,12 @@ summary.list-menu__item {
   content: "";
   transition: all 0.3s ease 0s;
 }
-.theme-toggler .colormode\:outline:hover:before,
-.theme-toggler .colormode\:outline.\:hover:before {
+.theme-toggler .colormode\:outline:hover:before {
   background-color: var(--colorModeBGV);
   content: "";
   transition: all 0.3s ease 0s;
 }
-.theme-toggler .colormode\:outline:hover svg,
-.theme-toggler .colormode\:outline.\:hover svg {
+.theme-toggler .colormode\:outline:hover svg {
   fill: none;
   stroke: var(--colorModeV);
   transition: all 0.3s ease 0s;
@@ -33471,14 +33444,12 @@ summary.list-menu__item {
   content: "";
   transition: all 0.3s ease 0s;
 }
-.theme-toggler input:checked + .colormode\:outline:hover:before,
-.theme-toggler input:checked + .colormode\:outline.\:hover:before {
+.theme-toggler input:checked + .colormode\:outline:hover:before {
   background-color: var(--colorModeBGV);
   content: "";
   transition: all 0.3s ease 0s;
 }
-.theme-toggler input:checked + .colormode\:outline:hover svg,
-.theme-toggler input:checked + .colormode\:outline.\:hover svg {
+.theme-toggler input:checked + .colormode\:outline:hover svg {
   fill: none;
   stroke: var(--colorModeV);
   transition: all 0.3s ease 0s;
@@ -33573,8 +33544,7 @@ summary.list-menu__item {
   transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 @media (hover: hover) and (pointer: fine) {
-  .hover\:swipe-in:hover:before,
-.hover\:swipe-in.\:hover:before {
+  .hover\:swipe-in:hover:before {
     right: auto;
     left: 0;
     width: 100%;
@@ -33597,8 +33567,7 @@ summary.list-menu__item {
   transition: background-size 0.2s linear 0.15s;
   transition: background-size 0.2s linear var(--background-delay, 0.15s);
 }
-.hover\:swipe-out:hover,
-.hover\:swipe-out.\:hover {
+.hover\:swipe-out:hover {
   --background-size: 0%;
   --background-delay: 0s;
   --stroke-dashoffset: 26;
@@ -33636,9 +33605,7 @@ summary.list-menu__item {
 .brackets a:hover:before,
 .brackets a:hover:after,
 .brackets a:focus:before,
-.brackets a:focus:after,
-.brackets a.\:hover:before,
-.brackets a.\:hover:after {
+.brackets a:focus:after {
   transform: translateX(0px);
   opacity: 1;
 }
@@ -33682,14 +33649,11 @@ summary.list-menu__item {
 .borderSlideUp a:hover:before,
 .borderSlideUp a:hover:after,
 .borderSlideUp a:focus:before,
-.borderSlideUp a:focus:after,
-.borderSlideUp a.\:hover:before,
-.borderSlideUp a.\:hover:after {
+.borderSlideUp a:focus:after {
   transform: scale(1);
 }
 .borderSlideUp a:hover:after,
-.borderSlideUp a:focus:after,
-.borderSlideUp a.\:hover:after {
+.borderSlideUp a:focus:after {
   top: 0%;
   opacity: 1;
 }
@@ -33722,9 +33686,7 @@ summary.list-menu__item {
 .sphere a:hover:before,
 .sphere a:hover:after,
 .sphere a:focus:before,
-.sphere a:focus:after,
-.sphere a.\:hover:before,
-.sphere a.\:hover:after {
+.sphere a:focus:after {
   transform: translateX(-50%) translateY(-50%) scale(1);
   opacity: 0.2;
 }
@@ -33737,8 +33699,7 @@ summary.list-menu__item {
 .link\:footer {
   color: var(--linkColor);
 }
-.link\:footer:hover,
-.link\:footer.\:hover {
+.link\:footer:hover {
   color: var(--linkHover);
 }
 .text\:footer {
@@ -33782,15 +33743,3 @@ summary.list-menu__item {
  * From postcss.config.js
  * Uses Breakpoints.map in Variables/Maps.scss
  */
-@media (max-width: 320px) {
-  .fluid-test {
-    padding: 1rem 10px 2rem;
-    font-size: 16px;
-  }
-}
-@media (min-width: 1600px) {
-  .fluid-test {
-    padding: 1rem 20px 2rem;
-    font-size: 30px;
-  }
-}

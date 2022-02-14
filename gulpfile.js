@@ -1,136 +1,105 @@
 'use strict';
 
-// Load plugins
 const gulp = require('gulp');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
-const plumber = require('gulp-plumber');
 const postcss = require('gulp-postcss');
 const rename = require('gulp-rename');
-const cssnano = require('gulp-cssnano');
-const gulpCopy = require('gulp-copy');
 const bump = require('gulp-bump');
-const git  = require('gulp-git');
+const plumber = require('gulp-plumber');
+const cssnano = require('gulp-cssnano');
+const git = require('gulp-git');
 const push = require('gulp-git-push');
 const gitignore = require('gulp-gitignore');
 
-// ESBuild Styles Move Task
+//Define Src and Dest Filepaths
+const esbuild = 'src/build/';
+const styles = 'src/styles/';
+const scripts = 'src/scripts/';
+const dist = 'theme/assets';
+const cdn = 'docs';
+const app = './';
 
-function pcss() {
-	return gulp
-		.src('src/build/*.css')
-		.pipe(plumber())
-		.pipe(postcss())
-		.pipe(gulp.dest('src/styles'));
-}
+//List Javascript Vendors in Bundle Order
+var libs = ['jquery.js', 'jqueryUI.js', 'aos.js', 'rellax.js'];
 
+//Itterate Through Vendor Array adding Filepath Strings
+libs = libs.map((i) => scripts + i);
+
+//Run Compiled Sass Through PostCSS
 function css() {
 	return gulp
-		.src('src/styles/**/*')
+		.src([esbuild + '*.css'])
 		.pipe(plumber())
-		.pipe(cssnano())
-		.pipe(rename({ suffix: '.min' }))
-		.pipe(gulp.dest('theme/assets'));
+		.pipe(postcss())
+		.pipe(gulp.dest(styles));
+	// .pipe(cssnano())
+	// .pipe(rename({ suffix: '.min' }))
+	// .pipe(gulp.dest(dist))
+	// .pipe(rename({ prefix: 'dist-' }))
+	// .pipe(gulp.dest(cdn));
 }
 
-
-function bjs() {
-	return gulp
-		.src('src/build/*.js')
-		.pipe(plumber())
-		.pipe(uglify())
-		.pipe(rename({ suffix: '.min' }))
-		.pipe(gulp.dest('theme/assets'));
-}
-
-function vjs() {
-	return gulp
-		.src([
-			'src/js/vendors/jquery.js',
-			'src/js/vendors/jqueryUI.js',
-			'src/js/vendors/aos.js',
-			'src/js/vendors/rellax.js',
-		])
-		.pipe(plumber())
-		.pipe(uglify())
-		.pipe(rename({ suffix: '.min' }))
-		.pipe(gulp.dest('src/scripts'));
-}
-
+//Move, Minify, and Rename Bundled Modules
 function js() {
 	return gulp
-		.src([
-			'src/scripts/jquery.min.js',
-			'src/scripts/jqueryUI.min.js',
-			// 'src/scripts/popper.min.js',
-			// 'src/scripts/mdball.min.js',
-			// 'src/scripts/three.min.js',
-			// 'src/scripts/vanta.min.js',
-			'src/scripts/aos.min.js',
-			'src/scripts/rellax.min.js',
-		])
+		.src([esbuild + '*.js'])
 		.pipe(plumber())
 		.pipe(uglify())
-		.pipe(concat('vendor.min.js'))
-		.pipe(gulp.dest('theme/assets'));
-}
-function cdn() {
-	return gulp
-		.src('theme/assets/*')
-		.pipe(plumber())
+		.pipe(rename({ suffix: '.min' }))
+		.pipe(gulp.dest(dist))
 		.pipe(rename({ prefix: 'dist-' }))
-		.pipe(gulp.dest('docs'));
+		.pipe(gulp.dest(cdn));
 }
-function tag() {
+
+//Move, Minify, and Rename Bundled Vendors
+function lib() {
 	return gulp
-		.src('./package.json')
+		.src(libs)
 		.pipe(plumber())
-		// bump package.json version
-		.pipe(bump({type: 'patch'}))
-		// save bumped file into filesystem
-		.pipe(gulp.dest('./'))
+		.pipe(concat('lib.js'))
+		.pipe(uglify())
+		.pipe(rename({ suffix: '.min' }))
+		.pipe(gulp.dest(dist))
+		.pipe(rename({ prefix: 'dist-' }))
+		.pipe(gulp.dest(cdn));
 }
-function deploy() {
+
+function ver() {
 	return gulp
-		.src('./*')
+		.src([app + 'package.json'])
+		.pipe(plumber())
+		.pipe(bump({ type: 'patch' }))
+		.pipe(gulp.dest(app));
+}
+
+function dep() {
+	return gulp
+		.src([app + '*'])
 		.pipe(plumber())
 		.pipe(gitignore())
-		// add changes
 		.pipe(git.add())
-		// commit changes
 		.pipe(git.commit('bump version'))
-		// push local changes to repository
-		.pipe(push({                      
-			repository: 'origin',
-			refspec: 'HEAD'
-		}));
+		.pipe(push({ repository: 'origin', refspec: 'HEAD' }));
 }
 
-
-// Watch files
 function watchFiles() {
-	gulp.watch('src/build/*.js', bjs);
-	gulp.watch('src/js/vendors/*.js', vjs);
-	gulp.watch('src/scripts/**/*', js);
-	gulp.watch('src/build/*.css', pcss);
-	gulp.watch('src/styles/**/*', css);
-	gulp.watch('theme/assets/**/*', cdn, tag, deploy);
+	gulp.watch('src/build/*.css', css);
+	gulp.watch('src/build/*.css', js);
+	gulp.watch('src/scripts/*.js', lib);
 }
 
 // define complex tasks
-const build = gulp.parallel(pcss, css, bjs, vjs, js);
+const build = gulp.series(ver, dep);
 const watch = gulp.series(watchFiles);
 
-
 // export tasks
-exports.pcss = pcss;
 exports.css = css;
-exports.bjs = bjs;
-exports.vjs = vjs;
 exports.js = js;
-exports.cdn = cdn;
-exports.tag = tag;
-exports.deploy = deploy;
+exports.lib = lib;
+exports.ver = ver;
+exports.dep = dep;
+
 exports.build = build;
 exports.watch = watch;
 exports.default = build;

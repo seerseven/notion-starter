@@ -33,7 +33,7 @@
   --color-text-purple: #c084fc;
   --color-text-pink: #f472b6;
   --color-text-red: #f87171;
-  --color-bg-default: randomColor;
+  --color-bg-default: randomColor(dark);
   --color-bg-gray: #f0edeb;
   --color-bg-brown: #f0e4da;
   --color-bg-orange: #fce4d1;
@@ -62,6 +62,9 @@
   --color-pill-purple: #e0d8f4;
   --color-pill-pink: #fae0f0;
   --color-pill-red: #fbd6d2;
+}
+.imhere {
+  bg: rgba(30, 136, 229, 0.4);
 }
 body {
   -webkit-font-smoothing: antialiased !important;

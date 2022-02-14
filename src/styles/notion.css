@@ -85,126 +85,76 @@
 /* src/sass/notion.scss */
 :root {
   --color-primary: #671e9b !important;
-  --color-primary_rgb: 103, 30, 155;
   --cta-color-bg: #e4f5fe !important;
-  --cta-color-bg_rgb: 228, 245, 254;
   --cta-padding: 12px 22px !important;
   --cta-border-radius: 50px !important;
   --cta-color-text: #424b55 !important;
-  --cta-color-text_rgb: 66, 75, 85;
   --color-text-default: #424b55;
-  --color-text-default_rgb: 66, 75, 85;
   --callout-border-radius: 20px !important;
   --inline-code-bg-color: rgba(28, 160, 241, 0.1) !important;
-  --inline-code-bg-color_rgb: 28, 160, 241;
   --content-width: 1500px !important;
   --color-code-block: #fafafa !important;
-  --color-code-block_rgb: 250, 250, 250;
   --color-text-light: white !important;
-  --color-text-light_rgb: 255, 255, 255;
   --column-spacing: 15px !important;
   --collection-card-cover-size-small: 180px !important;
   --collection-card-cover-size-medium: 260px !important;
   --collection-card-cover-size-large: calc(50% - 15px) !important;
   --transition: all 0.17s ease-in-out !important;
   --color-bg-gray: #f5f4f2 !important;
-  --color-bg-gray_rgb: 245, 244, 242;
   --color-ui-hover-bg: rgba(150, 150, 150, 0.1) !important;
-  --color-ui-hover-bg_rgb: 150, 150, 150;
   --color-ui-hover-bg-light: #e7f5fd !important;
-  --color-ui-hover-bg-light_rgb: 231, 245, 253;
   --color-border-default: #f1f5f7;
-  --color-border-default_rgb: 241, 245, 247;
   --color-accent-bg: var(--color-primary);
-  --color-accent-bg_rgb: var(--color-primary_rgb);
   --color-card-bg: rgba(150, 150, 150, 0.1) !important;
-  --color-card-bg_rgb: 150, 150, 150;
   --color-text-default: #4d586f;
-  --color-text-default_rgb: 77, 88, 111;
   --color-text-default-light: #64748b;
-  --color-text-default-light_rgb: 100, 116, 139;
   --color-text-gray: #9ca3af;
-  --color-text-gray_rgb: 156, 163, 175;
   --color-text-brown: #c9844f;
-  --color-text-brown_rgb: 201, 132, 79;
   --color-text-orange: #fb923c;
-  --color-text-orange_rgb: 251, 146, 60;
   --color-text-yellow: #fbbf24;
-  --color-text-yellow_rgb: 251, 191, 36;
   --color-text-green: #34d399;
-  --color-text-green_rgb: 52, 211, 153;
   --color-text-blue: #60a5fa;
-  --color-text-blue_rgb: 96, 165, 250;
   --color-text-purple: #c084fc;
-  --color-text-purple_rgb: 192, 132, 252;
   --color-text-pink: #f472b6;
-  --color-text-pink_rgb: 244, 114, 182;
   --color-text-red: #f87171;
-  --color-text-red_rgb: 248, 113, 113;
-  --color-bg-default: #88ed84;
-  --color-bg-default_rgb: 136, 237, 132;
+  --color-bg-default: #e80dd9;
   --color-bg-gray: #f0edeb;
-  --color-bg-gray_rgb: 240, 237, 235;
   --color-bg-brown: #f0e4da;
-  --color-bg-brown_rgb: 240, 228, 218;
   --color-bg-orange: #fce4d1;
-  --color-bg-orange_rgb: 252, 228, 209;
   --color-bg-yellow: #fbeed0;
-  --color-bg-yellow_rgb: 251, 238, 208;
   --color-bg-green: #deede8;
-  --color-bg-green_rgb: 222, 237, 232;
   --color-bg-blue: #dee8f7;
-  --color-bg-blue_rgb: 222, 232, 247;
   --color-bg-purple: #e0d8f4;
-  --color-bg-purple_rgb: 224, 216, 244;
   --color-bg-pink: #fae0f0;
-  --color-bg-pink_rgb: 250, 224, 240;
   --color-bg-red: #fbd6d2;
-  --color-bg-red_rgb: 251, 214, 210;
   --color-bg-gray-light: #f0edeb;
-  --color-bg-gray-light_rgb: 240, 237, 235;
   --color-bg-brown-light: #f0e4da;
-  --color-bg-brown-light_rgb: 240, 228, 218;
   --color-bg-orange-light: #fce4d1;
-  --color-bg-orange-light_rgb: 252, 228, 209;
   --color-bg-yellow-light: #fbeed0;
-  --color-bg-yellow-light_rgb: 251, 238, 208;
   --color-bg-green-light: #deede8;
-  --color-bg-green-light_rgb: 222, 237, 232;
   --color-bg-blue-light: #dee8f7;
-  --color-bg-blue-light_rgb: 222, 232, 247;
   --color-bg-purple-light: #e0d8f4;
-  --color-bg-purple-light_rgb: 224, 216, 244;
   --color-bg-pink-light: #fae0f0;
-  --color-bg-pink-light_rgb: 250, 224, 240;
   --color-bg-red-light: #fbd6d2;
-  --color-bg-red-light_rgb: 251, 214, 210;
   --color-pill-default: rgba(0, 0, 0, 0.04);
-  --color-pill-default_rgb: 0, 0, 0;
   --color-pill-gray: #f0edeb;
-  --color-pill-gray_rgb: 240, 237, 235;
   --color-pill-brown: #f0e4da;
-  --color-pill-brown_rgb: 240, 228, 218;
   --color-pill-orange: #fce4d1;
-  --color-pill-orange_rgb: 252, 228, 209;
   --color-pill-yellow: #fbeed0;
-  --color-pill-yellow_rgb: 251, 238, 208;
   --color-pill-green: #deede8;
-  --color-pill-green_rgb: 222, 237, 232;
   --color-pill-blue: #dee8f7;
-  --color-pill-blue_rgb: 222, 232, 247;
   --color-pill-purple: #e0d8f4;
-  --color-pill-purple_rgb: 224, 216, 244;
   --color-pill-pink: #fae0f0;
-  --color-pill-pink_rgb: 250, 224, 240;
   --color-pill-red: #fbd6d2;
-  --color-pill-red_rgb: 251, 214, 210;
+}
+.imhere {
+  bg: rgba(30, 136, 229, 0.4);
 }
 body {
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
   text-rendering: optimizeLegibility !important;
-  background: #213b82;
+  background: #20820d;
   font-size: 16px;
 }
 .super-content {
@@ -224,8 +174,7 @@ body {
 .super-navbar__button.super-navbar__menu-open {
   display: none !important;
 }
-.super-navbar__logo:hover,
-.super-navbar__logo.\:hover {
+.super-navbar__logo:hover {
   opacity: 0.7 !important;
   transition: all 0.17s ease-in-out !important;
   transition: var(--transition) !important;
@@ -239,8 +188,7 @@ body {
 .super-navbar__menu-item-list .super-navbar__item {
   border-radius: 10px !important;
 }
-.super-navbar__menu-item-list .super-navbar__item:hover,
-.super-navbar__menu-item-list .super-navbar__item.\:hover {
+.super-navbar__menu-item-list .super-navbar__item:hover {
   background: rgba(150, 150, 150, 0.1) !important;
   background: var(--color-ui-hover-bg) !important;
   opacity: 1 !important;
@@ -258,19 +206,16 @@ body {
   letter-spacing: -0.3px !important;
   transition: all 0.2s ease-in-out !important;
 }
-.notion-icon__search:hover path:nth-child(2),
-.notion-icon__search.\:hover path:nth-child(2),
-.notion-icon__search:hover path.\:nth-child\(2\),
-.notion-icon__search.\:hover path.\:nth-child\(2\) {
+.notion-icon__search:hover path:nth-child(2) {
   fill: #671e9b !important;
   fill: var(--color-primary) !important;
 }
 .notion-search__input {
-  background: #88ed84 !important;
+  background: #e80dd9 !important;
   background: var(--color-bg-default) !important;
 }
 .notion-search__box {
-  background: #88ed84 !important;
+  background: #e80dd9 !important;
   background: var(--color-bg-default) !important;
 }
 .notion-search__wrapper {
@@ -359,8 +304,7 @@ body {
 .notion-page__title .notion-semantic-string span {
   line-height: 1 !important;
 }
-.notion-page > div:hover,
-.notion-page > div.\:hover {
+.notion-page > div:hover {
   background: 0 0 !important;
 }
 .notion-table-of-contents {
@@ -377,8 +321,7 @@ body {
 .notion-table-of-contents__item a div {
   padding: 0 !important;
 }
-.notion-table-of-contents__item:hover,
-.notion-table-of-contents__item.\:hover {
+.notion-table-of-contents__item:hover {
   background: 0 0 !important;
   opacity: 0.6 !important;
 }
@@ -426,8 +369,7 @@ h3.notion-heading {
 a {
   border: 0 !important;
 }
-a:hover,
-a.\:hover {
+a:hover {
   opacity: 0.6 !important;
 }
 .notion-semantic-string .notion-link {
@@ -435,8 +377,7 @@ a.\:hover {
   color: #4d586f !important;
   color: var(--color-text-default) !important;
 }
-.notion-semantic-string .notion-link:hover,
-.notion-semantic-string .notion-link.\:hover {
+.notion-semantic-string .notion-link:hover {
   opacity: 0.6 !important;
 }
 p > span > span > a {
@@ -519,8 +460,7 @@ ul > .notion-list-item:before {
   color: var(--color-text-default) !important;
   opacity: 0.6 !important;
 }
-.notion-callout__content .notion-link:hover,
-.notion-callout__content .notion-link.\:hover {
+.notion-callout__content .notion-link:hover {
   color: #4d586f !important;
   color: var(--color-text-default) !important;
   opacity: 1 !important;
@@ -542,8 +482,7 @@ ul > .notion-list-item:before {
   display: inline-block !important;
   margin: 0 !important;
 }
-.notion-breadcrumb__item:hover,
-.notion-breadcrumb__item.\:hover {
+.notion-breadcrumb__item:hover {
   background: 0 0 !important;
 }
 .notion-column-list:first-child {
@@ -578,7 +517,7 @@ ul > .notion-list-item:before {
   overflow: auto !important;
   border-right: 1px solid #f1f5f7 !important;
   border-right: 1px solid var(--color-border-default) !important;
-  background: #88ed84 !important;
+  background: #e80dd9 !important;
   background: var(--color-bg-default) !important;
 }
 .notion-root > .notion-column-list > .notion-column:first-child .notion-text {
@@ -597,18 +536,15 @@ ul > .notion-list-item:before {
 .notion-root > .notion-column-list > .notion-column:first-child a div {
   opacity: 1 !important;
 }
-.notion-root > .notion-column-list > .notion-column:first-child a:hover div,
-.notion-root > .notion-column-list > .notion-column:first-child a.\:hover div {
+.notion-root > .notion-column-list > .notion-column:first-child a:hover div {
   opacity: 1 !important;
 }
-.notion-root > .notion-column-list > .notion-column:first-child a:hover .notion-page__title,
-.notion-root > .notion-column-list > .notion-column:first-child a.\:hover .notion-page__title {
+.notion-root > .notion-column-list > .notion-column:first-child a:hover .notion-page__title {
   color: #4d586f !important;
   color: var(--color-text-default) !important;
   opacity: 1 !important;
 }
-.notion-root > .notion-column-list > .notion-column:first-child .notion-page:hover,
-.notion-root > .notion-column-list > .notion-column:first-child .notion-page.\:hover {
+.notion-root > .notion-column-list > .notion-column:first-child .notion-page:hover {
   opacity: 1 !important;
 }
 .notion-root > .notion-column-list > .notion-column:first-child p {
@@ -631,18 +567,15 @@ ul > .notion-list-item:before {
   opacity: 0.3 !important;
   transition: opacity 0.2s ease-in-out !important;
 }
-.notion-root > .notion-column-list > .notion-column:first-child .notion-page:hover .notion-page__icon,
-.notion-root > .notion-column-list > .notion-column:first-child .notion-page.\:hover .notion-page__icon {
+.notion-root > .notion-column-list > .notion-column:first-child .notion-page:hover .notion-page__icon {
   filter: grayscale(0%) saturate(100%);
   opacity: 1 !important;
 }
-.notion-root > .notion-column-list > .notion-column:first-child .notion-page:hover,
-.notion-root > .notion-column-list > .notion-column:first-child .notion-page.\:hover {
+.notion-root > .notion-column-list > .notion-column:first-child .notion-page:hover {
   background: rgba(150, 150, 150, 0.1) !important;
   background: var(--color-ui-hover-bg) !important;
 }
-.notion-root > .notion-column-list > .notion-column:nth-child(2),
-.notion-root > .notion-column-list > .notion-column.\:nth-child\(2\) {
+.notion-root > .notion-column-list > .notion-column:nth-child(2) {
   z-index: 10 !important;
   width: 100% !important;
   min-width: 500px !important;
@@ -654,8 +587,7 @@ ul > .notion-list-item:before {
   padding-bottom: 100px !important;
   padding-left: 60px !important;
 }
-.notion-root > .notion-column-list > .notion-column:nth-child(3),
-.notion-root > .notion-column-list > .notion-column.\:nth-child\(3\) {
+.notion-root > .notion-column-list > .notion-column:nth-child(3) {
   z-index: 10 !important;
   position: -webkit-sticky !important;
   position: sticky !important;
@@ -673,11 +605,10 @@ ul > .notion-list-item:before {
   overflow: auto !important;
   border-left: 1px solid #f1f5f7 !important;
   border-left: 1px solid var(--color-border-default) !important;
-  background: #88ed84 !important;
+  background: #e80dd9 !important;
   background: var(--color-bg-default) !important;
 }
-.notion-root > .notion-column-list > .notion-column:nth-child(3) div p:first-child,
-.notion-root > .notion-column-list > .notion-column.\:nth-child\(3\) div p:first-child {
+.notion-root > .notion-column-list > .notion-column:nth-child(3) div p:first-child {
   margin-bottom: 10px !important;
   font-weight: 500 !important;
   font-size: 12px;
@@ -685,24 +616,20 @@ ul > .notion-list-item:before {
   text-transform: uppercase !important;
   opacity: 0.6 !important;
 }
-.notion-root > .notion-column-list > .notion-column:nth-child(3) .notion-text:first-child p,
-.notion-root > .notion-column-list > .notion-column.\:nth-child\(3\) .notion-text:first-child p {
+.notion-root > .notion-column-list > .notion-column:nth-child(3) .notion-text:first-child p {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
 .notion-root > .notion-column-list > .notion-column:first-child::-webkit-scrollbar,
-.notion-root > .notion-column-list > .notion-column:nth-child(3)::-webkit-scrollbar,
-.notion-root > .notion-column-list > .notion-column.\:nth-child\(3\)::-webkit-scrollbar {
+.notion-root > .notion-column-list > .notion-column:nth-child(3)::-webkit-scrollbar {
   width: 6px !important;
 }
 .notion-root > .notion-column-list > .notion-column:first-child::-webkit-scrollbar-track,
-.notion-root > .notion-column-list > .notion-column:nth-child(3)::-webkit-scrollbar-track,
-.notion-root > .notion-column-list > .notion-column.\:nth-child\(3\)::-webkit-scrollbar-track {
+.notion-root > .notion-column-list > .notion-column:nth-child(3)::-webkit-scrollbar-track {
   background: transparent !important;
 }
 .notion-root > .notion-column-list > .notion-column:first-child::-webkit-scrollbar-thumb,
-.notion-root > .notion-column-list > .notion-column:nth-child(3)::-webkit-scrollbar-thumb,
-.notion-root > .notion-column-list > .notion-column.\:nth-child\(3\)::-webkit-scrollbar-thumb {
+.notion-root > .notion-column-list > .notion-column:nth-child(3)::-webkit-scrollbar-thumb {
   border-radius: 20px !important;
   background-color: rgba(150, 150, 150, 0.1);
   background-color: var(--color-ui-hover-bg);
@@ -730,10 +657,9 @@ ul > .notion-list-item:before {
   transition: all 0.17s ease-in-out !important;
   transition: var(--transition) !important;
 }
-.notion-collection-card.board:hover,
-.notion-collection-card.board.\:hover {
+.notion-collection-card.board:hover {
   transform: translateY(-4px) !important;
-  background: #88ed84 !important;
+  background: #e80dd9 !important;
   background: var(--color-bg-default) !important;
   box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.17) !important;
 }
@@ -746,10 +672,9 @@ ul > .notion-list-item:before {
   transition: all 0.17s ease-in-out !important;
   transition: var(--transition) !important;
 }
-.notion-collection-gallery > .notion-collection-card:hover,
-.notion-collection-gallery > .notion-collection-card.\:hover {
+.notion-collection-gallery > .notion-collection-card:hover {
   transform: translateY(-4px) !important;
-  background: #88ed84 !important;
+  background: #e80dd9 !important;
   background: var(--color-bg-default) !important;
   box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.12) !important;
 }
@@ -832,8 +757,7 @@ th {
   font-size: 14px;
   font-family: "Roboto Mono", monospace !important;
 }
-.copy-to-clipboard-button:hover,
-.copy-to-clipboard-button.\:hover {
+.copy-to-clipboard-button:hover {
   box-shadow: inset 0 0 0 99999px rgba(0, 0, 0, 0.04) !important;
   cursor: pointer !important;
 }
@@ -857,8 +781,7 @@ th {
 .notion-collection-list__item {
   padding: 8px !important;
 }
-.notion-collection-list__item:hover,
-.notion-collection-list__item.\:hover {
+.notion-collection-list__item:hover {
   background: rgba(150, 150, 150, 0.1) !important;
   background: var(--color-ui-hover-bg) !important;
 }
@@ -872,8 +795,7 @@ div.code-toolbar > .toolbar {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
-div.code-toolbar:hover > .toolbar,
-div.code-toolbar.\:hover > .toolbar {
+div.code-toolbar:hover > .toolbar {
   opacity: 1;
 }
 div.code-toolbar[focus-within] > .toolbar {
@@ -916,10 +838,7 @@ div.code-toolbar > .toolbar > .toolbar-item > a:hover,
 div.code-toolbar > .toolbar > .toolbar-item > button:focus,
 div.code-toolbar > .toolbar > .toolbar-item > button:hover,
 div.code-toolbar > .toolbar > .toolbar-item > span:focus,
-div.code-toolbar > .toolbar > .toolbar-item > span:hover,
-div.code-toolbar > .toolbar > .toolbar-item > a.\:hover,
-div.code-toolbar > .toolbar > .toolbar-item > button.\:hover,
-div.code-toolbar > .toolbar > .toolbar-item > span.\:hover {
+div.code-toolbar > .toolbar > .toolbar-item > span:hover {
   color: inherit;
   text-decoration: none;
 }
@@ -982,8 +901,7 @@ div.code-toolbar > .toolbar > .toolbar-item > span.\:hover {
 .notion-root > .notion-column-list .notion-column-list:last-child .notion-column .highlighted-color.color-gray {
   pointer-events: none !important;
 }
-.notion-root > .notion-column-list .notion-column-list:last-child .notion-column a:hover,
-.notion-root > .notion-column-list .notion-column-list:last-child .notion-column a.\:hover {
+.notion-root > .notion-column-list .notion-column-list:last-child .notion-column a:hover {
   background: rgba(150, 150, 150, 0.1) !important;
   background: var(--color-ui-hover-bg) !important;
 }
@@ -1036,18 +954,15 @@ p {
 .notion-root > .notion-callout .notion-image a {
   opacity: 1 !important;
 }
-.notion-root > .notion-callout img:hover,
-.notion-root > .notion-callout img.\:hover {
+.notion-root > .notion-callout img:hover {
   opacity: 0.7 !important;
   transition: all 0.17s ease-in-out !important;
   transition: var(--transition) !important;
 }
-.notion-root > .notion-callout > .notion-callout__content > .notion-text:nth-child(3) p span span,
-.notion-root > .notion-callout > .notion-callout__content > .notion-text.\:nth-child\(3\) p span span {
+.notion-root > .notion-callout > .notion-callout__content > .notion-text:nth-child(3) p span span {
   margin: 0px 4px;
 }
-.notion-root > .notion-callout > .notion-callout__content > .notion-text:nth-child(3) p,
-.notion-root > .notion-callout > .notion-callout__content > .notion-text.\:nth-child\(3\) p {
+.notion-root > .notion-callout > .notion-callout__content > .notion-text:nth-child(3) p {
   line-height: 2 !important;
 }
 .notion-root > .notion-callout .notion-collection {
@@ -1098,8 +1013,7 @@ p {
   opacity: 0.7 !important;
   transition: all 0.3s ease !important;
 }
-.notion-root > .notion-callout .notion-collection-card:hover,
-.notion-root > .notion-callout .notion-collection-card.\:hover {
+.notion-root > .notion-callout .notion-collection-card:hover {
   transform: translateY(0px) !important;
   opacity: 1 !important;
 }
@@ -1107,8 +1021,7 @@ p {
   filter: #fff !important;
 }
 @media all and (max-width: 1100px) {
-  .notion-root > .notion-column-list > .notion-column:nth-child(3),
-.notion-root > .notion-column-list > .notion-column.\:nth-child\(3\) {
+  .notion-root > .notion-column-list > .notion-column:nth-child(3) {
     display: none !important;
   }
 }
@@ -1149,17 +1062,14 @@ p {
   .notion-header__title {
     font-size: 32px;
   }
-  .notion-root > .notion-column-list > .notion-column:nth-child(1),
-.notion-root > .notion-column-list > .notion-column.\:nth-child\(1\) {
+  .notion-root > .notion-column-list > .notion-column:nth-child(1) {
     display: none !important;
   }
-  .notion-root > .notion-column-list > .notion-column:nth-child(1).show-nav,
-.notion-root > .notion-column-list > .notion-column.\:nth-child\(1\).show-nav {
+  .notion-root > .notion-column-list > .notion-column:nth-child(1).show-nav {
     display: block !important;
     opacity: 1 !important;
   }
-  .notion-root > .notion-column-list > .notion-column:nth-child(2),
-.notion-root > .notion-column-list > .notion-column.\:nth-child\(2\) {
+  .notion-root > .notion-column-list > .notion-column:nth-child(2) {
     width: 100 !important;
     min-width: 100% !important;
     max-width: 100% !important;
@@ -1204,8 +1114,7 @@ p {
   }
 }
 @media all and (max-width: 764px) {
-  .notion-root > .notion-callout > .notion-callout__content > .notion-text:nth-child(3) p span,
-.notion-root > .notion-callout > .notion-callout__content > .notion-text.\:nth-child\(3\) p span {
+  .notion-root > .notion-callout > .notion-callout__content > .notion-text:nth-child(3) p span {
     display: flex !important;
     flex-direction: column !important;
     margin-bottom: 5px !important;
@@ -1338,7 +1247,7 @@ pre[class*=language-] {
   align-items: center !important;
   justify-content: center !important;
   border-radius: 70px !important;
-  background-color: #88ed84 !important;
+  background-color: #e80dd9 !important;
   background-color: var(--color-bg-default) !important;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.08) !important;
   color: #4d586f !important;

@@ -1,8 +1,12 @@
 @use '../../abstracts' as *;
 
 :root {
-@include notion-theme-variables;
-@include notion-default-color-variables;
+	@include notion-theme-variables;
+	@include notion-default-color-variables;
+}
+
+.imhere {
+	bg: hex(b60, 0.4);
 }
 
 body {
@@ -352,7 +356,7 @@ ul > .notion-list-item:before {
 	box-shadow: 0 10px 40px -10px rgb(0 0 0 / 12%) !important;
 }
 
-.notion-root>.notion-callout {
+.notion-root > .notion-callout {
 	display: block !important;
 }
 

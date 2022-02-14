@@ -1,16 +1,16 @@
 {
-  "name": "helium",
-  "version": "2.0.2",
-  "description": "Modern Shopify development workflow, with Online Store 2.0 features and built with performance and best practices in mind..",
-  "repository": "idbakkasse/helium",
-  "author": "Youness Idbakkasse <youness@idbakkasse.com>",
+  "name": "notionstarter",
+  "version": "2.0.17",
+  "description": "Building Notion Sites with a Modern development workflow, and built with performance and best practices in mind.",
+  "repository": "seerseven/notion-starter",
+  "author": "Zaccary Ledford <zacc@seerseven.com>",
   "license": "MIT",
   "keywords": [
-    "helium",
-    "shopify",
+    "notion",
     "starter",
     "boilerplate",
-    "themes"
+    "themes",
+    "builder"
   ],
   "browserslist": [
     "defaults"
@@ -34,6 +34,7 @@
     "gulp-git": "^2.10.1",
     "gulp-git-push": "^2.0.0",
     "gulp-gitignore": "^0.1.0",
+    "gulp-hub": "^4.2.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.1",
     "gulp-rename": "^2.0.0",

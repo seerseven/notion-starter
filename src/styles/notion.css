@@ -65,14 +65,14 @@
 }
 .imhere {
   background: rgba(216, 27, 96, 0.4);
-  color: #d8280d;
+  color: #f477e8;
   font: rgba(216, 27, 96, 0.4);
 }
 body {
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
   text-rendering: optimizeLegibility !important;
-  background: #b2cc20;
+  background: #bb7cdd;
   font-size: 16px;
 }
 .super-content {

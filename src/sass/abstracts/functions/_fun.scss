@@ -2,41 +2,6 @@
 @use '../variables' as *;
 @use '../variables/maps' as *;
 
-$fonts: (
-	font-body: v(font-body),
-	font-accent: v(font-accent),
-	font-head: v(font-head),
-	font-nav: v(font-nav),
-);
-
-$yggdrasil: (
-	ndx-bgc: s(index_background_color),
-	pg-bgc: s(pg_bgc),
-	acc-bgc: s(acc_bgc),
-	head-bgc: s(head_bgc),
-	foot-bgc: s(foot_bgc),
-	nav-bgc: s(nav_bgc),
-);
-
-@function ff($ff) {
-	@return map-get($fonts, $ff);
-}
-
-@function v($propertyName) {
-	@return var(--ygg-#{$propertyName});
-}
-
-@function s($setting) {
-	@return unquote('{{ settings.ygg_' + $setting + ' }}!important');
-}
-
-:root {
-	// SPACING Custom Properties
-	@each $space, $value in $yggdrasil {
-		--ygg-#{$space}: #{$value};
-	}
-}
-
 @function insta($key) {
 	$value: map-get($insta-filters, $key);
 	@return $value;

@@ -4,15 +4,11 @@
 	@include notion-theme-variables;
 	@include notion-default-color-variables;
 }
-:root {
-	--fuckYOU: $fuckYOU;
-	--fuckYOU1: $fuckYOU1;
-	--fuckYOU2: $fuckYOU2;
-}
 
 .imhere {
 	bg: hex(pk60, 0.4);
 	c: $hex;
+	font: ff(font-body);
 }
 
 body {

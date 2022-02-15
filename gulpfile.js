@@ -75,13 +75,12 @@ function ver() {
 		.pipe(gulp.dest(app));
 }
 
-function gitCommit(done) {
+function gitCommit() {
 	src([app + '*'])
 		.pipe(gitignore())
 		.pipe(git.add())
 		.pipe(git.commit('bump version'))
 		.pipe(wait(2000));
-	done();
 }
 
 function gitPush(done) {

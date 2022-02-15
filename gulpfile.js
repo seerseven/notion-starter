@@ -76,7 +76,7 @@ function ver() {
 }
 
 function gitCommit() {
-	src([app + '*'])
+	return src([app + '*'])
 		.pipe(gitignore())
 		.pipe(git.add())
 		.pipe(git.commit('bump version'))

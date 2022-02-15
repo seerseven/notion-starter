@@ -13,9 +13,18 @@
 // @function s($setting) {
 // 	@return unquote('{{ settings.ygg_' + $setting + ' }}!important');
 // }
+
+$fuckYOU: #4d586f !important;
+$fuckYOU1: #4d586f !important;
+$fuckYOU2: #4d586f !important;
+$q1: unquote('#');
+$q2: unquote('{');
+$q3: unquote('$');
+$q4: unquote('}');
 @function s($setting) {
-	@return unquote('(') + $setting + unquote(')');
+	@return $q1 + $q2 + $q3 + $setting + $q4;
 }
+
 // $filter + unquote('(') + $prop + unquote(')');
 // :root {
 //   --ygg-ndx-bgc: {{ settings.ygg_index_background_color }} !important;
@@ -34,18 +43,15 @@ $fonts: (
 );
 
 $yggdrasil: (
-	ndx-bgc: s(ndx-bgc),
-	pg-bgc: s(pg_bgc),
-	acc-bgc: s(acc_bgc),
-	head-bgc: s(head_bgc),
-	foot-bgc: s(foot_bgc),
-	nav-bgc: s(nav_bgc),
+	fuckYOU: s(fuckYOU),
+	fuckYOU1: s(fuckYOU1),
+	fuckYOU2: s(fuckYOU2),
 );
 
 :root {
 	// SPACING Custom Properties
 	@each $space, $value in $yggdrasil {
-		--ygg-#{$space}: #{$value};
+		--#{$space}: $value;
 	}
 }
 

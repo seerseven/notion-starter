@@ -45,15 +45,14 @@ $yggdrasil: (
 	fuckYOU2: s(fuckYOU2),
 );
 
+@function s($setting) {
+	@return $q1 + $q2 + $q3 + $setting + $q4;
+}
 :root {
 	// SPACING Custom Properties
 	@each $space, $value in $yggdrasil {
 		--#{$space}: #{$value};
 	}
-}
-
-@function s($setting) {
-	@return $q1 + $q2 + $q3 + $setting + $q4;
 }
 
 @function insta($key) {

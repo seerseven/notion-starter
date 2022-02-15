@@ -79,7 +79,8 @@ function gitCommit() {
 	src([app + '*'])
 		.pipe(gitignore())
 		.pipe(git.add())
-		.pipe(git.commit('bump version'));
+		.pipe(git.commit('bump version'))
+		.pipe(wait(2000));
 }
 
 function gitPush() {

@@ -75,19 +75,17 @@ function ver() {
 		.pipe(gulp.dest(app));
 }
 
-function gitCommit(done) {
+function gitCommit() {
 	src([app + '*'])
 		.pipe(gitignore())
 		.pipe(git.add())
 		.pipe(git.commit('bump version'));
-	done();
 }
 
-function gitPush(done) {
+function gitPush() {
 	git.push('origin', 'master', function (err) {
 		if (err) throw err;
 	});
-	done();
 }
 
 exports.change = function (done) {
@@ -101,36 +99,20 @@ exports.save = gitCommit;
 exports.push = gitPush;
 exports.deploy = series(gitCommit, gitPush);
 
-// task('commit', function (done) {
-// 	gitCommit();
-// 	done();
-// });
-
-// task('push', function () {
-// 	gitPush();
-// });
-
-// task('deploy', series('commit', 'push'));
-
-task('watch', function () {
-	watch('src/build/*.css', css);
-	watch('src/build/*.css', js);
-	watch('src/scripts/*.js', lib);
+task('commit', function (done) {
+	gitCommit();
+	done();
 });
+
+task('push', function (done) {
+	gitPush();
+	done();
+});
+
+task('github', series('commit', 'push'));
 
 exports.default = function () {
 	watch('src/build/*.css', css);
 	watch('src/build/*.css', js);
 	watch('src/scripts/*.js', lib);
 };
-
-// define complex tasks
-const version = series(ver);
-
-// export tasks
-exports.css = css;
-exports.js = js;
-exports.lib = lib;
-exports.ver = ver;
-
-exports.version = version;

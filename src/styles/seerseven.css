@@ -32947,12 +32947,12 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   border-radius: 50%;
   background-image: url("https://dummyimage.com/500x500");
 }
-@reactive { .placeholder { @seer size(calc(100vh - 8vw)); overflow: visible; background-color: #1b0170; color: #9fc9fc; } }
+@reactive { .placeholder { @seer size(calc(100vh - 8vw)); overflow: visible; background-color: #c64f05; color: #dfe868; } }
 @seerseven :--heading h1, h2, h3;
 :--heading {
   margin: 1rem;
   padding: 1.5rem;
-  border: 3px solid #98ff82 !important;
+  border: 3px solid #ca4bd8 !important;
   background-color: #fbe9e7;
   color: #000 !important;
   font-weight: 900;

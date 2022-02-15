@@ -19,6 +19,13 @@ function ver() {
 		.pipe(dest(app));
 }
 
+function watchcode() {
+	watch('src/build/*.css', cssTasks.css);
+	watch('src/build/*.js', jsTasks.js);
+	watch('src/scripts/*.js', jsTasks.lib);
+}
+
+exports.watch = watchcode;
 exports.css = cssTasks.css;
 exports.js = jsTasks.js;
 exports.lib = jsTasks.lib;

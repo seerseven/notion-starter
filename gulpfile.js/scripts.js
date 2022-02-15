@@ -2,6 +2,7 @@ const { task, series, watch, src, dest, parallel } = require('gulp');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
+const plumber = require('gulp-plumber');
 
 //Define Src and Dest Filepaths
 const esbuild = 'src/build/';

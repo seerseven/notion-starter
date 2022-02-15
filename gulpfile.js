@@ -93,7 +93,7 @@ exports.change = function (done) {
 	src([app + '*'])
 		.pipe(gitignore())
 		.pipe(git.add())
-		.pipe(git.commit('bump version'));
+		.pipe(git.commit('Dev Testing'));
 	done();
 };
 exports.save = gitCommit;

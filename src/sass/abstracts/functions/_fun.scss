@@ -22,7 +22,7 @@ $q2: unquote('{');
 $q3: unquote('$');
 $q4: unquote('}');
 @function s($setting) {
-	@return $q1 + $q2 + $q3 + $setting + $q4;
+	@return $q3 + $setting;
 }
 
 // $filter + unquote('(') + $prop + unquote(')');
@@ -51,7 +51,7 @@ $yggdrasil: (
 :root {
 	// SPACING Custom Properties
 	@each $space, $value in $yggdrasil {
-		--#{$space}: $value;
+		--#{$space}: #{$value};
 	}
 }
 

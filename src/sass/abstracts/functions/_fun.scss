@@ -2,6 +2,18 @@
 @use '../variables' as *;
 @use '../variables/maps' as *;
 
+@function ff($ff) {
+	@return map-get($fonts, $ff);
+}
+
+@function v($propertyName) {
+	@return var(--ygg-#{$propertyName});
+}
+
+@function s($setting) {
+	@return unquote('{{ settings.ygg_' + $setting + ' }}!important');
+}
+
 @function insta($key) {
 	$value: map-get($insta-filters, $key);
 	@return $value;

@@ -2,36 +2,6 @@
 @use '../variables' as *;
 @use '../variables/maps' as *;
 
-@function ff($ff) {
-	@return map-get($fonts, $ff);
-}
-
-@function v($propertyName) {
-	@return var(--ygg-#{$propertyName});
-}
-
-// @function s($setting) {
-// 	@return unquote('{{ settings.ygg_' + $setting + ' }}!important');
-// }
-
-$fuckYOU: #4d586f !important;
-$fuckYOU1: #4d586f !important;
-$fuckYOU2: #4d586f !important;
-$q1: unquote('#');
-$q2: unquote('{');
-$q3: unquote('$');
-$q4: unquote('}');
-
-// $filter + unquote('(') + $prop + unquote(')');
-// :root {
-//   --ygg-ndx-bgc: {{ settings.ygg_index_background_color }} !important;
-//   --ygg-pg-bgc: {{ settings.ygg_pg_bgc }} !important;
-//   --ygg-acc-bgc: {{ settings.ygg_acc_bgc }} !important;
-//   --ygg-head-bgc: {{ settings.ygg_head_bgc }} !important;
-//   --ygg-foot-bgc: {{ settings.ygg_foot_bgc }} !important;
-//   --ygg-nav-bgc: {{ settings.ygg_nav_bgc }} !important;
-// }
-
 $fonts: (
 	font-body: v(font-body),
 	font-accent: v(font-accent),
@@ -44,6 +14,14 @@ $yggdrasil: (
 	fuckYOU1: s(fuckYOU1),
 	fuckYOU2: s(fuckYOU2),
 );
+
+@function ff($ff) {
+	@return map-get($fonts, $ff);
+}
+
+@function v($prop) {
+	@return var(--#{$prop});
+}
 
 @function s($setting) {
 	@return $q1 + $q2 + $q3 + $setting + $q4;

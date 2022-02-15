@@ -21,9 +21,6 @@ $q1: unquote('#');
 $q2: unquote('{');
 $q3: unquote('$');
 $q4: unquote('}');
-@function s($setting) {
-	@return $q3 + $setting;
-}
 
 // $filter + unquote('(') + $prop + unquote(')');
 // :root {
@@ -53,6 +50,10 @@ $yggdrasil: (
 	@each $space, $value in $yggdrasil {
 		--#{$space}: #{$value};
 	}
+}
+
+@function s($setting) {
+	@return $q1 + $q2 + $q3 + $setting + $q4;
 }
 
 @function insta($key) {

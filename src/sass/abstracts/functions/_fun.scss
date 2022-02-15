@@ -14,9 +14,9 @@
 // 	@return unquote('{{ settings.ygg_' + $setting + ' }}!important');
 // }
 @function s($setting) {
-	@return unquote('#{$setting}!important');
+	@return unquote('(') + $setting + unquote(')');
 }
-
+// $filter + unquote('(') + $prop + unquote(')');
 // :root {
 //   --ygg-ndx-bgc: {{ settings.ygg_index_background_color }} !important;
 //   --ygg-pg-bgc: {{ settings.ygg_pg_bgc }} !important;

@@ -37,9 +37,7 @@ function css() {
 		.pipe(gulp.dest(styles))
 		.pipe(cssnano())
 		.pipe(rename({ suffix: '.min' }))
-		.pipe(gulp.dest(dist))
-		.pipe(rename({ prefix: 'dist-' }))
-		.pipe(gulp.dest(cdn));
+		.pipe(gulp.dest(dist));
 }
 
 //Move, Minify, and Rename Bundled Modules
@@ -49,9 +47,7 @@ function js() {
 		.pipe(plumber())
 		.pipe(uglify())
 		.pipe(rename({ suffix: '.min' }))
-		.pipe(gulp.dest(dist))
-		.pipe(rename({ prefix: 'dist-' }))
-		.pipe(gulp.dest(cdn));
+		.pipe(gulp.dest(dist));
 }
 
 //Move, Minify, and Rename Bundled Vendors
@@ -62,9 +58,7 @@ function lib() {
 		.pipe(concat('lib.js'))
 		.pipe(uglify())
 		.pipe(rename({ suffix: '.min' }))
-		.pipe(gulp.dest(dist))
-		.pipe(rename({ prefix: 'dist-' }))
-		.pipe(gulp.dest(cdn));
+		.pipe(gulp.dest(dist));
 }
 
 function ver() {

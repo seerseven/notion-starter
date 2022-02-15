@@ -14,6 +14,13 @@ $fuckYOU2: #333;
 @function d($setting) {
 	@return $q3 + $setting;
 }
+
+$ygg: (
+	fuckYOU: #333,
+	fuckYOU1: #333,
+	fuckYOU2: #333,
+);
+
 $yggdrasild: (
 	d(fuckYOU): #333,
 	d(fuckYOU1): #333,
@@ -25,6 +32,12 @@ $yggdrasil: (
 	fuckYOU1: s(fuckYOU1),
 	fuckYOU2: s(fuckYOU2),
 );
+
+@mixin lotion {
+	@each $space in $ygg {
+		#{$space}: #{$space};
+	}
+}
 
 @mixin motion {
 	@each $space, $value in $yggdrasild {
@@ -41,4 +54,5 @@ $yggdrasil: (
 :root {
 	@include motion;
 	@include notion;
+	@include lotion;
 }

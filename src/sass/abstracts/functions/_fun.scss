@@ -14,7 +14,7 @@
 // 	@return unquote('{{ settings.ygg_' + $setting + ' }}!important');
 // }
 @function s($setting) {
-	@return unquote('$ ' + $setting + '!important');
+	@return unquote('$' + $setting + '!important');
 }
 
 // :root {

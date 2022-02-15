@@ -1,6 +1,6 @@
 'use strict';
 
-const { task, series } = require('gulp');
+const { task, series, watch, src, dest, parallel } = require('gulp');
 const gulp = require('gulp');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
@@ -89,6 +89,13 @@ function gitCommit() {
 		.pipe(git.commit('bump version'));
 }
 
+exports.change = function () {
+	src([app + '*'])
+		.pipe(gitignore())
+		.pipe(git.add())
+		.pipe(git.commit('bump version'));
+};
+
 task('commit', function (done) {
 	gitCommit();
 	done();
@@ -101,15 +108,20 @@ task('push', function (done) {
 
 task('deploy', series('commit', 'push'));
 
-function watchFiles() {
-	gulp.watch('src/build/*.css', css);
-	gulp.watch('src/build/*.css', js);
-	gulp.watch('src/scripts/*.js', lib);
-}
+task('watch', function () {
+	watch('src/build/*.css', css);
+	watch('src/build/*.css', js);
+	watch('src/scripts/*.js', lib);
+});
+
+exports.default = function () {
+	watch('src/build/*.css', css);
+	watch('src/build/*.css', js);
+	watch('src/scripts/*.js', lib);
+};
 
 // define complex tasks
-const version = gulp.series(ver);
-const watch = gulp.series(watchFiles);
+const version = series(ver);
 
 // export tasks
 exports.css = css;
@@ -118,5 +130,3 @@ exports.lib = lib;
 exports.ver = ver;
 
 exports.version = version;
-exports.watch = watch;
-exports.default = watch;

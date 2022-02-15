@@ -1,6 +1,6 @@
 {
   "name": "notionstarter",
-  "version": "2.0.26",
+  "version": "2.0.27",
   "description": "Building Notion Sites with a Modern development workflow, and built with performance and best practices in mind.",
   "repository": "seerseven/notion-starter",
   "author": "Zaccary Ledford <zacc@seerseven.com>",
@@ -16,7 +16,7 @@
     "defaults"
   ],
   "scripts": {
-    "serve": "concurrently \"helium serve\" \"gulp watch\"",
+    "serve": "concurrently \"helium serve\" \"gulp\"",
     "watch": "helium watch",
     "build": "helium build",
     "lint": "helium lint"

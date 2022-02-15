@@ -97,18 +97,18 @@ exports.change = function (done) {
 		.pipe(git.commit('bump version'));
 	done();
 };
-
+exports.save = gitCommit;
+exports.push = gitPush;
 exports.deploy = series(gitCommit, gitPush);
 
-task('commit', function (done) {
-	gitCommit();
-	done();
-});
+// task('commit', function (done) {
+// 	gitCommit();
+// 	done();
+// });
 
-task('push', function (done) {
-	gitPush();
-	done();
-});
+// task('push', function () {
+// 	gitPush();
+// });
 
 // task('deploy', series('commit', 'push'));
 

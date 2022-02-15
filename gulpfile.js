@@ -22,12 +22,6 @@ const dist = 'theme/assets';
 const cdn = 'docs';
 const app = './';
 
-function gitPush() {
-	git.push('origin', 'master', function (err) {
-		if (err) throw err;
-	});
-}
-
 //List Javascript Vendors in Bundle Order
 var libs = ['jquery.js', 'jqueryUI.js', 'aos.js', 'rellax.js'];
 
@@ -81,12 +75,19 @@ function ver() {
 		.pipe(gulp.dest(app));
 }
 
-function gitCommit() {
-	return gulp
-		.src([app + '*'])
+function gitCommit(done) {
+	src([app + '*'])
 		.pipe(gitignore())
 		.pipe(git.add())
 		.pipe(git.commit('bump version'));
+	done();
+}
+
+function gitPush(done) {
+	git.push('origin', 'master', function (err) {
+		if (err) throw err;
+	});
+	done();
 }
 
 exports.change = function (done) {
@@ -96,6 +97,8 @@ exports.change = function (done) {
 		.pipe(git.commit('bump version'));
 	done();
 };
+
+exports.deploy = series(gitCommit, gitPush);
 
 task('commit', function (done) {
 	gitCommit();
@@ -107,7 +110,7 @@ task('push', function (done) {
 	done();
 });
 
-task('deploy', series('commit', 'push'));
+// task('deploy', series('commit', 'push'));
 
 task('watch', function () {
 	watch('src/build/*.css', css);

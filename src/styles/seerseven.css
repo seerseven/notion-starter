@@ -1,9 +1,4 @@
 /* src/sass/seerseven.scss */
-:root {
-  --fuckYOU: s(fuckYOU);
-  --fuckYOU1: s(fuckYOU1);
-  --fuckYOU2: s(fuckYOU2);
-}
 .c-r00 {
   color: #ffebee;
 }
@@ -32952,12 +32947,12 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   border-radius: 50%;
   background-image: url("https://dummyimage.com/500x500");
 }
-@reactive { .placeholder { @seer size(calc(100vh - 8vw)); overflow: visible; background-color: #0f9928; color: #fcdfc7; } }
+@reactive { .placeholder { @seer size(calc(100vh - 8vw)); overflow: visible; background-color: #af0546; color: #bfc6ff; } }
 @seerseven :--heading h1, h2, h3;
 :--heading {
   margin: 1rem;
   padding: 1.5rem;
-  border: 3px solid #732f9e !important;
+  border: 3px solid #f4b6ab !important;
   background-color: #fbe9e7;
   color: #000 !important;
   font-weight: 900;

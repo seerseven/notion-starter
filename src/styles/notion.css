@@ -1,10 +1,5 @@
 /* src/sass/notion.scss */
 :root {
-  --fuckYOU: s(fuckYOU);
-  --fuckYOU1: s(fuckYOU1);
-  --fuckYOU2: s(fuckYOU2);
-}
-:root {
   --color-primary: #671e9b !important;
   --cta-color-bg: #e4f5fe !important;
   --cta-padding: 12px 22px !important;
@@ -75,13 +70,13 @@
 }
 .imhere {
   background: rgba(216, 27, 96, 0.4);
-  color: #ffcac9;
+  color: #32a521;
 }
 body {
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
   text-rendering: optimizeLegibility !important;
-  background: #ffccd7;
+  background: #b9dd35;
   font-size: 16px;
 }
 .super-content {

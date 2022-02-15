@@ -26,12 +26,6 @@ $yggdrasil: (
 @function s($setting) {
 	@return $q1 + $q2 + $q3 + $setting + $q4;
 }
-:root {
-	// SPACING Custom Properties
-	@each $space, $value in $yggdrasil {
-		--#{$space}: #{$value};
-	}
-}
 
 @function insta($key) {
 	$value: map-get($insta-filters, $key);

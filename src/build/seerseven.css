@@ -1,10 +1,5 @@
 /* src/sass/seerseven.scss */
 @alias { @i : @import; @m : @media; sz: size; trans: transition; form: transform; bg: background; bgc: background-color; bimg: background-image; bpos: background-position; bsize: background-size; repeat: background-repeat; c: color; ci: color-ie; radius: border-radius; b: border; bright: border-right; bleft: border-left; btop: border-top; bbottom: border-bottom; shade: box-shadow; mouse: cursor; show: display; fs: font-size; fst: font-style; fw: font-weight; fam: font-family; h: height; min-h: min-height; max-h: max-height; w: width; min-w: min-width; max-w: max-width; space: letter-spacing; lh: line-height; list: list-style; mar: margin; mar-t: margin-top; mar-b: margin-bottom; mar-r: margin-right; mar-l: margin-left; pad: padding; pad-t: padding-top; pad-b: padding-bottom; pad-r: padding-right; pad-l: padding-left; op: opacity; o: order; z: z-index; pos: position; start: left; end: right; base: bottom; scroll: scroll-behavior; align: text-align; decor: text-decoration; shadow: text-shadow; vis: visibility; animate: animation; box: box-sizing; format: text-transform; }
-:root {
-  --fuckYOU: s(fuckYOU);
-  --fuckYOU1: s(fuckYOU1);
-  --fuckYOU2: s(fuckYOU2);
-}
 .c-r00 {
   color: #ffebee;
 }

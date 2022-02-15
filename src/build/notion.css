@@ -69,6 +69,11 @@
   --color-pill-pink: #fae0f0 !important;
   --color-pill-red: #fbd6d2 !important;
 }
+:root {
+  --fuckYOU: $fuckYOU;
+  --fuckYOU1: $fuckYOU1;
+  --fuckYOU2: $fuckYOU2;
+}
 .imhere {
   bg: rgba(216, 27, 96, 0.4);
   c: randomColor;

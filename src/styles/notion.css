@@ -68,15 +68,20 @@
   --color-pill-pink: #fae0f0 !important;
   --color-pill-red: #fbd6d2 !important;
 }
+:root {
+  --fuckYOU: $fuckYOU;
+  --fuckYOU1: $fuckYOU1;
+  --fuckYOU2: $fuckYOU2;
+}
 .imhere {
   background: rgba(216, 27, 96, 0.4);
-  color: #b75537;
+  color: #ce2f32;
 }
 body {
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
   text-rendering: optimizeLegibility !important;
-  background: #ef56d1;
+  background: #6ea30b;
   font-size: 16px;
 }
 .super-content {

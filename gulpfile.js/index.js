@@ -41,7 +41,7 @@ exports.default = function () {
 	watch('src/scripts/*.js', jsTasks.lib);
 	watch(
 		'theme/assets/*.min.css',
-		{ delay: 500 },
+		{ delay: 3500 },
 		series(gitTasks.gitSave, gitTasks.gitSend)
 	);
 };

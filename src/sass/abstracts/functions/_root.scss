@@ -14,18 +14,6 @@ $yggdrasil: (
 	nav-bgc: s(nav_bgc),
 );
 
-@function ff($ff) {
-	@return map-get($fonts, $ff);
-}
-
-@function v($propertyName) {
-	@return var(--ygg-#{$propertyName});
-}
-
-@function s($setting) {
-	@return unquote('{{ settings.ygg_' + $setting + ' }}!important');
-}
-
 :root {
 	// SPACING Custom Properties
 	@each $space, $value in $yggdrasil {

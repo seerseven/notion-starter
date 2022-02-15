@@ -1,5 +1,13 @@
 /* src/sass/notion.scss */
 :root {
+  --ygg-ndx-bgc: s(index_background_color);
+  --ygg-pg-bgc: s(pg_bgc);
+  --ygg-acc-bgc: s(acc_bgc);
+  --ygg-head-bgc: s(head_bgc);
+  --ygg-foot-bgc: s(foot_bgc);
+  --ygg-nav-bgc: s(nav_bgc);
+}
+:root {
   --color-primary: #671e9b !important;
   --cta-color-bg: #e4f5fe !important;
   --cta-padding: 12px 22px !important;
@@ -65,13 +73,13 @@
 }
 .imhere {
   background: rgba(216, 27, 96, 0.4);
-  color: #bcdaff;
+  color: #f17cf9;
 }
 body {
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
   text-rendering: optimizeLegibility !important;
-  background: #ff2b75;
+  background: #bfea52;
   font-size: 16px;
 }
 .super-content {

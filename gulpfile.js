@@ -110,5 +110,5 @@ exports.default = function () {
 	watch('src/build/*.css', ignore, css);
 	watch('src/build/*.js', ignore, js);
 	watch('src/scripts/*.js', lib);
-	watch('docs/*.css', { delay: 3500 }, series(gitCommit, gitPush));
+	watch('theme/assets/*.min.css', { delay: 3500 }, series(gitCommit, gitPush));
 };

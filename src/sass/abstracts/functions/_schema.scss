@@ -15,11 +15,7 @@ $fuckYOU2: #333;
 	@return $q3 + $setting;
 }
 
-$ygg: (
-	fuckYOU: #333,
-	fuckYOU1: #333,
-	fuckYOU2: #333,
-);
+$ygg: (fuckYOU, fuckYOU1, fuckYOU2);
 
 $yggdrasild: (
 	d(fuckYOU): #333,
@@ -33,9 +29,29 @@ $yggdrasil: (
 	fuckYOU2: s(fuckYOU2),
 );
 
+// $yg: unquote('(') + $prop + unquote(')');
+
+$q5: unquote('d');
+$q6: unquote('(');
+$q7: unquote('s');
+$q8: unquote(')');
+
 @mixin lotion {
-	@each $space in $ygg {
-		#{$space}: #{$space};
+	@each $name in $ygg {
+		#{--s}: $q5 + $q6 + #{$name} + $q8;
+	}
+	@each $name in $ygg {
+		#{--d}: $q7 + $q6 + #{$name} + $q8;
+	}
+}
+
+@mixin fucksass {
+	@content;
+}
+
+@mixin rotion {
+	@each $name in $ygg2 {
+		#{$name}: $q5 + $q6 + #{$name} + $q8;
 	}
 }
 
@@ -51,7 +67,7 @@ $yggdrasil: (
 	}
 }
 
-:root {
+@include fucksass {
 	@include motion;
 	@include notion;
 	@include lotion;

@@ -20,54 +20,55 @@ const esbuild = 'src/build/';
 const styles = 'src/styles/';
 const scripts = 'src/scripts/';
 const dist = 'theme/assets';
-const cdn = 'docs';
 const app = './';
+
+// var routes = {
+//   app: './',
+//   styles: 'src/styles/',
+//   scripts = 'src/scripts/',
+//   dist = 'theme/assets',
+//   esbuild = 'src/build/',
+// }
 
 //List Javascript Vendors in Bundle Order
 var libs = ['jquery.js', 'jqueryUI.js', 'aos.js', 'rellax.js'];
-
-//Itterate Through Vendor Array adding Filepath Strings
 libs = libs.map((i) => scripts + i);
 
 //Run Compiled Sass Through PostCSS
 function css() {
-	return gulp
-		.src([esbuild + '*.css'])
+	return src([esbuild + '*.css'])
 		.pipe(plumber())
 		.pipe(postcss())
-		.pipe(gulp.dest(styles))
+		.pipe(dest(styles))
 		.pipe(cssnano())
 		.pipe(rename({ suffix: '.min' }))
-		.pipe(gulp.dest(dist));
+		.pipe(dest(dist));
 }
 
 //Move, Minify, and Rename Bundled Modules
 function js() {
-	return gulp
-		.src([esbuild + '*.js'])
+	return src([esbuild + '*.js'])
 		.pipe(plumber())
 		.pipe(uglify())
 		.pipe(rename({ suffix: '.min' }))
-		.pipe(gulp.dest(dist));
+		.pipe(dest(dist));
 }
 
 //Move, Minify, and Rename Bundled Vendors
 function lib() {
-	return gulp
-		.src(libs)
+	return src(libs)
 		.pipe(plumber())
 		.pipe(concat('lib.js'))
 		.pipe(uglify())
 		.pipe(rename({ suffix: '.min' }))
-		.pipe(gulp.dest(dist));
+		.pipe(dest(dist));
 }
 
 function ver() {
-	return gulp
-		.src([app + 'package.json'])
+	return src([app + 'package.json'])
 		.pipe(plumber())
 		.pipe(bump({ type: 'patch' }))
-		.pipe(gulp.dest(app));
+		.pipe(dest(app));
 }
 
 function gitCommit() {
@@ -84,17 +85,6 @@ function gitPush(done) {
 	done();
 }
 
-exports.change = function (done) {
-	src([app + '*'])
-		.pipe(gitignore())
-		.pipe(git.add())
-		.pipe(git.commit('Dev Testing'));
-	done();
-};
-exports.save = gitCommit;
-exports.push = gitPush;
-exports.deploy = series(gitCommit, gitPush);
-
 task('commit', function (done) {
 	gitCommit();
 	done();
@@ -105,20 +95,34 @@ task('push', function (done) {
 	done();
 });
 
-task('github', series('commit', 'push'));
-let ignore = { ignoreInitial: true };
+exports.change = function (done) {
+	src([app + '*'])
+		.pipe(gitignore())
+		.pipe(git.add())
+		.pipe(git.commit('Dev Testing'));
+	done();
+};
 
 exports.scss = function () {
 	return src('src/sass/abstracts/utilities/schema/schema.scss')
 		.pipe(plumber())
 		.pipe(sass({ outputStyle: 'expanded' }))
 		.pipe(rename({ basename: 'sche-ma', extname: '.scss' }))
-		.pipe(gulp.dest('src/sass/abstracts/utilities/schema'));
+		.pipe(dest('src/sass/abstracts/utilities/schema'));
 };
 
 exports.default = function () {
-	watch('src/build/*.css', ignore, css);
-	watch('src/build/*.js', ignore, js);
+	watch('src/build/*.css', css);
+	watch('src/build/*.js', js);
 	watch('src/scripts/*.js', lib);
 	watch('theme/assets/*.min.css', { delay: 3500 }, series(gitCommit, gitPush));
 };
+
+// export tasks
+
+exports.save = gitCommit;
+exports.push = gitPush;
+exports.deploy = series(gitCommit, gitPush);
+
+// exports.js = js;
+// exports.watch = watch;

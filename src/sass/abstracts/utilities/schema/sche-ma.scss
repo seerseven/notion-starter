@@ -5,7 +5,10 @@
   --ygg-fuckYOU: #{$fuckYOU};
   --ygg-fuckYOU1: #{$fuckYOU1};
   --ygg-fuckYOU2: #{$fuckYOU2};
-  fuckYOU #333: fuckYOU #333;
-  fuckYOU1 #333: fuckYOU1 #333;
-  fuckYOU2 #333: fuckYOU2 #333;
+  --s: d(fuckYOUL);
+  --s: d(fuckYOU1);
+  --s: d(fuckYOU2);
+  --d: s(fuckYOUL);
+  --d: s(fuckYOU1);
+  --d: s(fuckYOU2);
 }

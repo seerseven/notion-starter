@@ -1,5 +1,10 @@
 /* src/sass/notion.scss */
 :root {
+  --ygg-fuckYOU: #333;
+  --ygg-fuckYOU1: #333;
+  --ygg-fuckYOU2: #333;
+}
+:root {
   --color-primary: #671e9b !important;
   --cta-color-bg: #e4f5fe !important;
   --cta-padding: 12px 22px !important;
@@ -65,14 +70,14 @@
 }
 .imhere {
   background: rgba(216, 27, 96, 0.4);
-  color: #9ab7e2;
+  color: #a517d1;
   font: var(--font-body);
 }
 body {
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
   text-rendering: optimizeLegibility !important;
-  background: #6f97ce;
+  background: #3a8cd8;
   font-size: 16px;
 }
 .super-content {

@@ -109,10 +109,11 @@ task('github', series('commit', 'push'));
 let ignore = { ignoreInitial: true };
 
 exports.scss = function () {
-	return src('src/schema/*.scss')
+	return src('src/sass/abstracts/utilities/schema/schema.scss')
 		.pipe(plumber())
 		.pipe(sass({ outputStyle: 'expanded' }))
-		.pipe(gulp.dest('src/schema'));
+		.pipe(rename({ basename: 'sche-ma', extname: '.scss' }))
+		.pipe(gulp.dest('src/sass/abstracts/utilities/schema'));
 };
 
 exports.default = function () {

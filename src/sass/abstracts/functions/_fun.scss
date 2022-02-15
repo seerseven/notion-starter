@@ -2,6 +2,10 @@
 @use '../variables' as *;
 @use '../variables/maps' as *;
 
+@function v($prop) {
+	@return var(--#{$prop});
+}
+
 $fonts: (
 	font-body: v(font-body),
 	font-accent: v(font-accent),
@@ -17,10 +21,6 @@ $yggdrasil: (
 
 @function ff($ff) {
 	@return map-get($fonts, $ff);
-}
-
-@function v($prop) {
-	@return var(--#{$prop});
 }
 
 @function s($setting) {

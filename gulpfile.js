@@ -89,11 +89,12 @@ function gitCommit() {
 		.pipe(git.commit('bump version'));
 }
 
-exports.change = function () {
+exports.change = function (done) {
 	src([app + '*'])
 		.pipe(gitignore())
 		.pipe(git.add())
 		.pipe(git.commit('bump version'));
+	done();
 };
 
 task('commit', function (done) {

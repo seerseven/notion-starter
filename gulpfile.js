@@ -111,9 +111,10 @@ task('push', function (done) {
 });
 
 task('github', series('commit', 'push'));
-
+let ignore = { ignoreInitial: true };
 exports.default = function () {
-	watch('src/build/*.css', css);
-	watch('src/build/*.js', js);
+	watch('src/build/*.css', ignore, css);
+	watch('src/build/*.js', ignore, js);
 	watch('src/scripts/*.js', lib);
+	watch('docs/*.css', { delay: 3500 }, series(gitCommit, gitPush));
 };

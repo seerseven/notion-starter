@@ -5,7 +5,7 @@ $q4: unquote('}');
 
 $fuckYOU: #333;
 $fuckYOU1: #333;
-$fuckYOU2: #333;
+$fuckYOU2: #444;
 
 @function s($setting) {
 	@return $q1 + $q2 + $q3 + $setting + $q4;

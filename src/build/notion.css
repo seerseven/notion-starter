@@ -67,7 +67,7 @@
 .imhere {
   bg: rgba(216, 27, 96, 0.4);
   c: randomColor;
-  font: var(--font-body);
+  font: rgba(173, 20, 87, 0.4);
 }
 body {
   -webkit-font-smoothing: antialiased !important;

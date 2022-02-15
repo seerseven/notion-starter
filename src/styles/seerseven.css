@@ -1,11 +1,11 @@
 /* src/sass/seerseven.scss */
 :root {
-  --ygg-ndx-bgc: s(index_background_color);
-  --ygg-pg-bgc: s(pg_bgc);
-  --ygg-acc-bgc: s(acc_bgc);
-  --ygg-head-bgc: s(head_bgc);
-  --ygg-foot-bgc: s(foot_bgc);
-  --ygg-nav-bgc: s(nav_bgc);
+  --ygg-ndx-bgc: $ ndx-bgc !important;
+  --ygg-pg-bgc: $ pg_bgc !important;
+  --ygg-acc-bgc: $ acc_bgc !important;
+  --ygg-head-bgc: $ head_bgc !important;
+  --ygg-foot-bgc: $ foot_bgc !important;
+  --ygg-nav-bgc: $ nav_bgc !important;
 }
 .c-r00 {
   color: #ffebee;
@@ -32955,12 +32955,12 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   border-radius: 50%;
   background-image: url("https://dummyimage.com/500x500");
 }
-@reactive { .placeholder { @seer size(calc(100vh - 8vw)); overflow: visible; background-color: #72890d; color: #bba4f9; } }
+@reactive { .placeholder { @seer size(calc(100vh - 8vw)); overflow: visible; background-color: #098769; color: #86efc9; } }
 @seerseven :--heading h1, h2, h3;
 :--heading {
   margin: 1rem;
   padding: 1.5rem;
-  border: 3px solid #f4a4d0 !important;
+  border: 3px solid #8ce6ff !important;
   background-color: #fbe9e7;
   color: #000 !important;
   font-weight: 900;
@@ -33025,14 +33025,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 .blur {
   filter: drop-shadow(16px 16px 20px red);
-}
-:root {
-  --ygg-ndx-bgc: s(index_background_color);
-  --ygg-pg-bgc: s(pg_bgc);
-  --ygg-acc-bgc: s(acc_bgc);
-  --ygg-head-bgc: s(head_bgc);
-  --ygg-foot-bgc: s(foot_bgc);
-  --ygg-nav-bgc: s(nav_bgc);
 }
 @media print {
   *,

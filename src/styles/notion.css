@@ -1,19 +1,11 @@
 /* src/sass/notion.scss */
 :root {
-  --ygg-ndx-bgc: s(index_background_color);
-  --ygg-pg-bgc: s(pg_bgc);
-  --ygg-acc-bgc: s(acc_bgc);
-  --ygg-head-bgc: s(head_bgc);
-  --ygg-foot-bgc: s(foot_bgc);
-  --ygg-nav-bgc: s(nav_bgc);
-}
-:root {
-  --ygg-ndx-bgc: s(index_background_color);
-  --ygg-pg-bgc: s(pg_bgc);
-  --ygg-acc-bgc: s(acc_bgc);
-  --ygg-head-bgc: s(head_bgc);
-  --ygg-foot-bgc: s(foot_bgc);
-  --ygg-nav-bgc: s(nav_bgc);
+  --ygg-ndx-bgc: $ ndx-bgc !important;
+  --ygg-pg-bgc: $ pg_bgc !important;
+  --ygg-acc-bgc: $ acc_bgc !important;
+  --ygg-head-bgc: $ head_bgc !important;
+  --ygg-foot-bgc: $ foot_bgc !important;
+  --ygg-nav-bgc: $ nav_bgc !important;
 }
 :root {
   --color-primary: #671e9b !important;
@@ -81,13 +73,13 @@
 }
 .imhere {
   background: rgba(216, 27, 96, 0.4);
-  color: #cbc5f9;
+  color: #cf69db;
 }
 body {
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
   text-rendering: optimizeLegibility !important;
-  background: #885ce8;
+  background: #efe683;
   font-size: 16px;
 }
 .super-content {

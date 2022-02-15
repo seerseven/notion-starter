@@ -10,8 +10,43 @@
 	@return var(--ygg-#{$propertyName});
 }
 
+// @function s($setting) {
+// 	@return unquote('{{ settings.ygg_' + $setting + ' }}!important');
+// }
 @function s($setting) {
-	@return unquote('{{ settings.ygg_' + $setting + ' }}!important');
+	@return unquote('$ ' + $setting + '!important');
+}
+
+// :root {
+//   --ygg-ndx-bgc: {{ settings.ygg_index_background_color }} !important;
+//   --ygg-pg-bgc: {{ settings.ygg_pg_bgc }} !important;
+//   --ygg-acc-bgc: {{ settings.ygg_acc_bgc }} !important;
+//   --ygg-head-bgc: {{ settings.ygg_head_bgc }} !important;
+//   --ygg-foot-bgc: {{ settings.ygg_foot_bgc }} !important;
+//   --ygg-nav-bgc: {{ settings.ygg_nav_bgc }} !important;
+// }
+
+$fonts: (
+	font-body: v(font-body),
+	font-accent: v(font-accent),
+	font-head: v(font-head),
+	font-nav: v(font-nav),
+);
+
+$yggdrasil: (
+	ndx-bgc: s(ndx-bgc),
+	pg-bgc: s(pg_bgc),
+	acc-bgc: s(acc_bgc),
+	head-bgc: s(head_bgc),
+	foot-bgc: s(foot_bgc),
+	nav-bgc: s(nav_bgc),
+);
+
+:root {
+	// SPACING Custom Properties
+	@each $space, $value in $yggdrasil {
+		--ygg-#{$space}: #{$value};
+	}
 }
 
 @function insta($key) {

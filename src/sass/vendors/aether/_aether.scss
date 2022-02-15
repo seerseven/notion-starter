@@ -1,15 +1,6 @@
 @use '../../abstracts' as *;
 
 :root {
-	--ygg-ndx-bgc: s(index_background_color);
-	--ygg-pg-bgc: s(pg_bgc);
-	--ygg-acc-bgc: s(acc_bgc);
-	--ygg-head-bgc: s(head_bgc);
-	--ygg-foot-bgc: s(foot_bgc);
-	--ygg-nav-bgc: s(nav_bgc);
-}
-
-:root {
 	@include notion-theme-variables;
 	@include notion-default-color-variables;
 }

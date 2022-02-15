@@ -13,6 +13,7 @@ const git = require('gulp-git');
 const push = require('gulp-git-push');
 const gitignore = require('gulp-gitignore');
 const wait = require('gulp-wait');
+const sass = require('gulp-sass')(require('sass'));
 
 //Define Src and Dest Filepaths
 const esbuild = 'src/build/';
@@ -106,6 +107,14 @@ task('push', function (done) {
 
 task('github', series('commit', 'push'));
 let ignore = { ignoreInitial: true };
+
+exports.scss = function () {
+	return src('src/schema/*.scss')
+		.pipe(plumber())
+		.pipe(sass({ outputStyle: 'expanded' }))
+		.pipe(gulp.dest('src/schema'));
+};
+
 exports.default = function () {
 	watch('src/build/*.css', ignore, css);
 	watch('src/build/*.js', ignore, js);

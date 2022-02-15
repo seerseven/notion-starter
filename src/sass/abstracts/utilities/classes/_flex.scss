@@ -138,13 +138,6 @@
 	flex-wrap: wrap-reverse !important;
 }
 
-@include mq(lg) {
-}
-@include mq(xl) {
-}
-@include mq(xxl) {
-}
-
 /* flex justify content */
 .jc-fs {
 	justify-content: flex-start !important;

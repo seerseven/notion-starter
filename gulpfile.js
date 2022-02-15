@@ -79,8 +79,7 @@ function gitCommit() {
 	return src([app + '*'])
 		.pipe(gitignore())
 		.pipe(git.add())
-		.pipe(git.commit('bump version'))
-		.pipe(wait(2000));
+		.pipe(git.commit('bump version'));
 }
 
 function gitPush(done) {
@@ -115,6 +114,6 @@ task('github', series('commit', 'push'));
 
 exports.default = function () {
 	watch('src/build/*.css', css);
-	watch('src/build/*.css', js);
+	watch('src/build/*.js', js);
 	watch('src/scripts/*.js', lib);
 };

@@ -115,11 +115,16 @@ function change(e, i, m, p) {
   s = elementsList[e](i);
   methodList[m](p, s);
 }
+function ID(i, v) {
+  s = elementsList["id"](i);
+  methodList["attr"](s, "id", v);
+}
 
 // src/js/seerseven.js
 document.addEventListener("DOMContentLoaded", function() {
   change("id", "page-index", "add", "SUCK-MY-BALLS");
   const newList = "#block-be2ef39cad6b4a7b9323e5d661b095bc";
   const main = "#block-6d55f0a3e06c494e9a42d3a4349643ae";
-  $(newList).appendTo(main);
+  const content = ID(main, "mainContent");
+  $(newList).appendTo(content);
 });

@@ -117,12 +117,13 @@ export function getTag(e) {
 	return document.getElementsByTagName(e);
 }
 export const elementsList = {
-	getId,
-	getQry,
-	getAll,
-	getClass,
-	getTag,
+	id: getId,
+	qry: getQry,
+	all: getAll,
+	class: getClass,
+	tag: getTag,
 };
+
 export function change(e, i, m, p) {
 	s = elementsList[e](i);
 	methodList[m](p, s);

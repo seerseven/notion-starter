@@ -105,11 +105,11 @@ function getTag(e) {
   return document.getElementsByTagName(e);
 }
 var elementsList = {
-  getId,
-  getQry,
-  getAll,
-  getClass,
-  getTag
+  id: getId,
+  qry: getQry,
+  all: getAll,
+  class: getClass,
+  tag: getTag
 };
 function change(e, i, m, p) {
   s = elementsList[e](i);

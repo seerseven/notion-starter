@@ -131,4 +131,4 @@ function change(elm, iD, meth, prop2) {
 
 // src/js/seerseven.js
 AOS.init();
-change(getID, "block-50026b0adf9c46bdbeef004adaa17c67", add, "notion-z");
+change(getID, page - index, add, "notion-z");

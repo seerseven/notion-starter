@@ -23,62 +23,92 @@ const classList = {
 	light: 'light',
 	blue: 'header-blue',
 };
-function add(selector, prop) {
-	selector.classList.add(prop);
+function add(s, p) {
+	s.classList.add(p);
 }
-function remove(prop, selector) {
-	selector.classList.remove(classList[prop]);
+function remove(s, p) {
+	s.classList.remove(p);
 }
-function contains(prop, selector) {
-	selector.classList.contains(classList[prop]);
+function contains(s, p) {
+	s.classList.contains(p);
 }
-function toggle(prop1, prop2, selector) {
-	selector.classList.toggle(classList[prop1], classList[prop2]);
+function toggle(s, p1, p2) {
+	s.classList.toggle(p1, p2);
 }
-function replace(prop1, prop2, selector) {
-	selector.classList.replace(prop1, prop2);
+function replace(s, p1, p2) {
+	s.classList.replace(p1, p2);
 }
-function len(selector) {
-	selector.length();
+function len(s) {
+	s.length();
 }
-function setAttr(prop, val, selector) {
-	selector.setAttribute(prop, val);
+function setAttr(s, p, v) {
+	s.setAttribute(p, v);
 }
-function getAttr(prop, val, selector) {
-	selector.getAttribute(prop, val);
+function getAttr(s, p, v) {
+	s.getAttribute(p, v);
 }
-function switchClass(prop1, prop2, selector) {
-	$(selector).switchClass(prop1, prop2, 0);
+function switchClass(s, p1, p2) {
+	$(s).switchClass(p1, p2, 0);
 }
-function attr(prop, val, selector) {
-	$(selector).attr(prop, val);
+function attr(s, p, v) {
+	$(s).attr(p, v);
 }
-function prop(prop, val, selector) {
-	$(selector).prop(prop, val);
+function prop(s, p, v) {
+	$(s).prop(p, v);
 }
-function hasClass(prop, selector) {
-	$(selector).hasClass(prop);
+function hasClass(s, p) {
+	$(s).hasClass(p);
 }
-function addClass(prop, selector) {
-	$(selector).addClass(prop);
+function addClass(s, p) {
+	$(s).addClass(p);
 }
-function html(selector) {
-	$(selector).html();
+function html(s) {
+	$(s).html();
 }
-function removeClass(prop, selector) {
-	$(selector).removeClass(prop);
+function removeClass(s, p) {
+	$(s).removeClass(p);
 }
-function toggleClass(prop1, prop2, selector) {
-	$(selector).toggleClass(prop1, prop2);
+function toggleClass(s, p1, p2) {
+	$(s).toggleClass(p1, p2);
 }
-function val(selector) {
-	$(selector).val();
+function val(s) {
+	$(s).v();
 }
-function css(prop, val, selector) {
-	$(selector).css(cssList[prop], val);
+function css(s, p, v) {
+	$(s).css(cssList[p], v);
 }
-function data(prop, val, selector) {
-	$(selector).data(prop, val);
+function data(s, p, v) {
+	$(s).data(p, v);
+}
+function append(s, p) {
+	$(s).appendTo(p);
+}
+function insert(m, s, p) {
+	if (m === 'before') {
+		$(s).insertBefore(p);
+	}
+	if (m === 'after') {
+		$(s).insertAfter(p);
+	}
+}
+function prepend(s, p) {
+	$(s).prependTo(p);
+}
+function wrap(s, v, i) {
+	if (i === undefined) {
+		$(s).wrap("<div class='" + v + "'></div>");
+	}
+	if (i !== undefined) {
+		$(s).wrap("<div id='" + i + "'" + "class='" + v + "'></div>");
+	}
+}
+function inner(s, v, i) {
+	if (i === undefined) {
+		$(s).wrap("<div class='" + v + "'></div>");
+	}
+	if (i !== undefined) {
+		$(s).wrap("<div id='" + i + "'" + "class='" + v + "'></div>");
+	}
 }
 const methodList = {
 	add,
@@ -100,24 +130,27 @@ const methodList = {
 	toggleClass,
 	data,
 	prop,
+	append,
+	prepend,
+	wrap,
+	inner,
+	insert,
 };
-
-function getId(x) {
-	return document.getElementById(x);
+function getId(e) {
+	return document.getElementById(e);
 }
-function getQry(x) {
-	return document.querySelector(x);
+function getQry(e) {
+	return document.querys(e);
 }
-function getAll(x) {
-	return document.querySelectorAll(x);
+function getAll(e) {
+	return document.querysAll(e);
 }
-function getClass(x) {
-	return document.getElementsByClassName(x);
+function getClass(e) {
+	return document.getElementsByClassName(e);
 }
-function getTag(x) {
-	return document.getElementsByTagName(x);
+function getTag(e) {
+	return document.getElementsByTagName(e);
 }
-
 const elementsList = {
 	id: getId,
 	qry: getQry,
@@ -126,10 +159,43 @@ const elementsList = {
 	tag: getTag,
 };
 
-function change(elm, iD, meth, prop) {
-	var src = elementsList[elm](iD);
-	methodList[meth](src, prop);
+function change(e, i, m, p) {
+	s = elementsList[e](i);
+	methodList[m](s, p);
 }
 
+function newID(i, v) {
+	s = elementsList['id'](i);
+	methodList['attr'](s, 'id', v);
+}
+
+function setID(i, v) {
+	s = elementsList['class'](i);
+	methodList['attr'](s, 'id', v);
+}
+
+change('id', 'page-index', 'add', 'SUCK-MY-BALLS');
+
+const div = 'block-be2ef39cad6b4a7b9323e5d661b095bc';
+const main = 'block-6d55f0a3e06c494e9a42d3a4349643ae';
+
+const content = newID(main, 'mainContent');
+const newDiv = newID(div, 'newDiv');
+
+prepend('#newDiv', '#mainContent');
+wrap('#page-index', 'wrapper', 'pageWrapper');
+inner('#mainContent', 'inner-wrapper');
+
+insert('before', '#newDiv', '#mainContent');
+$('.wrapper').css({
+	'background-color': '#f8f8f8',
+	width: '100%',
+	'max-width': '1000px',
+	margin: '20px auto',
+});
+
+// setID('wrapper', 'pageWrapper');
+
+console.log(content);
 // const fuck = change('id', 'pageindex', 'add', 'fuckme');
 // console.log(fuck);

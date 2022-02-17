@@ -23,62 +23,92 @@ export const classList = {
 	light: 'light',
 	blue: 'header-blue',
 };
-export function add(p, s) {
+export function add(s, p) {
 	s.classList.add(p);
 }
-export function remove(p, s) {
+export function remove(s, p) {
 	s.classList.remove(p);
 }
-export function contains(p, s) {
+export function contains(s, p) {
 	s.classList.contains(p);
 }
-export function toggle(p1, p2, s) {
+export function toggle(s, p1, p2) {
 	s.classList.toggle(p1, p2);
 }
-export function replace(p1, p2, s) {
+export function replace(s, p1, p2) {
 	s.classList.replace(p1, p2);
 }
 export function len(s) {
 	s.length();
 }
-export function setAttr(p, v, s) {
+export function setAttr(s, p, v) {
 	s.setAttribute(p, v);
 }
-export function getAttr(p, v, s) {
+export function getAttr(s, p, v) {
 	s.getAttribute(p, v);
 }
-export function switchClass(p1, p2, s) {
+export function switchClass(s, p1, p2) {
 	$(s).switchClass(p1, p2, 0);
 }
 export function attr(s, p, v) {
 	$(s).attr(p, v);
 }
-export function prop(p, v, s) {
+export function prop(s, p, v) {
 	$(s).prop(p, v);
 }
-export function hasClass(p, s) {
+export function hasClass(s, p) {
 	$(s).hasClass(p);
 }
-export function addClass(p, s) {
+export function addClass(s, p) {
 	$(s).addClass(p);
 }
 export function html(s) {
 	$(s).html();
 }
-export function removeClass(p, s) {
+export function removeClass(s, p) {
 	$(s).removeClass(p);
 }
-export function toggleClass(p1, p2, s) {
+export function toggleClass(s, p1, p2) {
 	$(s).toggleClass(p1, p2);
 }
 export function val(s) {
 	$(s).v();
 }
-export function css(p, v, s) {
+export function css(s, p, v) {
 	$(s).css(cssList[p], v);
 }
-export function data(p, v, s) {
+export function data(s, p, v) {
 	$(s).data(p, v);
+}
+export function append(s, p) {
+	$(s).appendTo(p);
+}
+export function insert(m, s, p) {
+	if (m === 'before') {
+		$(s).insertBefore(p);
+	}
+	if (m === 'after') {
+		$(s).insertAfter(p);
+	}
+}
+export function prepend(s, p) {
+	$(s).prependTo(p);
+}
+export function wrap(s, v, i) {
+	if (i === undefined) {
+		$(s).wrap("<div class='" + v + "'></div>");
+	}
+	if (i !== undefined) {
+		$(s).wrap("<div id='" + i + "'" + "class='" + v + "'></div>");
+	}
+}
+export function inner(s, v, i) {
+	if (i === undefined) {
+		$(s).wrap("<div class='" + v + "'></div>");
+	}
+	if (i !== undefined) {
+		$(s).wrap("<div id='" + i + "'" + "class='" + v + "'></div>");
+	}
 }
 export const methodList = {
 	add,
@@ -100,6 +130,11 @@ export const methodList = {
 	toggleClass,
 	data,
 	prop,
+	append,
+	prepend,
+	wrap,
+	inner,
+	insert,
 };
 export function getId(e) {
 	return document.getElementById(e);
@@ -126,10 +161,15 @@ export const elementsList = {
 
 export function change(e, i, m, p) {
 	s = elementsList[e](i);
-	methodList[m](p, s);
+	methodList[m](s, p);
 }
 
-export function ID(i, v) {
+export function newID(i, v) {
 	s = elementsList['id'](i);
+	methodList['attr'](s, 'id', v);
+}
+
+export function setID(i, v) {
+	s = elementsList['class'](i);
 	methodList['attr'](s, 'id', v);
 }

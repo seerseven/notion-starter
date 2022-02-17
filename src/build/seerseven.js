@@ -11,62 +11,92 @@ var cssList = {
   z: "z-index",
   pos: "position"
 };
-function add(p, s2) {
+function add(s2, p) {
   s2.classList.add(p);
 }
-function remove(p, s2) {
+function remove(s2, p) {
   s2.classList.remove(p);
 }
-function contains(p, s2) {
+function contains(s2, p) {
   s2.classList.contains(p);
 }
-function toggle(p1, p2, s2) {
+function toggle(s2, p1, p2) {
   s2.classList.toggle(p1, p2);
 }
-function replace(p1, p2, s2) {
+function replace(s2, p1, p2) {
   s2.classList.replace(p1, p2);
 }
 function len(s2) {
   s2.length();
 }
-function setAttr(p, v, s2) {
+function setAttr(s2, p, v) {
   s2.setAttribute(p, v);
 }
-function getAttr(p, v, s2) {
+function getAttr(s2, p, v) {
   s2.getAttribute(p, v);
 }
-function switchClass(p1, p2, s2) {
+function switchClass(s2, p1, p2) {
   $(s2).switchClass(p1, p2, 0);
 }
 function attr(s2, p, v) {
   $(s2).attr(p, v);
 }
-function prop(p, v, s2) {
+function prop(s2, p, v) {
   $(s2).prop(p, v);
 }
-function hasClass(p, s2) {
+function hasClass(s2, p) {
   $(s2).hasClass(p);
 }
-function addClass(p, s2) {
+function addClass(s2, p) {
   $(s2).addClass(p);
 }
 function html(s2) {
   $(s2).html();
 }
-function removeClass(p, s2) {
+function removeClass(s2, p) {
   $(s2).removeClass(p);
 }
-function toggleClass(p1, p2, s2) {
+function toggleClass(s2, p1, p2) {
   $(s2).toggleClass(p1, p2);
 }
 function val(s2) {
   $(s2).v();
 }
-function css(p, v, s2) {
+function css(s2, p, v) {
   $(s2).css(cssList[p], v);
 }
-function data(p, v, s2) {
+function data(s2, p, v) {
   $(s2).data(p, v);
+}
+function append(s2, p) {
+  $(s2).appendTo(p);
+}
+function insert(m, s2, p) {
+  if (m === "before") {
+    $(s2).insertBefore(p);
+  }
+  if (m === "after") {
+    $(s2).insertAfter(p);
+  }
+}
+function prepend(s2, p) {
+  $(s2).prependTo(p);
+}
+function wrap(s2, v, i) {
+  if (i === void 0) {
+    $(s2).wrap("<div class='" + v + "'></div>");
+  }
+  if (i !== void 0) {
+    $(s2).wrap("<div id='" + i + "'class='" + v + "'></div>");
+  }
+}
+function inner(s2, v, i) {
+  if (i === void 0) {
+    $(s2).wrap("<div class='" + v + "'></div>");
+  }
+  if (i !== void 0) {
+    $(s2).wrap("<div id='" + i + "'class='" + v + "'></div>");
+  }
 }
 var methodList = {
   add,
@@ -87,7 +117,12 @@ var methodList = {
   removeClass,
   toggleClass,
   data,
-  prop
+  prop,
+  append,
+  prepend,
+  wrap,
+  inner,
+  insert
 };
 function getId(e) {
   return document.getElementById(e);
@@ -113,11 +148,7 @@ var elementsList = {
 };
 function change(e, i, m, p) {
   s = elementsList[e](i);
-  methodList[m](p, s);
-}
-function ID(i, v) {
-  s = elementsList["id"](i);
-  methodList["attr"](s, "id", v);
+  methodList[m](s, p);
 }
 
 // src/js/seerseven.js
@@ -125,6 +156,6 @@ document.addEventListener("DOMContentLoaded", function() {
   change("id", "page-index", "add", "SUCK-MY-BALLS");
   const newList = "#block-be2ef39cad6b4a7b9323e5d661b095bc";
   const main = "#block-6d55f0a3e06c494e9a42d3a4349643ae";
-  const content = ID(main, "mainContent");
+  const content = (void 0)(main, "mainContent");
   $(newList).appendTo(content);
 });

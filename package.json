@@ -37,6 +37,7 @@
     "gulp-hub": "^4.2.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.1",
+    "gulp-prompt": "^1.2.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",

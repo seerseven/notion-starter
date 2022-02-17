@@ -31,7 +31,7 @@ function lib() {
 }
 
 function alljs() {
-	return src([allJS + '*.js'])
+	return src(allJS)
 		.pipe(plumber())
 		.pipe(uglify())
 		.pipe(concat('all.js'))

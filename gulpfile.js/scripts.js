@@ -17,6 +17,7 @@ libs = libs.map((i) => scripts + i);
 function js() {
 	return src([esbuild + '*.js'])
 		.pipe(plumber())
+		.pipe(dest(dist))
 		.pipe(uglify())
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(dest(dist));

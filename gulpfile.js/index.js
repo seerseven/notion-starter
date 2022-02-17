@@ -46,7 +46,6 @@ exports.watch = watchcode;
 exports.css = cssTasks.css;
 exports.js = jsTasks.js;
 exports.lib = jsTasks.lib;
-exports.alljs = jsTasks.alljs;
 exports.save = gitTasks.gitSave;
 exports.send = gitTasks.gitSend;
 exports.deploy = series(gitTasks.gitSave, gitTasks.gitSend);
@@ -58,7 +57,6 @@ exports.default = function () {
 	watch('src/build/*.css', cssTasks.css);
 	watch('src/build/*.js', jsTasks.js);
 	watch('src/vendors/*.js', jsTasks.lib);
-	watch('src/scripts/*.js', jsTasks.alljs);
 	watch(
 		'theme/assets/*.min.css',
 		{ delay: 3500 },

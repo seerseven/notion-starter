@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	const content = el.newID(main, 'mainContent');
 	const newDiv = el.newID(div, 'newDiv');
-
+	console.log(content);
+	console.log(newDiv);
 	el.prepend('#newDiv', '#mainContent');
 	el.wrap('#page-index', 'wrapper', 'pageWrapper');
 	el.inner('#mainContent', 'inner-wrapper');

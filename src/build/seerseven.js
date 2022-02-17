@@ -162,6 +162,8 @@ document.addEventListener("DOMContentLoaded", function() {
   const main = "block-6d55f0a3e06c494e9a42d3a4349643ae";
   const content = newID(main, "mainContent");
   const newDiv = newID(div, "newDiv");
+  console.log(content);
+  console.log(newDiv);
   prepend("#newDiv", "#mainContent");
   wrap("#page-index", "wrapper", "pageWrapper");
   inner("#mainContent", "inner-wrapper");

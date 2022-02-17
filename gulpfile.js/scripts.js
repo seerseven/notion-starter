@@ -7,7 +7,7 @@ const plumber = require('gulp-plumber');
 //Define Src and Dest Filepaths
 const esbuild = 'src/build/';
 const scripts = 'src/scripts/';
-const vendors = 'src/scripts/vendors/';
+const vendors = 'src/vendors/';
 const dist = 'theme/assets';
 
 //List Javascript Vendors in Bundle Order

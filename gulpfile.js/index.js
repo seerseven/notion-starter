@@ -39,7 +39,7 @@ function ask(done) {
 function watchcode() {
 	watch('src/build/*.css', cssTasks.css);
 	watch('src/build/*.js', jsTasks.js);
-	watch('src/scripts/vendors/*.js', jsTasks.lib);
+	watch('src/vendors/*.js', jsTasks.lib);
 }
 
 exports.watch = watchcode;
@@ -56,7 +56,7 @@ exports.ask = ask;
 exports.default = function () {
 	watch('src/build/*.css', cssTasks.css);
 	watch('src/build/*.js', jsTasks.js);
-	watch('src/scripts/*.js', jsTasks.lib);
+	watch('src/vendors/*.js', jsTasks.lib);
 	watch(
 		'theme/assets/*.min.css',
 		{ delay: 3500 },

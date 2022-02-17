@@ -21,21 +21,25 @@ function ver() {
 }
 
 function ask(done) {
-	src('test.js', {"allowEmpty": true})
-	.pipe( prompt.confirm({
-			type:'input',
-			name:'test',
-			message:'Hello, please enter commit mesage?',
-	}, (res) => {
-			console.log('Result', res);
-	}) );
+	src('test.js', { allowEmpty: true }).pipe(
+		prompt.confirm(
+			{
+				type: 'input',
+				name: 'test',
+				message: 'Hello, please enter commit mesage?',
+			},
+			(res) => {
+				console.log('Result', res);
+			}
+		)
+	);
 	done();
 }
 
 function watchcode() {
 	watch('src/build/*.css', cssTasks.css);
 	watch('src/build/*.js', jsTasks.js);
-	watch('src/scripts/*.js', jsTasks.lib);
+	watch('src/scripts/vendors/*.js', jsTasks.lib);
 }
 
 exports.watch = watchcode;

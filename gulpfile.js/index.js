@@ -3,6 +3,7 @@
 const { series, watch, src, dest } = require('gulp');
 const bump = require('gulp-bump');
 const plumber = require('gulp-plumber');
+const prompt = require('gulp-prompt');
 
 const cssTasks = require('./styles.js');
 const jsTasks = require('./scripts.js');
@@ -17,6 +18,18 @@ function ver() {
 		.pipe(plumber())
 		.pipe(bump({ type: 'patch' }))
 		.pipe(dest(app));
+}
+
+function ask(done) {
+	src('test.js', {"allowEmpty": true})
+	.pipe( prompt.confirm({
+			type:'input',
+			name:'test',
+			message:'Hello, please enter commit mesage?',
+	}, (res) => {
+			console.log('Result', res);
+	}) );
+	done();
 }
 
 function watchcode() {
@@ -34,6 +47,7 @@ exports.send = gitTasks.gitSend;
 exports.deploy = series(gitTasks.gitSave, gitTasks.gitSend);
 exports.scss = sassTasks.scss;
 exports.ver = ver;
+exports.ask = ask;
 
 exports.default = function () {
 	watch('src/build/*.css', cssTasks.css);

@@ -50,7 +50,7 @@ export function getAttr(p, v, s) {
 export function switchClass(p1, p2, s) {
 	$(s).switchClass(p1, p2, 0);
 }
-export function attr(p, v, s) {
+export function attr(s, p, v) {
 	$(s).attr(p, v);
 }
 export function prop(p, v, s) {
@@ -127,4 +127,9 @@ export const elementsList = {
 export function change(e, i, m, p) {
 	s = elementsList[e](i);
 	methodList[m](p, s);
+}
+
+export function changeID(i, v) {
+	s = elementsList['id'](i);
+	methodList['attr'](s, 'id', v);
 }

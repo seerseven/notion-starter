@@ -38,7 +38,7 @@ function getAttr(p, v, s2) {
 function switchClass(p1, p2, s2) {
   $(s2).switchClass(p1, p2, 0);
 }
-function attr(p, v, s2) {
+function attr(s2, p, v) {
   $(s2).attr(p, v);
 }
 function prop(p, v, s2) {

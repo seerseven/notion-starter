@@ -1,5 +1,5 @@
 import * as el from './utils/element';
 
-el.change('id', 'pageindex', 'add', 'fuckme');
+el.change('id', 'page-index', 'add', 'fuckme');
 
 console.log(element);

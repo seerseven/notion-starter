@@ -130,5 +130,5 @@ function change(elm, iD, meth, prop2) {
 }
 
 // src/js/seerseven.js
-change("id", "pageindex", "add", "fuckme");
+change("id", "page-index", "add", "fuckme");
 console.log(element);

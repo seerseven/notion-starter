@@ -165,13 +165,4 @@ document.addEventListener("DOMContentLoaded", function() {
   console.log(content);
   console.log(newDiv);
   prepend("#newDiv", "#mainContent");
-  wrap("#page-index", "wrapper", "pageWrapper");
-  inner("#mainContent", "inner-wrapper");
-  insert("before", "#newDiv", "#mainContent");
-  $(".wrapper").css({
-    "background-color": "#f8f8f8",
-    width: "100%",
-    "max-width": "1000px",
-    margin: "20px auto"
-  });
 });

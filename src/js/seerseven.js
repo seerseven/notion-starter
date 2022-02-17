@@ -11,14 +11,4 @@ document.addEventListener('DOMContentLoaded', function () {
 	console.log(content);
 	console.log(newDiv);
 	el.prepend('#newDiv', '#mainContent');
-	el.wrap('#page-index', 'wrapper', 'pageWrapper');
-	el.inner('#mainContent', 'inner-wrapper');
-
-	el.insert('before', '#newDiv', '#mainContent');
-	$('.wrapper').css({
-		'background-color': '#f8f8f8',
-		width: '100%',
-		'max-width': '1000px',
-		margin: '20px auto',
-	});
 });

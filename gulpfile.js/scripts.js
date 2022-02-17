@@ -7,17 +7,18 @@ const plumber = require('gulp-plumber');
 //Define Src and Dest Filepaths
 const esbuild = 'src/build/';
 const scripts = 'src/scripts/';
+const vendors = 'src/scripts/vendors';
 const dist = 'theme/assets';
 
 //List Javascript Vendors in Bundle Order
-var libs = ['jquery.js', 'jqueryUI.js', 'aos.js', 'rellax.js'];
-libs = libs.map((i) => scripts + i);
+var libs = ['jquery.js', 'jqueryUI.js'];
+libs = libs.map((i) => vendors + i);
 
 //Move, Minify, and Rename Bundled Modules
 function js() {
 	return src([esbuild + '*.js'])
 		.pipe(plumber())
-		.pipe(dest(dist))
+		.pipe(dest(scripts))
 		.pipe(uglify())
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(dest(dist));
@@ -28,6 +29,7 @@ function lib() {
 	return src(libs)
 		.pipe(plumber())
 		.pipe(concat('lib.js'))
+		.pipe(dest(scripts))
 		.pipe(uglify())
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(dest(dist));

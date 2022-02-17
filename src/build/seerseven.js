@@ -40,5 +40,5 @@ var elementsList = {
 
 // src/js/seerseven.js
 var element = document.getElementById(pageindex);
-add(pageindex, "i-added-this-class");
+add(element, "i-added-this-class");
 console.log(elementsList.getID);

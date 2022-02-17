@@ -17,6 +17,6 @@ function add(prop, selector) {
 }
 
 // src/js/seerseven.js
-var element = document.getElementById(pageindex);
+var element = document.getElementById("pageindex");
 add(element, "i-added-this-class");
 console.log(element);

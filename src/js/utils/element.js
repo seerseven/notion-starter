@@ -38,7 +38,7 @@ export function toggle(p1, p2, s) {
 export function replace(p1, p2, s) {
 	s.classList.replace(p1, p2);
 }
-export function length(s) {
+export function len(s) {
 	s.length();
 }
 export function setAttr(p, v, s) {
@@ -91,7 +91,7 @@ export const methodList = {
 	addClass,
 	css,
 	val,
-	length,
+	len,
 	setAttr,
 	getAttr,
 	attr,

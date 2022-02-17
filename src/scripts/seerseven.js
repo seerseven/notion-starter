@@ -26,7 +26,7 @@ function toggle(p1, p2, s2) {
 function replace(p1, p2, s2) {
   s2.classList.replace(p1, p2);
 }
-function length(s2) {
+function len(s2) {
   s2.length();
 }
 function setAttr(p, v, s2) {
@@ -79,7 +79,7 @@ var methodList = {
   addClass,
   css,
   val,
-  length,
+  len,
   setAttr,
   getAttr,
   attr,

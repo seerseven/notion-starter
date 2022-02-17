@@ -130,5 +130,5 @@ function change(elm, iD, meth, prop2) {
 }
 
 // src/js/seerseven.js
-AOS.init();
+
 change(getID, pageindex, add, 'i-added-this-class');

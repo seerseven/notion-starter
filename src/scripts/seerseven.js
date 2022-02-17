@@ -131,3 +131,4 @@ function change(elm, iD, meth, prop2) {
 
 // src/js/seerseven.js
 change(getID, pageindex, add, "i-added-this-class");
+console.log(elementsList.getID);

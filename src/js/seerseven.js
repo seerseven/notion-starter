@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	const div = 'block-be2ef39cad6b4a7b9323e5d661b095bc';
 	const main = 'block-6d55f0a3e06c494e9a42d3a4349643ae';
 
-	const content = newID(main, 'mainContent');
-	const newDiv = newID(div, 'newDiv');
+	const content = el.newID(main, 'mainContent');
+	const newDiv = el.newID(div, 'newDiv');
 
 	el.prepend('#newDiv', '#mainContent');
 	el.wrap('#page-index', 'wrapper', 'pageWrapper');

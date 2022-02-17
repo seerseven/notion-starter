@@ -150,6 +150,10 @@ function change(e, i, m, p) {
   s = elementsList[e](i);
   methodList[m](s, p);
 }
+function newID(i, v) {
+  s = elementsList["id"](i);
+  methodList["attr"](s, "id", v);
+}
 
 // src/js/seerseven.js
 document.addEventListener("DOMContentLoaded", function() {

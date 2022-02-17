@@ -11,75 +11,62 @@ var cssList = {
   z: "z-index",
   pos: "position"
 };
-var classList = {
-  bg: "sticky-bg",
-  bgv: "sticky-bgv",
-  hide: "sticky:hide",
-  show: "sticky:show",
-  colormodeOn: "colormode:on",
-  colormodeOff: "colormode:off",
-  transOn: "trans:on",
-  transOff: "trans:off",
-  dark: "dark",
-  light: "light",
-  blue: "header-blue"
-};
-function add(prop2, selector) {
-  selector.classList.add(classList[prop2]);
+function add(p, s2) {
+  s2.classList.add(p);
 }
-function remove(prop2, selector) {
-  selector.classList.remove(classList[prop2]);
+function remove(p, s2) {
+  s2.classList.remove(p);
 }
-function contains(prop2, selector) {
-  selector.classList.contains(classList[prop2]);
+function contains(p, s2) {
+  s2.classList.contains(p);
 }
-function toggle(prop1, prop2, selector) {
-  selector.classList.toggle(classList[prop1], classList[prop2]);
+function toggle(p1, p2, s2) {
+  s2.classList.toggle(p1, p2);
 }
-function replace(prop1, prop2, selector) {
-  selector.classList.replace(prop1, prop2);
+function replace(p1, p2, s2) {
+  s2.classList.replace(p1, p2);
 }
-function length(selector) {
-  selector.length();
+function length(s2) {
+  s2.length();
 }
-function setAttr(prop2, val2, selector) {
-  selector.setAttribute(prop2, val2);
+function setAttr(p, v, s2) {
+  s2.setAttribute(p, v);
 }
-function getAttr(prop2, val2, selector) {
-  selector.getAttribute(prop2, val2);
+function getAttr(p, v, s2) {
+  s2.getAttribute(p, v);
 }
-function switchClass(prop1, prop2, selector) {
-  $(selector).switchClass(prop1, prop2, 0);
+function switchClass(p1, p2, s2) {
+  $(s2).switchClass(p1, p2, 0);
 }
-function attr(prop2, val2, selector) {
-  $(selector).attr(prop2, val2);
+function attr(p, v, s2) {
+  $(s2).attr(p, v);
 }
-function prop(prop2, val2, selector) {
-  $(selector).prop(prop2, val2);
+function prop(p, v, s2) {
+  $(s2).prop(p, v);
 }
-function hasClass(prop2, selector) {
-  $(selector).hasClass(prop2);
+function hasClass(p, s2) {
+  $(s2).hasClass(p);
 }
-function addClass(prop2, selector) {
-  $(selector).addClass(prop2);
+function addClass(p, s2) {
+  $(s2).addClass(p);
 }
-function html(selector) {
-  $(selector).html();
+function html(s2) {
+  $(s2).html();
 }
-function removeClass(prop2, selector) {
-  $(selector).removeClass(prop2);
+function removeClass(p, s2) {
+  $(s2).removeClass(p);
 }
-function toggleClass(prop1, prop2, selector) {
-  $(selector).toggleClass(prop1, prop2);
+function toggleClass(p1, p2, s2) {
+  $(s2).toggleClass(p1, p2);
 }
-function val(selector) {
-  $(selector).val();
+function val(s2) {
+  $(s2).v();
 }
-function css(prop2, val2, selector) {
-  $(selector).css(cssList[prop2], val2);
+function css(p, v, s2) {
+  $(s2).css(cssList[p], v);
 }
-function data(prop2, val2, selector) {
-  $(selector).data(prop2, val2);
+function data(p, v, s2) {
+  $(s2).data(p, v);
 }
 var methodList = {
   add,
@@ -102,20 +89,20 @@ var methodList = {
   data,
   prop
 };
-function getId(x) {
-  return document.getElementById(x);
+function getId(e) {
+  return document.getElementById(e);
 }
-function getQry(x) {
-  return document.querySelector(x);
+function getQry(e) {
+  return document.querys(e);
 }
-function getAll(x) {
-  return document.querySelectorAll(x);
+function getAll(e) {
+  return document.querysAll(e);
 }
-function getClass(x) {
-  return document.getElementsByClassName(x);
+function getClass(e) {
+  return document.getElementsByClassName(e);
 }
-function getTag(x) {
-  return document.getElementsByTagName(x);
+function getTag(e) {
+  return document.getElementsByTagName(e);
 }
 var elementsList = {
   getId,
@@ -124,9 +111,9 @@ var elementsList = {
   getClass,
   getTag
 };
-function change(elm, iD, meth, prop2) {
-  var src = elementsList[elm](iD);
-  methodList[meth](prop2, src);
+function change(e, i, m, p) {
+  s = elementsList[e](i);
+  methodList[m](p, s);
 }
 
 // src/js/seerseven.js

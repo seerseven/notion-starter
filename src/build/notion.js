@@ -1,21 +1,11 @@
 var __getOwnPropNames = Object.getOwnPropertyNames;
-var __esm = (fn, res) => function __init() {
-  return fn && (res = (0, fn[__getOwnPropNames(fn)[0]])(fn = 0)), res;
-};
 var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
 
-// src/js/utils/element.js
-var init_element = __esm({
-  "src/js/utils/element.js"() {
-  }
-});
-
 // src/js/notion.js
 var require_notion = __commonJS({
   "src/js/notion.js"(exports, module) {
-    init_element();
     var _self = typeof window != "undefined" ? window : typeof WorkerGlobalScope != "undefined" && self instanceof WorkerGlobalScope ? self : {};
     var Prism = function(u) {
       var c = /\blang(?:uage)?-([\w-]+)\b/i, n = 0, e = {}, M = {

@@ -4,4 +4,4 @@ var element = document.getElementById(pageindex);
 
 el.add(element, 'i-added-this-class');
 
-console.log(el.elementsList.getID);
+console.log(element);

@@ -35,7 +35,6 @@ function alljs() {
 		.pipe(plumber())
 		.pipe(uglify())
 		.pipe(concat('all.js'))
-		.pipe(dest(dist))
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(dest(dist));
 }

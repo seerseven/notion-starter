@@ -129,7 +129,7 @@ export function change(e, i, m, p) {
 	methodList[m](p, s);
 }
 
-export function changeID(i, v) {
+export function ID(i, v) {
 	s = elementsList['id'](i);
 	methodList['attr'](s, 'id', v);
 }

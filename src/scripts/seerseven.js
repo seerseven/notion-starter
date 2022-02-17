@@ -154,8 +154,18 @@ function change(e, i, m, p) {
 // src/js/seerseven.js
 document.addEventListener("DOMContentLoaded", function() {
   change("id", "page-index", "add", "SUCK-MY-BALLS");
-  const newList = "#block-be2ef39cad6b4a7b9323e5d661b095bc";
-  const main = "#block-6d55f0a3e06c494e9a42d3a4349643ae";
-  const content = (void 0)(main, "mainContent");
-  $(newList).appendTo(content);
+  const div = "block-be2ef39cad6b4a7b9323e5d661b095bc";
+  const main = "block-6d55f0a3e06c494e9a42d3a4349643ae";
+  const content = newID(main, "mainContent");
+  const newDiv = newID(div, "newDiv");
+  prepend("#newDiv", "#mainContent");
+  wrap("#page-index", "wrapper", "pageWrapper");
+  inner("#mainContent", "inner-wrapper");
+  insert("before", "#newDiv", "#mainContent");
+  $(".wrapper").css({
+    "background-color": "#f8f8f8",
+    width: "100%",
+    "max-width": "1000px",
+    margin: "20px auto"
+  });
 });

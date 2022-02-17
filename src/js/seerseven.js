@@ -1,5 +1,7 @@
 import * as el from './utils/element';
 
-el.change(getID, pageindex, add, 'i-added-this-class');
+var element = document.getElementById(pageindex);
+
+el.add(pageindex, 'i-added-this-class');
 
 console.log(el.elementsList.getID);

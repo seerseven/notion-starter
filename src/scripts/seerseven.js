@@ -130,5 +130,6 @@ function change(elm, iD, meth, prop2) {
 }
 
 // src/js/seerseven.js
-change("id", "page-index", "add", "fuckme");
-console.log(element);
+document.addEventListener("DOMContentLoaded", function() {
+  change("id", "page-index", "add", "fuckme");
+});

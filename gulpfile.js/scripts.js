@@ -14,27 +14,32 @@ const dist = 'theme/assets';
 var libs = ['jquery.js', 'jqueryUI.js'];
 libs = libs.map((i) => vendors + i);
 
+var allJS = ['lib.js', 'seerseven.js', 'notion.js'];
+allJS = allJS.map((i) => scripts + i);
+
 //Move, Minify, and Rename Bundled Modules
 function js() {
 	return src([esbuild + '*.js'])
 		.pipe(plumber())
 		.pipe(dest(scripts))
-		.pipe(dest(dist))
-		.pipe(uglify())
-		.pipe(rename({ suffix: '.min' }))
 		.pipe(dest(dist));
 }
 
 //Move, Minify, and Rename Bundled Vendors
 function lib() {
-	return src(libs)
+	return src(libs).pipe(plumber()).pipe(concat('lib.js')).pipe(dest(scripts));
+}
+
+function alljs() {
+	return src([allJS + '*.js'])
 		.pipe(plumber())
-		.pipe(concat('lib.js'))
-		.pipe(dest(scripts))
 		.pipe(uglify())
+		.pipe(concat('all.js'))
+		.pipe(dest(dist))
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(dest(dist));
 }
 
 exports.js = js;
 exports.lib = lib;
+exports.alljs = alljs;

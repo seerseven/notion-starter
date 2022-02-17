@@ -118,5 +118,5 @@ function change(e, i, m, p) {
 
 // src/js/seerseven.js
 document.addEventListener("DOMContentLoaded", function() {
-  change("id", "page-index", "add", "FUCKINGADDTHIS");
+  change("id", "page-index", "add", "SUCK-IT-NOTION");
 });

@@ -131,4 +131,4 @@ function change(elm, iD, meth, prop2) {
 
 // src/js/seerseven.js
 AOS.init();
-change(getID, page - index, add, "i-added-this-class");
+change(getID, "page-index", add, "i-added-this-class");
